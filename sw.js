@@ -1,6 +1,6 @@
 // すゝめ Service Worker
 // 画面（index.html）は毎回サーバーから最新を取得し、オフライン時だけ保存済みの版を使います。
-const CACHE = 'susume-v26';
+const CACHE = 'susume-v27';
 const ASSETS = ['./manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png'];
 
 self.addEventListener('install', e => {

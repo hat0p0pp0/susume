@@ -671,6 +671,66 @@ body[data-coach] .tabs button[aria-current]{background:var(--ha);color:#fff;anim
  .qlist{display:grid;grid-template-columns:1fr 1fr;gap:0 4px}
  .dtiles{grid-template-columns:repeat(4,1fr)}
 }
+
+/* ===== v27 UI/UX polish ===== */
+.srow{gap:12px}.srow span{flex:0 0 auto}.srow b{text-align:right}
+@container (max-width:370px){.fmt{display:none}.fsk{max-height:19px}.fbody{gap:10px;padding:6px 12px 2px}}
+@media (max-width:380px){.cmd{font-size:15.5px}.cmd small{max-width:36%;font-size:10.5px}}
+@media (min-width:920px){.app:has(.tabs) .top .brand{visibility:hidden}}
+.small{font-size:12.5px}
+:focus-visible{outline:3px solid var(--yell);outline-offset:2px}
+.top{border-bottom:1px solid transparent;transition:border-color .2s}
+/* フク老の吹き出しを明るく */
+.win.msgwin{background:#FFFBEB;color:#191B2E;border-color:#191B2E;box-shadow:0 0 0 3px #FFFBEB,0 0 0 5px rgba(25,27,46,.08);font-weight:600}
+.win.msgwin .who{background:#191B2E;color:#fff;border-color:#191B2E}
+.win.msgwin small,.win.msgwin .small{color:#5B5F78}
+.win.msgwin b{color:#C2185B}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .win.msgwin{background:#24263A;color:#F3F3FA;border-color:#F3F3FA;box-shadow:0 0 0 3px #24263A}:root:not([data-theme="light"]) .win.msgwin b{color:#FF8FB5}}
+:root[data-theme="dark"] .win.msgwin{background:#24263A;color:#F3F3FA;border-color:#F3F3FA;box-shadow:0 0 0 3px #24263A}
+:root[data-theme="dark"] .win.msgwin b{color:#FF8FB5}
+/* コマンド行：折り返しても崩れない */
+.cmd{min-height:48px;font-size:16.5px;line-height:1.35}
+.cmd small{white-space:normal;text-align:right;max-width:42%;line-height:1.35}
+/* 下タブ：小さな補足文字はスマホでは隠し、ラベルを読みやすく */
+.tabs button{font-size:11.5px;min-height:52px;justify-content:center}
+@media (max-width:919px){.tabs button small{display:none!important}}
+/* タップしやすさ */
+.seg button{min-height:40px}
+.btn.sm{min-height:38px}
+.tchip{min-height:36px}
+button,a{-webkit-tap-highlight-color:transparent}
+.list-item:active,.pkc:active,.qwrap:active{background:var(--chip)}
+/* 画面切替アニメ */
+main.enter{animation:pgIn .22s ease-out}
+@keyframes pgIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){main.enter{animation:none}}
+body.calm *{animation:none!important;transition:none!important}
+body.big main{zoom:1.12}
+/* 冒険者カードを小さい画面でも崩さない */
+.fcard{container-type:inline-size}
+.finfo small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fnm{font-size:clamp(17px,7cqw,26px)}
+.fsk{max-height:38px;overflow:hidden}
+.fsk span{font-size:clamp(9px,2.8cqw,10.5px)}
+.fhd{font-size:clamp(11px,3.4cqw,13px)}
+.fst b{font-size:clamp(14px,4.6cqw,17px)}
+/* ホームの冒険リスト（折りたたみ） */
+.jmore{width:100%;border:0;background:none;color:#A5ACC9;font:inherit;font-size:12.5px;font-weight:800;padding:8px 0 2px;text-align:center}
+/* ホーム画面に追加の案内 */
+.instb{display:flex;align-items:center;gap:10px;margin:10px 16px 0;padding:10px 12px;background:var(--sheet);border:3px solid var(--ink);clip-path:var(--n4)}
+.instb b{display:block;font-size:14px}.instb small{display:block;font-size:12px;color:var(--ink2);line-height:1.5}
+.instb .x{border:0;background:none;color:var(--ink2);font-size:20px;padding:0 4px}
+/* 表示設定 */
+.prefrow{margin:14px 16px}
+.prefrow h3{margin:0 0 6px;font-size:15px}
+.prefrow .seg{margin:0}
+.prefprev{margin:14px 16px;padding:14px;background:var(--sheet);border:3px solid var(--ink);clip-path:var(--n4)}
+@media (min-width:920px){
+ .homegrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 6px;align-items:start}
+ .homegrid .hcol:first-child{position:sticky;top:72px}
+ .homegrid .stage{height:300px}
+ .cmd small{max-width:none}
+}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
 </head>
@@ -843,7 +903,7 @@ events:[
 interest:{'hayase|know-e-1':{n:4,by:{}}},posts:{},photos:{},lecYell:{},lecRatings:{},
 nav:{tab:'home',view:'home',p:{}},stack:[],ui:{show:{shu:true,ha:true,ri:true},pick:null,vote:{},rate:{},yellAmt:300,evSeg:'voting',comSeg:'timeline'},toast:'',modal:null}}
 const S_KEY='oshibana-mock-v8';
-const APP_VERSION='v26（推し／寄り道クエスト・カード表裏・PC対応）';
+const APP_VERSION='v27（UI/UXブラッシュアップ：見やすさ・戻る操作・表示設定）';
 let state=null;
 try{state=JSON.parse(localStorage.getItem(S_KEY))}catch(e){state=null}
 if(!state||state.v!==1)state=initState();
@@ -1368,14 +1428,14 @@ function nextAction(u){const td=todos();if(td.length){const x=td[0];return{t:`�
 
 /* ---- じぶん（自分を推す） ---- */
 V.home=()=>{const u=me(),r=compute(u);if(!r)return V.needDiag();const pid=state.persona,k=classOf(u,r),L=levelOf(expOf(pid)),st=stageOfLv(L.lv),na=nextAction(u),lg=loginGain(u);const J=journey(u),jn=J.find(x=>!x.done);if(jn&&!todos().length){na.t=jn.say;na.cta=['▶ '+jn.label,jn.act]}
- return`<div class="stage" style="margin-top:12px">${avatarPx(u.eq,k.curKey,112,u.name,{g:u.chara,st,look:u.look})}</div>
+ return`${installBanner()}<div class="homegrid"><div class="hcol"><div class="stage" style="margin-top:12px">${avatarPx(u.eq,k.curKey,112,u.name,{g:u.chara,st,look:u.look})}</div>
  <div class="win statwin"><div class="row between" style="margin-bottom:6px"><b class="pxf" style="font-size:20px">${esc(u.name)}</b><span class="pxf" style="color:var(--yell);font-size:20px">Lv.${L.lv}</span></div>
  ${statRow('せいちょう',STAGE_N(u.chara)[st])}${statRow('しょくぎょう',st<2?`みならい（素質：${esc(k.cur.n)}）`:esc(k.cur.n))}${statRow('しょうごう',esc(titleOf(u)))}${statRow('エール',`${ICO('coin',14)}${u.bal.toLocaleString()} pt`)}
  <div class="expbar"><i style="width:${Math.round(L.cur/L.need*100)}%"></i></div><div style="color:#A5ACC9;font-size:12px;margin-top:4px">つぎのレベルまで あと ${L.need-L.cur} EXP${st<2?`・Lv.${st===0?3:6}で${STAGE_N(u.chara)[st+1]}に成長`:''}</div></div>
- ${owlSay(na.t,{mood:na.mood})}${jn?journeyWin(J):''}
- <div class="win cmdwin">${jn&&!todos().length?'':cmd(na.cta[0],na.cta[1],'',true)}${lg?cmd(`${ICO('potion',16)}ログインボーナス`,'loginBonus',`+${lg} エール`):''}${cmd(`${ICO('scroll',18)}冒険者カード`,'go:mypage','名刺を見る・共有')}${cmd(`${ICO('chest',18)}そうび`,'go:equip','着替える・ショップ')}${cmd(`${ICO('key',18)}メニュー`,'go:settings','記録・設定')}</div>`};
+</div><div class="hcol">${owlSay(na.t,{mood:na.mood})}${jn?journeyWin(J,true):''}
+ <div class="win cmdwin">${jn&&!todos().length?'':cmd(na.cta[0],na.cta[1],'',true)}${lg?cmd(`${ICO('potion',16)}ログインボーナス`,'loginBonus',`+${lg} エール`):''}${cmd(`${ICO('scroll',18)}冒険者カード`,'go:mypage','名刺を見る・共有')}${cmd(`${ICO('chest',18)}そうび`,'go:equip','着替える・ショップ')}${cmd(`${ICO('key',18)}メニュー`,'go:settings','記録・設定')}</div></div></div>`};
 V.settings=()=>{const u=me(),pid=state.persona,ti=tier(u),st=stageOf(u.sent);const map=activity(pid);const m=TODAY.getMonth()+1;const act=Object.keys(map).filter(k=>+k.slice(5,7)===m).length;
- return`<h1>メニュー</h1><div class="win cmdwin">${cmd(`${ICO('key',18)}遊び方`,'go:guide','用語と仕組み')}${cmd(`${ICO('book',18)}学びの記録`,'go:record',`今月${act}日`,true)}${cmd(`${ICO('coin',18)}エールの集め方`,'go:yellrules',`残高 ${u.bal.toLocaleString()}pt`)}${cmd(`${ICO('star',18)}しょうごう`,'go:yellpage',RANKS[st].n)}${cmd('評価と割引','go:tierpage',['通常','20%引き','50%引き'][ti])}${cmd(`${ICO('scroll',18)}詳細レポート`,'go:report','無料')}${cmd(`${ICO('gem',18)}プロフィール写真`,'go:photo','')}${cmd('安全とプライバシー','go:safety','')}${cmd('データの管理','go:datamgmt','')}</div><p class="small muted" style="text-align:center">バージョン ${APP_VERSION}</p>`};
+ return`<h1>メニュー</h1><div class="win cmdwin">${cmd(`${ICO('key',18)}遊び方`,'go:guide','用語と仕組み')}${cmd(`${ICO('gem',18)}表示設定`,'go:display','テーマ・文字の大きさ')}${cmd(`${ICO('book',18)}学びの記録`,'go:record',`今月${act}日`,true)}${cmd(`${ICO('coin',18)}エールの集め方`,'go:yellrules',`残高 ${u.bal.toLocaleString()}pt`)}${cmd(`${ICO('star',18)}しょうごう`,'go:yellpage',RANKS[st].n)}${cmd('評価と割引','go:tierpage',['通常','20%引き','50%引き'][ti])}${cmd(`${ICO('scroll',18)}詳細レポート`,'go:report','無料')}${cmd(`${ICO('gem',18)}プロフィール写真`,'go:photo','')}${cmd('安全とプライバシー','go:safety','')}${cmd('データの管理','go:datamgmt','')}</div><p class="small muted" style="text-align:center">バージョン ${APP_VERSION}</p>`};
 V.yellrules=()=>{const u=me();const used=u.em&&u.em.m===dstr(TODAY).slice(0,7)?u.em.amt:0;return`<h1>エールの集め方</h1>${owlSay('エールはお金では買えぬ。学びに行き、仲間と励まし合うことでのみ集まる、学びの証じゃ。',{size:48})}
  <div class="sheet"><div class="row between"><b>今月もらったエール</b><span class="pxf">${used} / 2,000</span></div><div class="meter yell" style="margin-top:6px"><span style="width:${used/20}%"></span></div></div>
  <h2>もらえる</h2><div class="sheet"><table class="price"><tr><td>${ICO('scroll',14)}初めての診断</td><td>100</td></tr><tr><td>${ICO('flag',14)}対面クエストに参加（転職ルート）</td><td>200</td></tr><tr><td>${ICO('flag',14)}対面クエストに参加（鍛錬ルート）</td><td>100</td></tr><tr><td>${ICO('star',14)}師匠からの評価 ★5／★4／★3</td><td>100／60／30</td></tr><tr><td>${ICO('gem',14)}連続参加ボーナス</td><td>100〜200</td></tr><tr><td>${ICO('potion',14)}ログイン（7日連続で＋20）</td><td>5／日</td></tr><tr><td>${ICO('book',14)}お題への投稿（1日1回）</td><td>10</td></tr><tr><td>${ICO('heart',14)}後輩を会に誘う（鍛錬ルート）</td><td>50</td></tr></table></div>
@@ -1733,7 +1793,7 @@ function render(){save();if(PUBLIC){document.getElementById('app').innerHTML=pub
  if(state.modal&&state.modal.tabidachi)html+=`<div class="modal" role="dialog" aria-modal="true" aria-label="旅立ち"><div class="win" style="max-width:340px;text-align:center">${owl(80,'happy','bob')}<div class="pxf" style="font-size:24px;color:#FBBF24;margin:8px 0">旅立ちの日</div><p>はじめてのクエストを達成した！<br>師匠と仲間に会いに行くたび、おぬしは成長していく。</p>${cmd('冒険をつづける','closeModal','',true)}</div></div>`;
  else if(state.modal&&state.modal.lv)html+=`<div class="modal" role="dialog" aria-modal="true" aria-label="レベルアップ"><div class="sheet">${owl(90,'happy','bob')}<h2 class="pxf" style="margin:8px 0 2px;font-size:28px;color:var(--ha)">${ICO('star',26)}LEVEL UP!${ICO('star',26)}</h2><p style="font-weight:800">Lv.${state.modal.lv} になりました</p><p class="small muted">学びを続けると、職業の熟練度と必殺ワザも伸びていきます</p><button class="btn full" data-act="closeModal">つづける</button></div></div>`;
  else if(state.modal)html+=`<div class="modal" role="dialog" aria-modal="true" aria-label="称号を獲得"><div class="sheet"><div class="row" style="justify-content:center;gap:4px;align-items:flex-end">${owl(80,'happy','bob')}${stageIcon(state.modal.st,90,true)}</div><h2 style="margin:10px 0 6px;text-align:center">称号「${RANKS[state.modal.st].n}の応援者」を獲得</h2><p class="small muted">新しい特典：${RANKS[state.modal.st].perk}</p><button class="btn full" data-act="closeModal">閉じる</button></div></div>`;
- document.getElementById('app').innerHTML=html;coachHook();
+ applyPrefs();document.getElementById('app').innerHTML=html;coachHook();syncHistory();pgAnim();
  if(view==='analyze'&&!render.t){render.t=setTimeout(()=>{render.t=null;state.ui.bloom=true;logAct('diag','');{const u=me();if(!u.diagBonus){u.diagBonus=1;earn(u,100)}}const u=me();if(state.persona==='me'&&!u.hist.length)u.hist=[];state.stack=[];state.nav=me().tut?{tab:'home',view:'tutResult',p:{}}:{tab:'shuhari',view:'shuhari',p:{}};render();window.scrollTo(0,0)},1700)}}
 
 /* ============ 操作 ============ */
@@ -1976,6 +2036,39 @@ Object.assign(ACT,{
   if(t){u.tickets--;if(e.status==='confirmed'){e.paid=e.paid||{};e.paid[pid]=1}u.trial=[...new Set([...(u.trial||[]),e.theme])]}
   if(e.status==='proposed'&&e.joined>=e.min)e.status='confirmed';logAct('circle',e.title);
   toast(t?`券で寄り道！「${SKILL[e.theme]}」がお試しワザになりました（残り${u.tickets}枚）`:`寄り道枠で参加表明しました`)}
+});
+
+/* ===== v27: 戻る対応・画面切替・表示設定・ホーム追加案内 ===== */
+let __pop=false;
+function navKey(){const n=state.nav||{};return (n.tab||'')+'|'+(n.view||'')+'|'+JSON.stringify(n.p||{})}
+function syncHistory(){if(PUBLIC)return;try{const k=navKey(),st={k,nav:state.nav,stack:state.stack||[]};const url=location.pathname+location.search+'#/'+(state.nav.view||'');
+ if(__pop||!history.state||!history.state.k){history.replaceState(st,'',url);__pop=false;return}
+ if(history.state.k!==k)history.pushState(st,'',url);else history.replaceState(st,'',url)}catch(e){}}
+window.addEventListener('popstate',e=>{if(PUBLIC)return;const st=e.state;if(st&&st.nav){__pop=true;state.nav=st.nav;state.stack=st.stack||[];state.modal=null;render();window.scrollTo(0,0)}});
+function pgAnim(){const k=navKey();if(pgAnim.k!==k){const first=pgAnim.k===undefined;pgAnim.k=k;if(!first){const m=document.querySelector('main');if(m)m.classList.add('enter')}}}
+function applyPrefs(){const p=state.prefs||{};const r=document.documentElement;if(p.theme==='light'||p.theme==='dark')r.dataset.theme=p.theme;else delete r.dataset.theme;document.body.classList.toggle('big',p.size==='big');document.body.classList.toggle('calm',p.motion==='calm')}
+window.addEventListener('scroll',()=>{const t=document.querySelector('.top');if(t)t.style.borderBottomColor=scrollY>8?'var(--line)':'transparent'},{passive:true});
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.__bip=e;if(state.role==='user')render()});
+function installBanner(){const p=state.prefs||{};try{if(p.noInstall||matchMedia('(display-mode: standalone)').matches||navigator.standalone||location.protocol==='file:')return''}catch(e){return''}const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);if(!window.__bip&&!ios)return'';
+ return`<div class="instb">${ICO('gem',22)}<div class="grow"><b>ホーム画面に追加</b><small>${ios?'下の共有ボタン →「ホーム画面に追加」で、アプリのように起動できます':'ワンタップで、アプリのように起動できます'}</small></div>${ios?'':'<button class="btn sm ha" data-act="installApp">追加</button>'}<button class="x" data-act="pref:noInstall:1" aria-label="案内を閉じる">×</button></div>`}
+const _journeyWin0=journeyWin;
+journeyWin=function(J,compact){if(!compact||state.ui.jOpen)return _journeyWin0(J).replace(/<\/div>$/,compact?'<button class="jmore" data-act="jOpen">たたむ ▲</button></div>':'</div>');
+ const n=J.filter(x=>x.done).length,nx=J.findIndex(x=>!x.done),x=J[nx];
+ return`<div class="win jwin"><div class="row between"><b class="pxf" style="font-size:16px">${ICO('flag',16)} はじめての冒険</b><span class="pxf" style="color:#FBBF24">${n}/${J.length}</span></div><div class="jbar"><i style="width:${n/J.length*100}%"></i></div>
+ <button class="jr nx" data-act="${x.act}"><span class="jn">${nx+1}</span><span class="jl">${esc(x.label)}<br><small>つぎはここ ▶ タップ</small></span><span>›</span></button><button class="jmore" data-act="jOpen">冒険の地図をすべて見る（${J.length}ステップ）▼</button></div>`};
+V.display=()=>{const p=state.prefs||{};const seg=(k,opts,def)=>`<div class="seg">${opts.map(([v,l])=>`<button class="${(p[k]||def)===v?'on':''}" data-act="pref:${k}:${v}" aria-pressed="${(p[k]||def)===v}">${l}</button>`).join('')}</div>`;
+ return`<h1>表示設定</h1><p class="lead">見やすさは、あとからいつでも変えられます。</p>
+ <div class="prefrow"><h3>テーマ</h3>${seg('theme',[['auto','端末に合わせる'],['light','ライト'],['dark','ダーク']],'auto')}</div>
+ <div class="prefrow"><h3>文字の大きさ</h3>${seg('size',[['std','標準'],['big','大きめ']],'std')}</div>
+ <div class="prefrow"><h3>動き</h3>${seg('motion',[['std','標準'],['calm','少なめ']],'std')}</div>
+ <div class="prefprev"><b>プレビュー</b><p class="small muted" style="margin:4px 0 0">学びの冒険に、いざ出発。フク老の吹き出しや、ボタンの大きさがこのように変わります。</p></div>
+ ${owlSay('見やすい設定が見つかったら、そのまま冒険を続けるのじゃ。',{size:40})}`};
+const _cmd0=cmd;cmd=function(l,...a){return _cmd0(String(l).replace(/^▶\s*/,''),...a)};
+Object.assign(ACT,{
+ back:()=>{if((state.stack||[]).length&&history.state&&history.state.k){history.back()}else back()},
+ pref:(k,v)=>{state.prefs=state.prefs||{};state.prefs[k]=k==='noInstall'?1:v},
+ jOpen:()=>{state.ui.jOpen=!state.ui.jOpen},
+ installApp:()=>{const e=window.__bip;if(!e)return;e.prompt();window.__bip=null;e.userChoice&&e.userChoice.then(()=>render())}
 });
 render();
 if('serviceWorker' in navigator&&location.protocol.startsWith('http')){window.addEventListener('load',()=>{navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).then(r=>r.update()).catch(()=>{});let reloaded=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(reloaded)return;reloaded=true;location.reload()})})}

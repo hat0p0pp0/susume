@@ -8,12 +8,12 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="すゝめ">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="icon" href="icons/icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <title>すゝめ</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -395,6 +395,12 @@ button.kpi{font:inherit;color:inherit}
 .titlelogo{margin:18px 0 10px}
 .titlelogo span{display:block;font-size:56px;line-height:1.1;letter-spacing:.08em;color:var(--ink);text-shadow:4px 4px 0 var(--ha-t),-2px -2px 0 var(--shu-t)}
 .titlelogo small{display:block;font-weight:800;font-size:15px;margin-top:4px;color:var(--ha)}
+.abq{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0 18px;text-align:left}
+.ab{padding:12px 10px;font-size:14px;font-weight:700;line-height:1.55;clip-path:var(--n4);border:2px solid transparent}
+.ab b{display:block;font-family:'DotGothic16',monospace;font-weight:400;font-size:18px;margin-bottom:2px}
+.ab.a{background:var(--shu-t)}.ab.a b{color:var(--shu)}
+.ab.b{background:var(--ha-t)}.ab.b b{color:var(--ha)}
+.ab.a.on{border-color:var(--shu)}.ab.b.on{border-color:var(--ha)}
 hr{border:0;border-top:1.5px dashed var(--line);margin:12px 0}
 a{color:var(--shu)}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
@@ -412,6 +418,12 @@ svg.pxs.ico{display:inline-block!important;vertical-align:-3px;margin-right:5px;
 .icard{position:relative}
 .ibadge{position:absolute;left:6px;top:6px;background:var(--sheet);padding:3px;border:2px solid var(--ink);line-height:0;z-index:1}
 h2 svg.pxs.ico{vertical-align:-4px;margin-right:8px}
+.tutbar{margin:10px 16px 0;background:var(--ha);color:#fff;padding:8px 14px;display:flex;align-items:center;gap:10px;clip-path:var(--n4);font-weight:800;font-size:13px}
+.win svg.tabpx,details.gd summary svg.tabpx{display:inline-block!important;vertical-align:-6px;width:22px;height:auto;margin-right:4px}
+.tutbar b{font-family:'DotGothic16',monospace;font-weight:400;font-size:15px}
+.tutdots{margin-left:auto;display:flex;gap:4px}.tutdots i{width:10px;height:10px;background:rgba(255,255,255,.35)}.tutdots i.on{background:#fff}
+details.gd summary svg{vertical-align:-6px;margin-right:4px}
+details.gd p,details.gd .kv{font-size:14px}
 /* ===== JRPGウィンドウ ===== */
 .win{background:#14152A;color:#F8FAFC;border:3px solid #F8FAFC;box-shadow:0 0 0 3px #14152A;margin:14px 19px;padding:14px 16px;font-weight:700}
 .win .small,.win small{color:#A5ACC9}
@@ -505,6 +517,160 @@ h1 small,h2 small{font-family:'M PLUS Rounded 1c',sans-serif;font-size:12px;colo
 .toggle{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-top:2px dashed var(--line);font-weight:700}
 .toggle:first-child{border-top:0}
 .toggle input{width:22px;height:22px;accent-color:var(--ha)}
+
+/* v25 wizard & coach */
+.pksteps{display:flex;gap:4px;margin:6px 16px 4px}
+.pksteps button{flex:1;border:0;background:var(--chip);color:var(--ink2);font-size:11px;font-weight:800;padding:7px 0;clip-path:var(--n2)}
+.pksteps button.on{background:var(--ink);color:var(--paper)}
+.pksteps button.done{background:var(--ha-t);color:var(--ha)}
+.pksteps button:disabled{opacity:.55}
+.pkq{margin:14px 16px 4px;font-family:'DotGothic16',monospace;font-size:20px;line-height:1.4}
+.pkhint{margin:0 16px 6px;font-size:13px;color:var(--ink2)}
+.pkc{display:block;width:calc(100% - 32px);margin:10px 16px;text-align:left;background:var(--sheet);color:var(--ink);border:3px solid var(--ink);padding:14px 14px 12px;clip-path:var(--n4);position:relative;font:inherit;cursor:pointer}
+.pkc:active{transform:translateY(2px)}
+.pkc .ttl{font-weight:800;font-size:17px;line-height:1.4;display:block;padding-right:28px}
+.pkc .sub{display:block;font-size:13px;color:var(--ink2);margin-top:4px;line-height:1.5}
+.pkc .go{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:22px;color:var(--ink2)}
+.pkc .bdg{display:inline-block;font-size:11px;font-weight:800;padding:2px 8px;margin-bottom:6px;color:#fff;background:var(--ha);clip-path:var(--n2)}
+.pkc.t{border-color:var(--ha);box-shadow:inset 6px 0 0 var(--ha)}
+.pkc.k{border-color:var(--shu);box-shadow:inset 6px 0 0 var(--shu)}
+.pkc .rw{display:inline-block;margin-top:8px;font-size:12px;font-weight:800;padding:3px 8px;background:var(--chip);clip-path:var(--n2)}
+.pkc.big{padding:18px 16px}
+.pkc .ic{float:left;margin:2px 12px 4px 0}
+.pktray{margin:8px 16px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px;font-weight:700;color:var(--ink2)}
+.pktray .chip2{display:inline-flex;align-items:center;gap:4px;background:var(--ink);color:var(--paper);border:0;padding:4px 10px;font-size:12px;font-weight:800;clip-path:var(--n2)}
+.waza{margin:12px 16px;background:#14152A;color:#fff;padding:18px 16px;clip-path:var(--n4);text-align:center}
+.waza small{display:block;color:#A5ACC9;font-size:12px}
+.waza b{display:block;font-family:'DotGothic16',monospace;font-weight:400;font-size:30px;color:#FBBF24;margin:4px 0;letter-spacing:.05em}
+.waza span{font-size:14px}
+.pkback{display:inline-block;margin:6px 16px 0;border:0;background:none;color:var(--ink2);font-weight:800;font-size:13px;padding:4px 0}
+.coach{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(92px + env(safe-area-inset-bottom,0px));width:calc(100% - 24px);max-width:456px;z-index:40;background:#14152A;color:#fff;border:3px solid #fff;clip-path:var(--n4);padding:12px 14px;}
+.coach .ct{display:flex;gap:10px;align-items:flex-start}
+.coach .cs{font-size:11px;color:#FBBF24;font-weight:800}
+.coach p{margin:2px 0 0;font-size:14px;line-height:1.6}
+.coach .cb{display:flex;gap:8px;margin-top:10px}
+.coach .cb button{flex:1;border:0;padding:10px;font-weight:800;font-size:14px;clip-path:var(--n2)}
+.coach .cb .nx{background:var(--ha);color:#fff}.coach .cb .sk{flex:0 0 auto;background:transparent;color:#A5ACC9}
+body[data-coach] main{padding-bottom:220px}
+body[data-coach] .tabs{z-index:41}
+body[data-coach] .tabs button[aria-current]{background:var(--ha);color:#fff;animation:cpulse 1s infinite}
+.coach-hl{position:relative;z-index:39;outline:4px solid #FBBF24;outline-offset:3px;animation:cpulse 1s infinite;background:var(--sheet)}
+@keyframes cpulse{50%{outline-color:#FF3D7F;box-shadow:0 0 0 6px rgba(255,61,127,.25)}}
+.jwin .jr{display:flex;align-items:center;gap:10px;width:100%;border:0;background:none;color:inherit;font:inherit;text-align:left;padding:7px 2px;border-bottom:1px dashed rgba(255,255,255,.15)}
+.jwin .jr:last-child{border-bottom:0}
+.jwin .jn{flex:0 0 26px;height:26px;display:grid;place-items:center;font-size:12px;font-weight:800;background:#2A2C48;color:#A5ACC9;clip-path:var(--n2)}
+.jwin .jr.ok .jn{background:#0DAA7B;color:#fff}
+.jwin .jr.nx{color:#FBBF24}.jwin .jr.nx .jn{background:var(--ha);color:#fff;animation:cpulse 1s infinite}
+.jwin .jr .jl{flex:1;font-size:14px;font-weight:700}.jwin .jr.ok .jl{color:#7C83A8;text-decoration:line-through}
+.jwin .jr small{font-size:11px;color:#A5ACC9}
+.pkfx p{margin:0;padding:8px 0;border-bottom:1px dashed var(--line);font-size:14px}.pkfx p:last-child{border-bottom:0}.pkfx strong{color:var(--ha)}
+.jbar{height:8px;background:#2A2C48;margin:6px 0 4px}.jbar i{display:block;height:100%;background:#FBBF24}
+
+/* v26 quests */
+.tkt{margin:10px 16px;background:#14152A;color:#fff;padding:12px 14px;clip-path:var(--n4);display:grid;grid-template-columns:1fr 1fr;gap:4px 12px}
+.tkt .v{font-family:'DotGothic16',monospace;font-size:22px;color:#FBBF24;line-height:1.1}
+.tkt small{color:#A5ACC9;font-size:11px}
+.tkt .bt{grid-column:1/-1;display:flex;gap:8px;margin-top:8px}
+.tkt .bt button{flex:1;border:0;padding:8px;font-weight:800;font-size:12px;clip-path:var(--n2);background:#2A2C48;color:#fff}
+.tkt .bt button.p{background:var(--ha)}
+.qsec{display:flex;align-items:center;gap:8px;margin:18px 16px 6px;font-weight:800;font-size:15px}
+.qsec .sk{display:inline-block;padding:2px 10px;color:#fff;font-family:'DotGothic16',monospace;font-weight:400;clip-path:var(--n2)}
+.qsec small{margin-left:auto;color:var(--ink2);font-weight:700;font-size:12px}
+.qwrap{margin:8px 16px;background:var(--sheet);border:3px solid var(--ink);clip-path:var(--n4);padding:4px 6px 6px}
+.qwrap .qwhy{display:flex;flex-wrap:wrap;gap:4px;padding:6px 6px 0}
+.qwrap .qwhy span{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:800;background:var(--ha-t);color:var(--ha);padding:2px 8px;clip-path:var(--n2)}
+.qwrap .qwhy span.g{background:var(--chip);color:var(--ink2)}
+.qwrap .qft{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 6px 2px;border-top:1px dashed var(--line);margin-top:4px}
+.qwrap .qft .btn{flex:1}.qwrap .qft .info{flex:1 1 100%;font-size:12px;color:var(--ink2);font-weight:700;line-height:1.5}
+.qwrap .qft .seats i{display:inline-block;width:10px;height:10px;margin-right:2px;background:var(--line);vertical-align:-1px}
+.qwrap .qft .seats i.on{background:var(--yell)}
+.qempty{margin:8px 16px;padding:12px 14px;border:3px dashed var(--line);font-size:13px;color:var(--ink2);line-height:1.6}
+.qempty .lc2{display:flex;align-items:center;gap:8px;margin-top:8px;width:100%;border:0;background:var(--sheet);padding:8px;font:inherit;color:var(--ink);text-align:left;clip-path:var(--n2)}
+.yexp{margin:10px 16px;background:linear-gradient(135deg,#FFF7E0,#FFE4EE);border:3px solid var(--ink);clip-path:var(--n4);padding:12px 14px;color:#191B2E}
+.yexp b.t{font-family:'DotGothic16',monospace;font-weight:400;font-size:17px}
+.yexp ol{margin:6px 0 0;padding-left:20px;font-size:13px;line-height:1.7}
+.axf{display:flex;gap:6px;overflow-x:auto;padding:4px 16px 6px;scrollbar-width:none}
+.axf button{flex:0 0 auto;border:2px solid var(--ink);background:var(--sheet);color:var(--ink);padding:4px 12px;font-size:12px;font-weight:800;clip-path:var(--n2)}
+.axf button.on{background:var(--c,var(--ink));color:#fff;border-color:var(--c,var(--ink))}
+/* v26 card */
+.cmode{display:flex;margin:6px 16px 10px;border:3px solid var(--ink);clip-path:var(--n2)}
+.cmode button{flex:1;border:0;background:var(--sheet);color:var(--ink);padding:8px;font-weight:800;font-size:13px}
+.cmode button.on{background:var(--ink);color:var(--paper)}
+.fcard{margin:0 auto;width:min(100% - 32px,380px);perspective:1200px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.fin{position:relative;width:100%;aspect-ratio:1.586;transition:transform .7s cubic-bezier(.3,1.3,.5,1);transform-style:preserve-3d}
+.fcard.flip .fin{transform:rotateY(180deg)}
+.ff{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 24px rgba(20,21,42,.35)}
+.ff.back{transform:rotateY(180deg)}
+.fcard.digital .ff{background:radial-gradient(120% 90% at 0% 0%,color-mix(in srgb,var(--cc) 55%,#14152A) 0%,#14152A 60%);color:#fff;border:3px solid #fff;outline:3px solid #14152A}
+.fcard.real .ff{background:linear-gradient(135deg,#FFFDF6,#F1ECE0) padding-box,linear-gradient(120deg,#F9D976,#F39F86,#B8A1FF,#7FDBDA,#F9D976) border-box;color:#191B2E;border:5px solid transparent}
+.fcard.real .ff.front::after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 45%,transparent 60%);background-size:250% 100%;animation:holo 4s linear infinite;pointer-events:none}
+@keyframes holo{0%{background-position:150% 0}100%{background-position:-100% 0}}
+.fhd{display:flex;justify-content:space-between;align-items:center;padding:7px 14px;font-family:'DotGothic16',monospace;font-size:13px;letter-spacing:.08em}
+.fcard.digital .fhd{background:var(--cc)}
+.fcard.real .fhd{border-bottom:2px solid #191B2E;color:#191B2E}
+.fhd b{font-weight:400;color:#FBBF24;font-size:16px}.fcard.real .fhd b{color:var(--cc)}
+.fbody{flex:1;display:flex;gap:12px;padding:8px 14px 4px;align-items:center;min-height:0}
+.fav{flex:0 0 auto;width:34%;height:100%;display:grid;place-items:end center;background:linear-gradient(#8FD3FF 0 70%,#6FBF4A 70%);border:3px solid #fff;border-radius:8px;overflow:hidden;padding-bottom:2px}
+.fcard.real .fav{border-color:#191B2E}
+.fav svg{max-height:96%;width:auto}
+.finfo{flex:1;min-width:0}
+.finfo small{display:block;font-size:10.5px;opacity:.75;font-weight:700}
+.fnm{font-family:'DotGothic16',monospace;font-size:24px;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fjob{display:inline-block;margin-top:4px;padding:2px 10px;font-size:12px;font-weight:800;color:#fff;border-radius:4px}
+.fsk{display:flex;flex-wrap:wrap;gap:3px;margin-top:6px}
+.fsk span{font-size:10px;font-weight:800;padding:1px 6px;border-radius:3px;color:#fff}
+.fft{display:flex;justify-content:space-between;align-items:center;padding:5px 14px;font-size:10px;font-weight:800;opacity:.85}
+.fft span{display:inline-flex;align-items:center;white-space:nowrap;font-family:'DotGothic16','M PLUS Rounded 1c','Hiragino Sans','Noto Sans CJK JP','Noto Sans JP','Yu Gothic','Meiryo',sans-serif}.fft svg{width:14px;height:14px;vertical-align:-3px;margin-right:3px}
+.fbk{flex:1;display:flex;gap:10px;padding:10px 14px 4px;min-height:0;align-items:center}
+.frad{flex:0 0 42%}.frad svg{width:100%;height:auto;display:block}
+.fst{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.fst div{background:rgba(255,255,255,.1);padding:4px 6px;border-radius:5px;line-height:1.2}
+.fcard.real .fst div{background:rgba(25,27,46,.06)}
+.fst small{display:block;font-size:9.5px;opacity:.75;font-weight:700}
+.fst b{font-family:'DotGothic16',monospace;font-weight:400;font-size:17px}
+.fst .wide{grid-column:1/-1;font-size:11px;font-weight:800}
+.fbf{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:5px 14px 7px;font-size:10px;font-weight:800}
+.fbf .qrs svg{width:44px;height:44px;background:#fff;padding:2px;border-radius:3px;display:block}
+.nfc{display:inline-flex;align-items:center;gap:6px}
+.nfc i{width:22px;height:22px;border:2px solid currentColor;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:12px}
+.fmt{margin-top:6px}.fmt small{font-size:9.5px}.fmt i{display:block;height:5px;background:rgba(127,127,140,.3);margin-top:2px}.fmt b{display:block;height:100%;background:#FBBF24}
+.yexp summary{cursor:pointer;list-style:none}.yexp summary::-webkit-details-marker{display:none}
+.fhint{text-align:center;font-size:12px;color:var(--ink2);font-weight:700;margin:8px 0 2px}
+.fhint button{border:0;background:var(--chip);color:var(--ink);font-weight:800;font-size:12px;padding:4px 12px;margin-left:6px;clip-path:var(--n2)}
+.dtiles{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 16px}
+.dtile{background:var(--sheet);border:3px solid var(--ink);clip-path:var(--n4);padding:10px 12px}
+.dtile small{display:block;font-size:11px;color:var(--ink2);font-weight:800}
+.dtile b{font-family:'DotGothic16',monospace;font-weight:400;font-size:26px;line-height:1.2}
+.dtile b em{font-style:normal;font-size:13px;margin-left:2px;color:var(--ink2)}
+.dtile .bar{height:6px;background:var(--line);margin-top:6px}.dtile .bar i{display:block;height:100%;background:var(--ha)}
+.road{display:flex;align-items:stretch;gap:4px;margin-top:6px}
+.road div{flex:1;padding:6px 8px;color:#fff;font-size:12px;font-weight:800;line-height:1.3;clip-path:var(--n2)}
+.road div small{display:block;font-size:10px;opacity:.85}
+.road .ar{flex:0 0 auto;align-self:center;color:#FBBF24;padding:0;background:none!important}
+.skb{display:grid;grid-template-columns:auto 1fr auto;gap:6px 10px;align-items:center;font-size:13px;font-weight:800}
+.skb .m{height:10px;background:var(--line)}.skb .m i{display:block;height:100%}
+.heat{display:grid;grid-template-rows:repeat(7,13px);grid-auto-columns:13px;grid-auto-flow:column;gap:3px;margin-top:8px}
+.heat i{background:var(--line);display:block}
+.heat i.l1{background:#FBCFE8}.heat i.l2{background:#F472B6}.heat i.l3{background:#DB2777}
+.mpgrid{display:block}
+/* v26 PC */
+@media (min-width:920px){
+ body{font-size:15.5px}
+ .app:has(.tabs){max-width:none;padding-left:236px;padding-bottom:40px}
+ .app:has(.tabs)>main,.app:has(.tabs)>.top{max-width:880px;margin-left:auto;margin-right:auto}
+ .app:not(:has(.tabs)){max-width:640px}
+ .tabs{left:16px!important;top:16px;bottom:16px!important;transform:none!important;width:204px!important;max-width:none!important;display:flex!important;flex-direction:column;gap:6px;padding:16px 10px!important;justify-content:flex-start}
+ .tabs::before{content:'すゝめ';font-family:'DotGothic16','M PLUS Rounded 1c','Hiragino Sans','Noto Sans CJK JP','Noto Sans JP','Yu Gothic','Meiryo',sans-serif;font-size:26px;text-align:center;margin:4px 0 14px;color:var(--ink)}
+ .tabs button{flex-direction:row!important;justify-content:flex-start!important;gap:10px!important;padding:10px 12px!important;font-size:15px!important}
+ .tabs button small{font-size:11px!important;margin-left:auto;white-space:nowrap}
+ .tabs button{white-space:nowrap}
+ .coach{left:calc(236px + (100% - 236px)/2);bottom:24px}
+ .toast{left:calc(50% + 118px);bottom:24px}
+ .mpgrid{display:grid;grid-template-columns:420px 1fr;gap:4px;align-items:start}
+ .mpgrid .cardcol{position:sticky;top:72px}
+ .qlist{display:grid;grid-template-columns:1fr 1fr;gap:0 4px}
+ .dtiles{grid-template-columns:repeat(4,1fr)}
+}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
 </head>
@@ -573,6 +739,8 @@ const TRAW=[
 ['para','w',2,'対話で結論を出す','波風を立てないのが大人だ、という思い込み','意見をぶつけ合い、合意に至る力','ハーバード流交渉術','諸子百家の「百家争鳴」','ハーバーマスの熟議','十七条憲法「必ず衆とともに論ずべし」','ファシリテーター付きの会議'],
 ['para','w',3,'原理原則を貫く','状況次第で柔軟に変えるのが賢い、という思い込み','ぶれない軸を持って判断する力','カントの定言命法','孟子の「義」','立憲主義','稲盛和夫の「フィロソフィ」','自分の行動指針を10箇条にまとめる']];
 const THEMES=TRAW.map(r=>({id:`${r[0]}-${r[1]}-${r[2]}`,ax:r[0],dir:r[1],name:r[3],un:r[4],re:r[5],W:r[6],E:r[7],H:r[8],J:r[9],ex:r[10]}));
+const CONCRETE={'see-e-1': ['細部より先に全体像をつかむ','企画書を作る前や、新しい職場に入ったとき'], 'see-e-2': ['相手の背景から話を読み解く','お客さんや上司の「本当の要望」をつかみたいとき'], 'see-e-3': ['原因を一つに決めつけず関係図で見る','同じトラブルが何度も起きるとき'], 'self-e-1': ['チームの中で自分の役割を見つける','チームなのに、つい一人で抱え込むとき'], 'self-e-2': ['人を手伝うことで成果を出す','自分の評価ばかり気になってしまうとき'], 'self-e-3': ['誰もが話しやすい場をつくる','会議で発言する人がいつも同じとき'], 'judge-e-1': ['データにない違和感を言葉にする','数字は正しいのに、何かしっくりこないとき'], 'judge-e-2': ['会議の空気と本音を読み取る','反対意見が出ないまま物事が決まるとき'], 'judge-e-3': ['考えすぎを止めて目の前に集中する','考えすぎて手が止まってしまうとき'], 'know-e-1': ['まずやってみて体で覚える','本を読んでばかりで行動に移せないとき'], 'know-e-2': ['姿勢と呼吸から集中を整える','デスクワークで集中が続かないとき'], 'know-e-3': ['五感を使ってアイデアを出す','アイデアがいつも似たものになるとき'], 'time-e-1': ['予定を詰め込まず今日を味わう','毎日予定に追われているとき'], 'time-e-2': ['変化を前向きに受け止める','異動や環境の変化が不安なとき'], 'time-e-3': ['季節に合わせて働き方に緩急をつける','一年中全力で走り続けて疲れたとき'], 'para-e-1': ['白黒つけずに落としどころを探す','意見が二つに割れたとき'], 'para-e-2': ['答えの出ない問いを考え続ける','すぐに正解が出ない課題に向き合うとき'], 'para-e-3': ['計画通りにいかない状況を楽しむ','予定外のことが起きると焦るとき'], 'see-w-1': ['問題を要素に分けて整理する','どこから手をつければいいかわからないとき'], 'see-w-2': ['仮説を立てて小さく試す','「たぶん大丈夫」で進めて失敗したとき'], 'see-w-3': ['伝えたいことを3つにまとめる','「話が長い」と言われるとき'], 'self-w-1': ['会議で自分の意見を最初に言う','言いたいことを飲み込んでしまうとき'], 'self-w-2': ['無理な頼まれごとを上手に断る','頼まれごとで手一杯になるとき'], 'self-w-3': ['周りに流されず自分で選ぶ','キャリアを周りに合わせて決めてきたとき'], 'judge-w-1': ['「本当に？」と前提を問い直す','前例や上司の言葉をそのまま受け入れがちなとき'], 'judge-w-2': ['主張と根拠をセットで話す','「なんでそう思うの？」と聞かれて詰まるとき'], 'judge-w-3': ['感覚ではなく数字で説明する','説得したいのに感覚の話になってしまうとき'], 'know-w-1': ['モヤモヤを言葉にして伝える','頭ではわかっているのに説明できないとき'], 'know-w-2': ['自分のノウハウを手順書にする','「あの人に聞かないとわからない」仕事があるとき'], 'know-w-3': ['わかりやすく人に教える','後輩に教えてもうまく伝わらないとき'], 'time-w-1': ['3年後の自分を具体的に描く','将来の方向がぼんやりしているとき'], 'time-w-2': ['ゴールから逆算して計画を立てる','締め切り直前にいつも慌てるとき'], 'time-w-3': ['決めたことを最後まで続ける','始めたことが三日坊主で終わるとき'], 'para-w-1': ['迷ったときに素早く決める','決められずに選択肢が増え続けるとき'], 'para-w-2': ['意見をぶつけ合って結論を出す','本音を言わないまま会議が終わるとき'], 'para-w-3': ['自分なりの判断基準を持つ','状況によって判断がぶれるとき']};
+THEMES.forEach(t=>{const c=CONCRETE[t.id];if(c){t.old=t.name;t.name=c[0];t.scene=c[1]}});
 const TH=id=>THEMES.find(t=>t.id===id);
 
 const LECS=[
@@ -640,6 +808,7 @@ const TOOLS=[
 {id:'big5',name:'ビッグファイブ（IPIP版）',cost:'無料',kind:'big5',hint:'各因子の高・中・低を選んでください',link:'https://bigfive-test.com/'},
 {id:'ennea',name:'エニアグラム',cost:'無料版あり',kind:'one',hint:'1〜9のタイプを選んでください'},
 {id:'riasec',name:'ホランド職業興味（RIASEC）',cost:'無料版あり',kind:'multi',opts:RIASEC,max:3,hint:'上位3つを選んでください'}];
+TOOLS.splice(0,TOOLS.length,...TOOLS.filter(t=>!t.link));
 const RANKS=[{n:'たね',min:0,perk:'はじめの一歩'},{n:'めぶき',min:500,perk:'イベントの優先席'},{n:'つぼみ',min:2000,perk:'限定装備と、師匠からのお礼メッセージ'},{n:'まんかい',min:6000,perk:'師匠を囲む少人数のお茶会に招待'}];
 const NAMES=['あおい','けんと','さや','りく','ゆい','はると','みお','そうた','ことね','だいき','ひなた','れん','つむぎ','ゆうま','かのん','しゅん','のぞみ','たくみ','あかね','こうき','まな','いつき','ちひろ','ゆずき','Mika','ともや','えみ','Taku','しおり','かずま','Yuna','ひろし','なつみ','Ren','みさき','こうた','さくら','Kei','ふうか','じゅん'];
 const AVC=['#3E5C8A','#C44F6D','#5E8F5A','#8A6A4F','#6B5B95','#B7800F','#2F7F7F'];
@@ -648,11 +817,11 @@ const AVC=['#3E5C8A','#C44F6D','#5E8F5A','#8A6A4F','#6B5B95','#B7800F','#2F7F7F'
 const T50=()=>Object.fromEntries(AX.map(a=>[a.id,50]));
 function initState(){return{v:1,persona:'me',role:'guest',viewAs:null,mode:'user',lec:'shiraishi',
 users:{
-sato:{look:0,chara:'boy',eq:{head:'hat_band',acc:'acc_glasses'},items:{hat_band:{via:'buy'},acc_glasses:{via:'buy'}},name:'佐藤 健',age:32,job:'総合商社・営業企画',answers:[6,3,6,3,6,3,5,3,6,2,5,3],toolOn:['mbti','clifton'],tools:{mbti:'ESTJ',clifton:['分析思考','目標志向','達成欲','戦略性','指令性']},exps:['logic','mba','run'],target:T50(),themes:['see-e-1','judge-e-3','time-e-1'],hist:[{d:'2026年4月',k:10},{d:'2026年7月',k:5}],rating:4.6,rc:8,sent:1200,bal:3000,plus:false,verified:true,friends:['ono','tanaka','suzuki']},
-ono:{look:2,chara:'girl',eq:{body:'body_haori',hand:'hand_fan',head:'pass_ev4'},items:{body_haori:{via:'buy'},hand_fan:{via:'buy'},pass_ev4:{via:'pass'}},name:'小野 まり',age:29,job:'UIデザイナー',answers:[3,7,4,6,2,6,2,7,3,6,3,6],toolOn:['via','p16'],tools:{via:['審美眼','創造性','好奇心','スピリチュアリティ','親切心'],p16:'INFP'},exps:['sado','yoga','museum','photo'],target:T50(),themes:['know-w-1','time-w-2','judge-w-1'],hist:[{d:'2026年5月',k:8}],rating:4.9,rc:17,sent:5600,bal:1800,plus:true,verified:true,friends:['sato','tanaka','yamada']},
-tanaka:{look:3,chara:'girl',name:'田中 ゆう',age:38,job:'メーカー人事',answers:[4,5,3,6,5,4,5,5,5,4,4,5],toolOn:['via','big5'],tools:{via:['チームワーク','公平さ','親切心','判断力','希望'],big5:{o:'mid',c:'high',e:'high',a:'high'}},exps:['pilates','journal','volunteer'],target:T50(),themes:['self-w-2','see-w-3','para-w-2'],hist:[{d:'2026年6月',k:6}],rating:4.3,rc:3,sent:300,bal:1200,plus:false,verified:false,friends:['sato','ono']},
-suzuki:{look:1,chara:'boy',name:'鈴木 陽向',age:21,job:'大学3年生（経済学部）',answers:[5,4,5,3,4,5,4,6,6,3,5,3],toolOn:['p16','riasec'],tools:{p16:'ENTP',riasec:['企業的（E）','芸術的（A）','研究的（I）']},exps:['oshikatsu','dance','startup','lang'],target:T50(),themes:['time-e-1','self-e-1','para-e-3'],hist:[],rating:4.5,rc:5,sent:900,bal:700,plus:false,verified:true,friends:['sato','ono']},
-yamada:{look:5,chara:'girl',eq:{head:'hat_kasa',acc:'acc_scarf'},items:{hat_kasa:{via:'buy'},acc_scarf:{via:'buy'}},name:'山田 和子',age:66,job:'元看護師長（シルバー世代）',answers:[3,6,2,6,3,5,2,6,4,6,2,6],toolOn:['ennea','big5'],tools:{ennea:2,big5:{o:'mid',c:'high',e:'mid',a:'high'}},exps:['kado','garden','temple','volunteer','care'],target:T50(),themes:['self-w-1','know-w-1','time-w-1'],hist:[{d:'2026年3月',k:9},{d:'2026年6月',k:4}],rating:4.8,rc:21,sent:8200,bal:2400,plus:true,verified:true,friends:['tanaka','ono']},
+sato:{look:0,chara:'tanuki',eq:{head:'hat_band',acc:'acc_glasses'},items:{hat_band:{via:'buy'},acc_glasses:{via:'buy'}},name:'佐藤 健',age:32,job:'総合商社・営業企画',answers:[6,3,6,3,6,3,5,3,6,2,5,3],toolOn:['mbti','clifton'],tools:{mbti:'ESTJ',clifton:['分析思考','目標志向','達成欲','戦略性','指令性']},exps:['logic','mba','run'],target:T50(),themes:['see-e-1','judge-e-3','time-e-1'],hist:[{d:'2026年4月',k:10},{d:'2026年7月',k:5}],rating:4.6,rc:8,sent:1200,bal:3000,plus:false,verified:true,friends:['ono','tanaka','suzuki']},
+ono:{look:2,chara:'fox',eq:{body:'body_haori',hand:'hand_fan',head:'pass_ev4'},items:{body_haori:{via:'buy'},hand_fan:{via:'buy'},pass_ev4:{via:'pass'}},name:'小野 まり',age:29,job:'UIデザイナー',answers:[3,7,4,6,2,6,2,7,3,6,3,6],toolOn:['via','p16'],tools:{via:['審美眼','創造性','好奇心','スピリチュアリティ','親切心'],p16:'INFP'},exps:['sado','yoga','museum','photo'],target:T50(),themes:['know-w-1','time-w-2','judge-w-1'],hist:[{d:'2026年5月',k:8}],rating:4.9,rc:17,sent:5600,bal:1800,plus:true,verified:true,friends:['sato','tanaka','yamada']},
+tanaka:{look:3,chara:'fox',name:'田中 ゆう',age:38,job:'メーカー人事',answers:[4,5,3,6,5,4,5,5,5,4,4,5],toolOn:['via','big5'],tools:{via:['チームワーク','公平さ','親切心','判断力','希望'],big5:{o:'mid',c:'high',e:'high',a:'high'}},exps:['pilates','journal','volunteer'],target:T50(),themes:['self-w-2','see-w-3','para-w-2'],hist:[{d:'2026年6月',k:6}],rating:4.3,rc:3,sent:300,bal:1200,plus:false,verified:false,friends:['sato','ono']},
+suzuki:{look:1,chara:'tanuki',name:'鈴木 陽向',age:21,job:'大学3年生（経済学部）',answers:[5,4,5,3,4,5,4,6,6,3,5,3],toolOn:['p16','riasec'],tools:{p16:'ENTP',riasec:['企業的（E）','芸術的（A）','研究的（I）']},exps:['oshikatsu','dance','startup','lang'],target:T50(),themes:['time-e-1','self-e-1','para-e-3'],hist:[],rating:4.5,rc:5,sent:900,bal:700,plus:false,verified:true,friends:['sato','ono']},
+yamada:{look:5,chara:'fox',eq:{head:'hat_kasa',acc:'acc_scarf'},items:{hat_kasa:{via:'buy'},acc_scarf:{via:'buy'}},name:'山田 和子',age:66,job:'元看護師長（シルバー世代）',answers:[3,6,2,6,3,5,2,6,4,6,2,6],toolOn:['ennea','big5'],tools:{ennea:2,big5:{o:'mid',c:'high',e:'mid',a:'high'}},exps:['kado','garden','temple','volunteer','care'],target:T50(),themes:['self-w-1','know-w-1','time-w-1'],hist:[{d:'2026年3月',k:9},{d:'2026年6月',k:4}],rating:4.8,rc:21,sent:8200,bal:2400,plus:true,verified:true,friends:['tanaka','ono']},
 me:{chara:'',name:'',age:null,job:'',answers:Array(12).fill(0),toolOn:[],tools:{},exps:[],target:T50(),themes:[],hist:[],rating:0,rc:0,sent:0,bal:0,plus:false,verified:false,friends:[]}},
 events:[
 {id:'ev1',theme:'see-e-1',lec:'shiraishi',title:'松林図屛風から「余白」を読む対話会',status:'voting',joined:6,min:5,max:10,fee:24000,deadline:'あと31時間',by:{sato:1,ono:1,tanaka:1},voted:{},
@@ -673,8 +842,8 @@ events:[
 {id:'ev15',theme:'para-e-1',lec:'fujii',title:'対立のあいだに立つ：中庸の対話術',status:'done',joined:7,min:5,max:10,fee:20000,date:'9月6日（日）13:00〜15:00',format:'対面',venue:'梅田のレンタルスペース',venueFee:9000,by:{tanaka:1},rated:{}}],
 interest:{'hayase|know-e-1':{n:4,by:{}}},posts:{},photos:{},lecYell:{},lecRatings:{},
 nav:{tab:'home',view:'home',p:{}},stack:[],ui:{show:{shu:true,ha:true,ri:true},pick:null,vote:{},rate:{},yellAmt:300,evSeg:'voting',comSeg:'timeline'},toast:'',modal:null}}
-const S_KEY='oshibana-mock-v7';
-const APP_VERSION='v20（アイテムアイコン）';
+const S_KEY='oshibana-mock-v8';
+const APP_VERSION='v26（推し／寄り道クエスト・カード表裏・PC対応）';
 let state=null;
 try{state=JSON.parse(localStorage.getItem(S_KEY))}catch(e){state=null}
 if(!state||state.v!==1)state=initState();
@@ -832,10 +1001,10 @@ function toast(msg){state.toast=msg;let el=document.querySelector('.toast');if(!
 /* ============ 共通パーツ ============ */
 function topbar(){const adm=state.role==='admin',viewing=adm&&state.viewAs;let right='';
  if(adm&&!viewing)right=`<span class="adm-badge">管理者</span><button class="mode" data-act="logout">ログアウト</button>`;
- else if(state.role==='user'||viewing)right=`<button data-act="go:mypage" style="border:0;background:none;padding:0" aria-label="マイページ">${avatar(me().name||'?',36,'u:'+state.persona)}</button>`;
+ else if(state.role==='user'||viewing)right=`<button class="icon" data-act="go:guide" aria-label="遊び方" style="font-size:16px;font-weight:800">?</button><button data-act="go:mypage" style="border:0;background:none;padding:0" aria-label="マイページ">${avatar(me().name||'?',36,'u:'+state.persona)}</button>`;
  return`${viewing?`<div class="viewas"><span>管理者として「${esc(me().name||'未登録')}」の画面を表示中</span><button data-act="endView">管理画面に戻る</button></div>`:''}<header class="top">${state.stack.length?'<button class="icon" data-act="back" aria-label="戻る">‹</button>':''}<div class="brand">${logo()}<span>すゝめ</span></div><div class="top-r">${right}</div></header>`}
 const ADMIN_VIEWS=['adm','admUsers','admUser','lec','admEvents','admData'];
-function tabbar(){if(state.role==='guest')return'';const adm=state.role==='admin'&&!state.viewAs;const items=adm?[['adm','概要'],['admUsers','ユーザー'],['lec','講師'],['admEvents','イベント'],['admData','データ']]:[['home','じぶん','自分を推す'],['shuhari','まなび','学びを推す'],['comm','なかま','仲間を推す'],['shisho','ししょう','師匠を推す'],['events','たび','コトを推す']];return`<nav class="tabs" aria-label="メインメニュー">${items.map(([k,l,n])=>`<button data-act="tab:${k}" ${state.nav.tab===k?'aria-current="page"':''}>${adm?`<svg viewBox="0 0 24 24">${TAB_ICON[k]}</svg>`:tabIcon(k)}${l}${n?`<small style="font-size:8.5px;font-family:'M PLUS Rounded 1c',sans-serif;opacity:.8;line-height:1">${n}</small>`:''}</button>`).join('')}</nav>`}
+function tabbar(){if(state.role==='guest'||(state.role==='user'&&!state.viewAs&&me().tut&&me().tut<4))return'';const adm=state.role==='admin'&&!state.viewAs;const items=adm?[['adm','概要'],['admUsers','ユーザー'],['lec','講師'],['admEvents','イベント'],['admData','データ']]:[['home','じぶん','自分を推す'],['shuhari','まなび','学びを推す'],['comm','なかま','仲間を推す'],['shisho','ししょう','師匠を推す'],['events','たび','コトを推す']];return`<nav class="tabs" aria-label="メインメニュー">${items.map(([k,l,n])=>`<button data-act="tab:${k}" ${state.nav.tab===k?'aria-current="page"':''}>${adm?`<svg viewBox="0 0 24 24">${TAB_ICON[k]}</svg>`:tabIcon(k)}${l}${n?`<small style="font-size:8.5px;font-family:'M PLUS Rounded 1c',sans-serif;opacity:.8;line-height:1">${n}</small>`:''}</button>`).join('')}</nav>`}
 function lecRow(l,themeId){const u=me();return`<button class="list-item" data-act="go:circle:${l.id}:${themeId}">${avatar(l.name,44,'l:'+l.id)}<div class="grow"><div class="row between"><b>${esc(l.name)}</b>${themeId?`<span class="tag ha">マッチ度 ${matchLabel(u,l,themeId)}</span>`:''}</div><div class="muted ellipsis">${CAT_ICON[l.cat]} ${l.cat}｜${esc(l.title)}</div><div class="small muted">★${l.rating}（${l.count}回）・${esc(l.format)}・${esc(l.area)}</div></div></button>`}
 const TODAY=new Date(2026,8,27);
 const AXCOL={see:'#3D5AFE',self:'#FF3D7F',judge:'#F59E0B',know:'#0DAA7B',time:'#8B5CF6',para:'#0EA5E9'};
@@ -881,11 +1050,17 @@ const REPORT_PRICE=490;
 const hasReport=u=>true;
 function lockWrap(inner,label){return`<div class="lockwrap"><div class="locked" aria-hidden="true">${inner}</div><div class="lockover"><span>🔒 ${label}</span><button class="btn sm ha" data-act="go:report">詳細レポートで見る（${REPORT_PRICE}円）</button></div></div>`}
 function matchLabel(u,l,tid){const m=match(u,l,tid);if(hasReport(u))return m+'%';const best=LECS.filter(x=>x.themes.includes(tid)).sort((a,b)=>match(u,b,tid)-match(u,a,tid))[0];return best&&best.id===l.id?m+'%':'🔒'}
+function matchWhy(u,l,tid){const t=TH(tid),a=AXM[t.ax],v=l.s[t.ax],side=t.dir==='e'?v:100-v,sideN=t.dir==='e'?a.e:a.w;const r=[];
+ if(l.themes.includes(tid))r.push(['📘',`「${t.name}」をテーマに会を開いている師匠です`]);
+ r.push(['🧭',`「${a.name}」の軸で${sideN}寄り（${side}/100）。あなたが${routeOf(u,tid)==='t'?'これから身につけたい':'磨きたい'}考え方を、ふだんから使っている人です`]);
+ r.push(['⭐',`これまで${l.count}回開催し、参加者の平均評価は★${l.rating}`]);
+ r.push(['📍',`${l.area}で開催・講師料の目安 ${yen(l.fee)}（参加者で割り勘）`]);return r}
+function whyHtml(u,l,tid){return`<ul class="kv" style="margin-top:6px">${matchWhy(u,l,tid).map(([i,x])=>`<li style="font-size:13px">${i} ${esc(x)}</li>`).join('')}</ul><p class="small muted" style="margin-top:6px">マッチ度は「テーマの一致」「師匠の考え方のタイプ」「これまでの評価」から出した目安です。数字にとらわれず、話してみたいと思える人を選んでください。</p>`}
 function greet(){const h=new Date().getHours();return h<11?'おはよう':h<18?'こんにちは':'こんばんは'}
 function nextAction(u){const td=todos();if(td.length){const x=td[0];const k={'🗳':'日程投票','💳':'事前決済','⭐':'講師の評価'}[x.ic];return{t:`「${esc(x.e.title)}」の${k}がまだだよ。`,cta:[x.t,x.act]}}
  if(!u.themes.length)return{t:'伸ばしたい方向から、推しテーマを選んでみよう。',cta:['推しテーマを選ぶ','go:pick']};
  const mis=u.mis||{},th=TH(u.themes[0]);
- if(!mis.post)return{t:`今週のお題は「${esc(th.name)}」を感じた瞬間。ひとことでいいから投稿してみない？`,cta:['投稿しにいく',`comGo:${th.id}:timeline`]};
+ if(!mis.post)return{t:`今週のお題は「${esc(th.name)}」を試せた場面。ひとことでいいから投稿してみない？`,cta:['投稿しにいく',`comGo:${th.id}:timeline`]};
  if(!mis.circle)return{t:'推しサークルをのぞいてみよう。あと少しで開催が決まる会があるかも。',cta:['サークルを見る',`comGo:${th.id}:circle`]};
  if(!hasReport(u)&&!mis.report)return{t:`伸ばしどころは、あと2つあるんだ。詳細レポートで全部見てみる？（${REPORT_PRICE}円）`,cta:['中身を見てみる','go:report'],mood:'think'};
  return{t:'今日もいい学びだったね。仲間にエールを送ってみる？',cta:['仲間を見る',`comGo:${th.id}:nakama`],mood:'happy'}}
@@ -894,11 +1069,11 @@ function confMeter(r){return`<div class="row between small"><span>診断の確�
 /* ============ 画面：ユーザー ============ */
 const V={};
 V.welcome=()=>`<section class="hero">${owl(118,'happy','bob')}<div class="bubble center">はじめまして、わしはフク老。<br>あなたの考え方の「型」を一緒に見つけるよ。</div><h1>自分の「型」を知って、<br>推し仲間と学び直そう</h1><p class="muted">3分の診断で、あなたの考え方のクセを花のチャートに。伸ばしたい方向の講師と、同じ目標の仲間が見つかります。</p></section>
-<div class="sheet"><ol class="steps"><li><div><b>診断する</b><p class="muted small">12問のクイック診断で「いまの私」を描きます。</p></div></li><li><div><b>推しテーマを選ぶ</b><p class="muted small">伸ばしたい方向から、学びたいテーマを選びます。</p></div></li><li><div><b>仲間と集まる</b><p class="muted small">5人集まれば、日時や場所を投票で決めて開催します。</p></div></li></ol></div>
+<div class="sheet"><ol class="steps"><li><div><b>診断する</b><p class="muted small">6問のクイック診断で「いまの私」を描きます。</p></div></li><li><div><b>推しテーマを選ぶ</b><p class="muted small">伸ばしたい方向から、学びたいテーマを選びます。</p></div></li><li><div><b>仲間と集まる</b><p class="muted small">5人集まれば、日時や場所を投票で決めて開催します。</p></div></li></ol></div>
 <div class="pad"><button class="btn ha full big" data-act="go:register">無料で新規登録</button><p class="muted small" style="text-align:center;margin-top:10px">18歳以上が対象・登録と診断で約5分</p><p style="text-align:center;margin-top:28px"><button class="chip" data-act="go:adminLogin">管理者の方はこちら</button></p><p class="small muted" style="text-align:center;margin-top:14px">バージョン ${APP_VERSION}</p></div>`;
 V.register=()=>`<h1>新規登録</h1><p class="lead">登録は無料です。あとからマイページで変更できます。</p><div class="sheet pop form-card"><label class="f" for="rg-n" style="margin-top:0">ニックネーム（必須）</label><input type="text" id="rg-n" data-id="rg-n" maxlength="20" placeholder="例：はなこ" autocomplete="nickname"><label class="f" for="rg-a">年齢（必須）</label><input type="number" id="rg-a" data-id="rg-a" min="18" max="99" placeholder="例：32" inputmode="numeric"><label class="f" for="rg-j">お仕事・立場（任意）</label><input type="text" id="rg-j" data-id="rg-j" maxlength="30" placeholder="例：メーカー勤務、大学生、フリーランス"><label class="check"><input type="checkbox" data-id="rg-ok">18歳以上であり、利用規約とプライバシーポリシーに同意します</label></div><div class="pad"><button class="btn ha full big" data-act="register">登録して診断に進む</button><p class="small muted" style="text-align:center;margin-top:10px">本番ではメールアドレスまたはSNSアカウントでログインします</p></div>`;
 V.adminLogin=()=>`<h1>管理者ログイン</h1><p class="lead">ダミーデータの閲覧・出力と、講師の画面の確認ができます。</p><div class="sheet pop"><label class="f" for="ad-p" style="margin-top:0">パスコード</label><input type="text" id="ad-p" data-id="ad-p" autocomplete="off" placeholder="パスコードを入力"><p class="small muted" style="margin-top:8px">モック用のパスコードは <b>admin</b> です。この画面の制限はブラウザ内だけの簡易的なもので、本番ではサーバー側の権限管理に置き換えます。</p></div><div class="pad"><button class="btn full" data-act="adminLogin">ログイン</button></div>`;
-V.needDiag=()=>`<div style="height:10px"></div>${owlSay('12問のクイック診断で、いまの私と伸ばす方向がわかるよ。3分くらいで終わるから、気軽にどうぞ。',{title:`${esc(me().name||'ようこそ')}さん、まずは診断から`,cta:['診断をはじめる','go:diag']})}`;
+V.needDiag=()=>`<div style="height:10px"></div>${owlSay('6問のクイック診断で、いまの私と伸ばす方向がわかるよ。3分くらいで終わるから、気軽にどうぞ。',{title:`${esc(me().name||'ようこそ')}さん、まずは診断から`,cta:['診断をはじめる','go:diag']})}`;
 V.home=()=>{const u=me(),r=compute(u);if(!r)return V.needDiag();const pid=state.persona,k=classOf(u,r),L=levelOf(expOf(pid)),na=nextAction(u),rc=reach(u,r.s);const nx=myEvents().filter(e=>e.status!=='done').map(e=>({e,dt:evDate(e)})).filter(x=>x.dt&&x.dt.days>=0).sort((a,b)=>a.dt.ts-b.dt.ts)[0];
  return`<div class="lvbar"><span class="lv">Lv.${L.lv}</span><div class="grow"><div class="meter yell"><span style="width:${Math.round(L.cur/L.need*100)}%"></span></div><span class="small muted" style="font-weight:700">次のレベルまで ${L.need-L.cur} EXP</span></div></div>
  <div class="stage"><div class="nameplate"><b class="pxf">${esc(u.name)}</b><span>${esc(k.cur.n)}・${esc(titleOf(u))}</span></div>${avatarPx(u.eq,k.curKey,120,u.name)}<button class="btn sm chg" data-act="go:equip">👕 着替える</button></div>
@@ -909,14 +1084,19 @@ V.diag=()=>{const u=me(),r=compute(u);const qd=u.answers.every(v=>v),nt=(u.toolO
  const card=(act,title,desc,done,req)=>`<button class="list-item" data-act="go:${act}"><div class="grow"><div class="row" style="gap:6px"><b>${title}</b>${req?'<span class="tag ha">必須</span>':'<span class="tag">任意</span>'}</div><div class="small muted">${desc}</div></div><span class="tag ${done?'ri':''}">${done?'入力済み':'未入力'}</span></button>`;
  return`<h1>診断する</h1>${owlSay('まずはクイック診断だけでOK。診断ツールの結果や体験も入れると、ぼくの見立てがもっと正確になるよ。',{size:52,mood:'think'})}
  <div class="sheet">${r?confMeter(r):confMeter({conf:0})}</div>
- <div class="sheet">${card('dq','クイック診断','12問・約3分。直感でタップするだけ',qd,true)}${card('dtools','自己分析ツールの結果',nt?`${nt}件入力済み`:'VIA、16Personalities、ストレングスなど',nt>0,false)}${card('dbooks','体験・習慣',nb?`${nb}件選択済み`:'最近の体験やハマっていること',nb>0,false)}</div>
+ <div class="sheet">${card('dq','クイック診断','6問・約2分。AとBのどちらに近いかを選ぶだけ',qd,true)}${card('dtools','自己分析ツールの結果',nt?`${nt}件入力済み`:'受けたことのある診断があれば（MBTI・ストレングスなど）',nt>0,false)}${card('dbooks','体験・習慣',nb?`${nb}件選択済み`:'最近の体験やハマっていること',nb>0,false)}</div>
  <div class="pad"><button class="btn ha full" data-act="analyze" ${r?'':'disabled'}>結果を見る</button>${r?'':'<p class="small muted" style="text-align:center;margin-top:8px">まずは独自簡易診断から始めてください</p>'}</div>`};
-V.dq=()=>{const u=me();const anim=state.ui.qAnim;state.ui.qAnim=false;const i=clamp(state.ui.qi||0,0,11),q=Q[i];const n=u.answers.filter(v=>v).length;const labels=['全くそう思わない','そう思わない','あまりそう思わない','どちらでもない','ややそう思う','そう思う','とてもそう思う'];
- return`<h1>クイック診断</h1><p class="lead">直感でタップしてください。正解はありません。</p><div class="qdots">${Q.map((_,k)=>`<button class="${k===i?'cur':''} ${u.answers[k]?'done':''}" data-act="qNav:${k}" aria-label="質問${k+1}へ"></button>`).join('')}</div>
- <div class="sheet pop qcard ${anim?'slidein':''}"><div class="row" style="justify-content:center;gap:8px">${owl(42,'think')}<span class="tag">Q${i+1}／12・${AXM[q.ax].name}</span></div><p class="qtext">${esc(q.t)}</p><div class="scale" role="radiogroup" aria-label="${esc(q.t)}">${[1,2,3,4,5,6,7].map(v=>{const sz=[44,38,33,28,33,38,44][v-1];const side=v<4?'l':v>4?'r':'';return`<button role="radio" aria-checked="${u.answers[i]===v}" aria-label="${labels[v-1]}" class="${side} ${u.answers[i]===v?'on':''} ${u.answers[i]===v&&state.ui.qPop===i?'popnow':''}" style="width:${sz}px;height:${sz}px" data-act="ans:${i}:${v}">${u.answers[i]===v?'✓':''}</button>`}).join('')}</div><div class="scale-ends"><span>そう思わない</span><span>そう思う</span></div><div class="anslabel ${u.answers[i]?'set':''} ${state.ui.qPop===i?'pop':''}">${u.answers[i]?'「'+labels[u.answers[i]-1]+'」を選びました':'あてはまる丸をタップ'}</div></div>
- <div class="pad row between"><button class="btn ghost sm" data-act="qNav:${i-1}" ${i===0?'disabled':''}>前へ</button><span class="small muted" style="font-weight:700">${n}/12 回答済み</span>${n===12?'<button class="btn sm ha" data-act="back">完了</button>':`<button class="btn ghost sm" data-act="qNav:${i+1}" ${i===11?'disabled':''}>次へ</button>`}</div>`};
+V.dq=()=>{const u=me();const anim=state.ui.qAnim;state.ui.qAnim=false;const PR=qPairs();const i=clamp(state.ui.qi||0,0,PR.length-1),q=PR[i];const done=k=>u.answers[PR[k].ie]&&u.answers[PR[k].iw];const n=PR.filter((_,k)=>done(k)).length;const v=done(i)?u.answers[q.ie]:0;
+ const labels=['Aにとても近い','Aに近い','ややA','どちらとも言えない','ややB','Bに近い','Bにとても近い'];
+ return`${u.tut?tutBar(1):''}<h1>クイック診断</h1><p class="lead">AとB、ふだんの自分に近いほうをタップ。正解はありません。</p><div class="qdots">${PR.map((_,k)=>`<button class="${k===i?'cur':''} ${done(k)?'done':''}" data-act="qNav:${k}" aria-label="質問${k+1}へ"></button>`).join('')}</div>
+ <div class="sheet pop qcard ${anim?'slidein':''}"><div class="row" style="justify-content:center;gap:8px">${owl(42,'think')}<span class="tag">Q${i+1}／${PR.length}</span></div>
+ <div class="abq"><div class="ab a ${v&&v<4?'on':''}"><b>A</b>${esc(q.w.t)}</div><div class="ab b ${v>4?'on':''}"><b>B</b>${esc(q.e.t)}</div></div>
+ <div class="scale" role="radiogroup" aria-label="AとBのどちらに近いか">${[1,2,3,4,5,6,7].map(x=>{const sz=[44,38,33,28,33,38,44][x-1];const side=x<4?'l':x>4?'r':'';return`<button role="radio" aria-checked="${v===x}" aria-label="${labels[x-1]}" class="${side} ${v===x?'on':''} ${v===x&&state.ui.qPop===i?'popnow':''}" style="width:${sz}px;height:${sz}px" data-act="ans2:${i}:${x}">${v===x?'✓':''}</button>`}).join('')}</div><div class="scale-ends"><span>◀ Aに近い</span><span>Bに近い ▶</span></div>
+ <div class="anslabel ${v?'set':''} ${state.ui.qPop===i?'pop':''}">${v?'「'+labels[v-1]+'」を選びました':'近いほうのマスをタップ'}</div></div>
+ <div class="pad row between"><button class="btn ghost sm" data-act="qNav:${i-1}" ${i===0?'disabled':''}>前へ</button><span class="small muted" style="font-weight:700">${n}/${PR.length} 回答済み</span>${n===PR.length?(u.tut?'<button class="btn sm ha" data-act="analyze">結果を見る</button>':'<button class="btn sm ha" data-act="back">完了</button>'):`<button class="btn ghost sm" data-act="qNav:${i+1}" ${i===PR.length-1?'disabled':''}>次へ</button>`}</div>`};
+function qPairs(){return AX.map(a=>{const iw=Q.findIndex(q=>q.ax===a.id&&q.dir==='w'),ie=Q.findIndex(q=>q.ax===a.id&&q.dir==='e');return{ax:a,iw,ie,w:Q[iw],e:Q[ie]}})}
 V.dtools=()=>{const u=me();const on=u.toolOn||[];return`<h1>自己分析ツールの結果</h1><p class="lead">受けたことのあるツールを選び、結果を入力してください。</p>
- <div class="sheet"><h3>受けたことがない方へ</h3><p class="small muted">無料で受けられる次の診断がおすすめです。結果が出たら、ここに戻って入力してください。</p><div class="chips"><a class="chip" href="https://www.viacharacter.org/" target="_blank" rel="noopener">VIA-IS（強み・無料）</a><a class="chip" href="https://www.16personalities.com/ja" target="_blank" rel="noopener">16Personalities（無料）</a><a class="chip" href="https://bigfive-test.com/" target="_blank" rel="noopener">ビッグファイブ（無料）</a></div></div>
+ 
  <div class="sheet"><h3>ツールを選ぶ</h3><div class="chips">${TOOLS.map(t=>`<button class="chip ${on.includes(t.id)?'on':''}" data-act="toolOn:${t.id}">${esc(t.name)}<span class="small">（${t.cost}）</span></button>`).join('')}</div></div>
  ${TOOLS.filter(t=>on.includes(t.id)).map(t=>`<div class="sheet"><h3>${esc(t.name)}</h3><p class="small muted">${esc(t.hint)}</p>${toolForm(u,t)}</div>`).join('')}
  <div class="pad"><button class="btn full" data-act="back">保存して戻る</button></div>`};
@@ -964,7 +1144,7 @@ V.theme=p=>{const t=TH(p.id),u=me(),a=AXM[t.ax];const mine=u.themes.includes(t.i
  return`<p class="lead" style="margin-top:16px">${a.name}・${t.dir==='e'?a.e:a.w}側へ伸ばすテーマ</p><h1 style="margin-top:0">${esc(t.name)}</h1>
  <div class="pair"><div class="sheet card-shu"><h3>手放すこと</h3><p class="small">${esc(t.un)}</p></div><div class="sheet card-ha"><h3>身につけること</h3><p class="small">${esc(t.re)}</p></div></div>
  <h2>4つのレンズ</h2><div class="mandala"><div class="qd q1"><b>西洋知</b>${esc(t.W)}</div><div class="qd q2"><b>東洋知</b>${esc(t.E)}</div><div class="qd q3"><b>人文知</b>${esc(t.H)}</div><div class="qd q4"><b>日本の知・美</b>${esc(t.J)}</div><div class="core">${esc(t.name)}</div></div>
- <div class="sheet"><h3>おすすめの体験</h3><p class="small">${esc(t.ex)}</p></div>
+ <div class="sheet"><h3>こんなときに効く</h3><p>${esc(t.scene||'')}</p><p class="small muted" style="margin:0">学びのキーワード：${esc(t.old||'')}</p></div><div class="sheet"><h3>おすすめの体験</h3><p class="small">${esc(t.ex)}</p></div>
  <h2>推し講師</h2><div class="sheet">${lecs.length?lecs.map(l=>lecRow(l,t.id)).join(''):'<p class="small muted">このテーマの講師を募集中です。講師として登録すると、最初の推し講師になれます。</p>'}</div>
  <div class="sheet row between"><div><b>${memberCount(t.id)}人</b><div class="small muted">がこのテーマを推しています</div></div><button class="btn ghost sm" data-act="go:community:${t.id}">推しコミュを見る</button></div>
  <div class="pad"><button class="btn ${mine?'ghost':'ha'} full" data-act="toggleTheme:${t.id}">${mine?'推しテーマから外す':'推しテーマに追加する'}</button></div>`};
@@ -977,7 +1157,7 @@ V.explore=()=>{const u=me(),r=compute(u);const rec=r?candidates(u,r.s).filter(t=
  <h2>すべてのテーマ</h2>${AX.map(a=>`<div class="sheet"><b style="color:${AXCOL[a.id]}">${a.name}</b><div class="small muted" style="margin:6px 0 4px">${a.e}側へ</div><div class="chips">${THEMES.filter(t=>t.ax===a.id&&t.dir==='e').map(t=>`<button class="chip ${u.themes.includes(t.id)?'on':''}" data-act="go:theme:${t.id}">${esc(t.name)}</button>`).join('')}</div><div class="small muted" style="margin:10px 0 4px">${a.w}側へ</div><div class="chips">${THEMES.filter(t=>t.ax===a.id&&t.dir==='w').map(t=>`<button class="chip ${u.themes.includes(t.id)?'on':''}" data-act="go:theme:${t.id}">${esc(t.name)}</button>`).join('')}</div></div>`).join('')}`};
 function communityBody(id){const t=TH(id),a=AXM[t.ax],u=me(),r=compute(u);const seg=state.ui.comSeg||'timeline';const lecs=LECS.filter(l=>l.themes.includes(id));let body='';
  if(seg==='timeline'){const posts=[...(state.posts[id]||[]),...genPosts(t)];
-  body=owlSay(`今週のお題は「${esc(t.name)}」を感じた瞬間。写真かひとことで教えてね。`,{size:50,cta:state.ui.compose?null:['＋ 投稿する','compose']})+(state.ui.compose?`<div class="sheet pop"><textarea placeholder="気づきや学びを共有する" data-id="post" aria-label="投稿内容"></textarea><div class="row between" style="margin-top:10px"><button class="btn ghost sm" data-act="compose">やめる</button><span class="small muted">投稿でエール10pt</span><button class="btn sm ha" data-act="post:${id}">投稿する</button></div></div>`:'')+`<div class="sheet">${posts.map(x=>`<div class="post"><div class="row">${avatar(x.name,32,x.key)}<b>${esc(x.name)}</b><span class="small muted">${esc(x.time)}</span></div><p style="margin:6px 0 4px">${esc(x.text)}</p><div class="small" style="color:var(--yell);font-weight:700">📣 ${x.yell||0}</div></div>`).join('')}</div>`}
+  body=owlSay(`今週のお題は「${esc(t.name)}」を試せた場面を、ひとことで教えてね。`,{size:50,cta:state.ui.compose?null:['＋ 投稿する','compose']})+(state.ui.compose?`<div class="sheet pop"><textarea placeholder="気づきや学びを共有する" data-id="post" aria-label="投稿内容"></textarea><div class="row between" style="margin-top:10px"><button class="btn ghost sm" data-act="compose">やめる</button><span class="small muted">投稿でエール10pt</span><button class="btn sm ha" data-act="post:${id}">投稿する</button></div></div>`:'')+`<div class="sheet">${posts.map(x=>`<div class="post"><div class="row">${avatar(x.name,32,x.key)}<b>${esc(x.name)}</b><span class="small muted">${esc(x.time)}</span></div><p style="margin:6px 0 4px">${esc(x.text)}</p><div class="small" style="color:var(--yell);font-weight:700">📣 ${x.yell||0}</div></div>`).join('')}</div>`}
  if(seg==='nakama'){const ms=members(id);const withD=r?ms.map(m=>({...m,d:Math.sqrt(AX.reduce((x,b)=>x+(m.s[b.id]-r.s[b.id])**2,0)/6)})).sort((p,q)=>p.d-q.d):ms.map(m=>({...m,d:0}));
   const row=m=>`<div class="list-item">${flower(m.s,{labels:false,size:40})}<div class="grow"><b>${esc(m.name)}</b><div class="small muted">タイプの近さ ${Math.max(5,Math.round(100-m.d*1.4))}%</div></div><button class="btn ghost sm" data-act="go:yell:peer:${m.name}">📣 エール</button></div>`;
   body=`<h2 style="font-size:16px">同志：タイプが近い仲間</h2><div class="sheet">${withD.slice(0,4).map(row).join('')}</div><h2 style="font-size:16px">補い合う仲間：タイプが違う仲間</h2><div class="sheet">${withD.slice(-4).reverse().map(row).join('')}</div><div class="pad"><button class="btn ghost full" data-act="invite">友達をこのテーマに招待する</button></div>`}
@@ -1001,7 +1181,7 @@ function genPosts(t){const m=members(t.id);const ls=LECS.filter(x=>x.themes.incl
  return idx.map((k,i)=>({name:m[i].name,text:pool[k],time:times[i],yell:Math.floor(r()*40)}))}
 V.community=p=>{const t=TH(p.id),u=me(),r=compute(u);const seg=state.ui.comSeg;const lecs=LECS.filter(l=>l.themes.includes(t.id));
  let body='';
- if(seg==='timeline'){const posts=[...(state.posts[t.id]||[]),...genPosts(t)];body=`<div class="odai"><span class="small">今週のお題</span><b>「${esc(t.name)}」を感じた瞬間を、写真か一言で</b></div><div class="sheet"><textarea placeholder="気づきや学びを共有する" data-id="post" aria-label="投稿内容"></textarea><div class="row between" style="margin-top:8px"><span class="small muted">投稿するとエール10ptがもらえます</span><button class="btn sm" data-act="post:${t.id}">投稿する</button></div></div><div class="sheet">${posts.map(x=>`<div class="post"><div class="row">${avatar(x.name,32,x.key)}<b>${esc(x.name)}</b><span class="small muted">${esc(x.time)}</span></div><p style="margin:6px 0 4px">${esc(x.text)}</p><div class="small" style="color:var(--yell)">エール ${x.yell||0}</div></div>`).join('')}</div>`}
+ if(seg==='timeline'){const posts=[...(state.posts[t.id]||[]),...genPosts(t)];body=`<div class="odai"><span class="small">今週のお題</span><b>「${esc(t.name)}」を試せた場面を、ひとことで</b></div><div class="sheet"><textarea placeholder="気づきや学びを共有する" data-id="post" aria-label="投稿内容"></textarea><div class="row between" style="margin-top:8px"><span class="small muted">投稿するとエール10ptがもらえます</span><button class="btn sm" data-act="post:${t.id}">投稿する</button></div></div><div class="sheet">${posts.map(x=>`<div class="post"><div class="row">${avatar(x.name,32,x.key)}<b>${esc(x.name)}</b><span class="small muted">${esc(x.time)}</span></div><p style="margin:6px 0 4px">${esc(x.text)}</p><div class="small" style="color:var(--yell)">エール ${x.yell||0}</div></div>`).join('')}</div>`}
  if(seg==='nakama'){const ms=members(t.id);const withD=r?ms.map(m=>({...m,d:Math.sqrt(AX.reduce((x,a)=>x+(m.s[a.id]-r.s[a.id])**2,0)/6)})).sort((a,b)=>a.d-b.d):ms.map(m=>({...m,d:0}));
   const row=m=>`<div class="list-item">${flower(m.s,{labels:false,size:40})}<div class="grow"><b>${esc(m.name)}</b><div class="small muted">型の近さ ${Math.max(5,Math.round(100-m.d*1.4))}%</div></div><button class="btn ghost sm" data-act="go:yell:peer:${m.name}">エール</button></div>`;
   body=`<h2 style="font-size:16px">同志：タイプが近い仲間</h2><p class="lead">同じ場所から、同じ方向を目指しています。</p><div class="sheet">${withD.slice(0,5).map(row).join('')}</div><h2 style="font-size:16px">補い合う仲間：タイプが違う仲間</h2><p class="lead">あなたの伸ばしどころを、すでに持っているかもしれません。</p><div class="sheet">${withD.slice(-5).reverse().map(row).join('')}</div><div class="pad"><button class="btn ghost full" data-act="invite">友達をこのテーマに招待する</button></div>`}
@@ -1010,7 +1190,7 @@ V.community=p=>{const t=TH(p.id),u=me(),r=compute(u);const seg=state.ui.comSeg;c
 
 V.circle=p=>{const l=LEC(p.lec),t=TH(p.theme),u=me(),r=compute(u);const key=l.id+'|'+t.id,it=interest(key);const done=it.by[state.persona];const evc=state.events.find(e=>e.circle===key);const props=state.events.filter(e=>e.lec===l.id&&e.status==='proposed');const st=stageOf(lecYell(l));
  return`<div class="sheet" style="margin-top:16px"><div class="row">${avatar(l.name,64,'l:'+l.id)}<div class="grow"><h1 style="margin:0;font-size:22px">${esc(l.name)}</h1><div class="small muted">${CAT_ICON[l.cat]} ${l.cat}｜${esc(l.title)}・${l.age}歳</div><div class="small">★${l.rating}（${l.count}回開催）<span class="tag ri">本人確認済み</span></div></div></div><p style="margin-top:10px">${esc(l.bio)}</p><div class="chips">${l.themes.map(id=>`<button class="chip ${id===t.id?'on':''}" data-act="go:theme:${id}">${esc(TH(id).name)}</button>`).join('')}</div><hr><div class="small muted">講師料の目安 ${yen(l.fee)}／回（参加者で割り勘）・${esc(l.format)}・${esc(l.area)}</div></div>
- <div class="sheet"><div class="row between"><h3>あなたとの相性</h3><span class="tag ha">マッチ度 ${matchLabel(u,l,t.id)}</span></div><div class="row" style="justify-content:space-around">${r?`<figure style="margin:0;text-align:center">${flower(r.s,{labels:false,size:110})}<figcaption class="small muted">あなたのタイプ</figcaption></figure>`:''}<figure style="margin:0;text-align:center">${flower(l.s,{labels:false,size:110})}<figcaption class="small muted">講師のタイプ</figcaption></figure></div><p class="small muted">講師の型が、あなたの「${esc(t.name)}」の方向にあるほどマッチ度が上がります。</p></div>
+ <div class="sheet"><div class="row between"><h3>あなたとの相性</h3><span class="tag ha">マッチ度 ${matchLabel(u,l,t.id)}</span></div><div class="row" style="justify-content:space-around">${r?`<figure style="margin:0;text-align:center">${flower(r.s,{labels:false,size:110})}<figcaption class="small muted">あなたのタイプ</figcaption></figure>`:''}<figure style="margin:0;text-align:center">${flower(l.s,{labels:false,size:110})}<figcaption class="small muted">講師のタイプ</figcaption></figure></div><b class="small" style="display:block;margin-top:8px">マッチ度の理由</b>${whyHtml(u,l,t.id)}</div>
  <div class="sheet"><h3>${esc(l.name)}×${esc(t.name)} サークル</h3><p class="small muted">参加表明が5人集まると、日時・形式・場所の投票が始まります。</p><div class="dots">${[0,1,2,3,4].map(i=>`<i class="${i<Math.min(5,it.n)?'on':''}"></i>`).join('')}</div><p class="small"><b>${Math.min(it.n,5)}/5人</b>${it.n<5?`・あと${5-it.n}人で投票開始`:'・投票が始まりました'}</p>${evc?`<button class="btn ha full" data-act="go:vote:${evc.id}">投票に進む</button>`:`<button class="btn ha full" data-act="interest:${key}" ${done?'disabled':''}>${done?'参加表明済み':'このサークルに参加表明する'}</button>`}</div>
  ${props.length?`<h2>講師からの提案</h2><div class="sheet">${props.map(eventCard).join('')}</div>`:''}
  <div class="pad"><button class="btn ${(me().oshi||[]).includes(l.id)?'ghost':'ha'} full" data-act="oshi:${l.id}">${(me().oshi||[]).includes(l.id)?'★ 推し師匠（解除する）':'☆ 推し師匠にする'}</button></div><div class="sheet row">${stageIcon(st,44)}<div class="grow"><b>受け取ったエール ${lecYell(l).toLocaleString()}pt</b><div class="small muted">講師の花：${RANKS[st].n}</div></div><button class="btn sm" data-act="go:yell:lec:${l.id}">エールを送る</button></div>`};
@@ -1129,8 +1309,8 @@ V.lec=()=>{const l=LEC(state.lec);const rate=lecRate(l),st=stageOf(lecYell(l));c
 
 /* ============ v14：5つの推し・RPG ============ */
 function logo(){return owl(26,'normal')}
-const LOOKS={boy:[{h:'#3B2A20',s:'#F6C9A0',t:'short',n:'さわやか'},{h:'#1F2937',s:'#E8B48A',t:'spiky',n:'つんつん'},{h:'#A16207',s:'#F6C9A0',t:'bowl',n:'まっしゅ'},{h:'#7C2D12',s:'#D99A6C',t:'side',n:'わけめ'},{h:'#1F2937',s:'#FBD7B5',t:'bowl',n:'おかっぱ'},{h:'#9CA3AF',s:'#F6C9A0',t:'spiky',n:'ぎんいろ'},{h:'#2563EB',s:'#E8B48A',t:'short',n:'あおがみ'},{h:'#B45309',s:'#B97A50',t:'side',n:'こむぎ'}],
-girl:[{h:'#3B2A20',s:'#F6C9A0',t:'long',n:'ろんぐ',r:'#FF3D7F'},{h:'#1F2937',s:'#FBD7B5',t:'twin',n:'ついん',r:'#FF3D7F'},{h:'#A16207',s:'#F6C9A0',t:'bob',n:'ぼぶ',r:'#0DAA7B'},{h:'#7C2D12',s:'#D99A6C',t:'pony',n:'ぽにー',r:'#F59E0B'},{h:'#EC4899',s:'#F6C9A0',t:'twin',n:'ももいろ',r:'#3D5AFE'},{h:'#F5D06F',s:'#FBD7B5',t:'long',n:'きんいろ',r:'#3D5AFE'},{h:'#1F2937',s:'#B97A50',t:'bob',n:'くろぼぶ',r:'#FF3D7F'},{h:'#8B5CF6',s:'#E8B48A',t:'pony',n:'むらさき',r:'#FBBF24'}]};
+const LOOKS={tanuki:[{n:'ちゃいろ',f:'#A8743F',d:'#4A3020',l:'#F3E3C3',e:'round'},{n:'こげちゃ',f:'#7A5230',d:'#2E1E14',l:'#E8D2AE',e:'sleepy'},{n:'はいいろ',f:'#9A938A',d:'#3D3833',l:'#EDE8E0',e:'round'},{n:'ゆきだぬき',f:'#E8E2D6',d:'#8A8075',l:'#FFFFFF',e:'smile'},{n:'あかちゃ',f:'#B86A3C',d:'#4A2A18',l:'#F6DFC4',e:'smile'},{n:'まめだぬき',f:'#C9A26B',d:'#5A4126',l:'#FAF0DC',e:'round',m:'leaf'},{n:'まゆげ',f:'#8F6A44',d:'#3A2818',l:'#EADAC0',e:'sharp',m:'brow'},{n:'はっぱ名人',f:'#6E5A43',d:'#2A2018',l:'#E3D4BE',e:'sleepy',m:'leaf'}],
+fox:[{n:'きつね色',f:'#E08A3A',d:'#3A2418',l:'#FFF4E6',e:'sharp'},{n:'こぎつね',f:'#F0A050',d:'#4A2E1C',l:'#FFF7EC',e:'round'},{n:'ぎんぎつね',f:'#A9B2BD',d:'#2F3540',l:'#F4F6F8',e:'sharp'},{n:'しろぎつね',f:'#F2EEE6',d:'#9A8F80',l:'#FFFFFF',e:'smile',m:'star'},{n:'くろぎつね',f:'#3E3A44',d:'#1A181E',l:'#D9D4DE',e:'sharp'},{n:'ゆうやけ',f:'#D6542E',d:'#3A1A10',l:'#FFE8D6',e:'smile'},{n:'きんいろ',f:'#E7B743',d:'#5A3E12',l:'#FFF8E1',e:'sleepy',m:'star'},{n:'のはら',f:'#C98A52',d:'#4A3020',l:'#F8EBD8',e:'round',m:'leaf'}]};
 function hairPx(L,H){const h=L.h,r=L.r||'#FF3D7F';let q=pr(3,H-3,10,3,h)+pr(4,H,8,1,h);
  switch(L.t){case'short':q+=pr(3,H,1,3,h)+pr(12,H,1,3,h);break;
  case'spiky':q+=pr(3,H,1,3,h)+pr(12,H,1,3,h)+pr(3,H-4,1,1,h)+pr(6,H-4,1,1,h)+pr(9,H-4,1,1,h)+pr(12,H-4,1,1,h)+pr(2,H-2,1,1,h)+pr(13,H-2,1,1,h);break;
@@ -1142,9 +1322,10 @@ function hairPx(L,H){const h=L.h,r=L.r||'#FF3D7F';let q=pr(3,H-3,10,3,h)+pr(4,H,
  case'pony':q+=pr(3,H,1,3,h)+pr(12,H,1,3,h)+pr(13,H-2,2,7,h)+pr(12,H-3,2,1,r);break}
  return q}
 const KIWAMI={'see-w':'解析の剣聖','see-e':'風景の大詩人','self-w':'孤高の聖騎士','self-e':'絆の大守護者','judge-w':'論理の大魔導士','judge-e':'星詠みの占星術師','know-w':'言の葉の大書記','know-e':'型の拳聖','time-w':'策略の大軍師','time-e':'四季の大旅人','para-w':'決断の英雄','para-e':'中庸の大仙人'};
-const STAGE_N=g=>['幼少期',g==='girl'?'少女期':'少年期','青年期','熟練期'];
+const STAGE_N=g=>g==='fox'?['子ギツネ','若ギツネ','一人前のキツネ','化け名人']:['子ダヌキ','若ダヌキ','一人前のタヌキ','化け名人'];
+const ANIMAL_N={tanuki:'タヌキ',fox:'キツネ'};
 const stageOfLv=lv=>lv<=2?0:lv<=5?1:lv<=9?2:3;
-const avOpt=(u,pid)=>({g:u.chara||'boy',st:stageOfLv(levelOf(expOf(pid)).lv),look:u.look});
+const avOpt=(u,pid)=>({g:u.chara||'tanuki',st:stageOfLv(levelOf(expOf(pid)).lv),look:u.look});
 function strongSide(u,r,ax){return r.s[ax]-(u.target[ax]??50)<0?'w':'e'}
 function routeOf(u,themeId){const r=compute(u);if(!r)return't';const t=TH(themeId);return t.dir!==strongSide(u,r,t.ax)?'t':'k'}
 function earn(u,amt){const m=dstr(TODAY).slice(0,7);if(!u.em||u.em.m!==m)u.em={m,amt:0};const got=Math.max(0,Math.min(2000-u.em.amt,amt));u.em.amt+=got;u.bal+=got;return got}
@@ -1186,15 +1367,15 @@ function nextAction(u){const td=todos();if(td.length){const x=td[0];return{t:`�
  return{t:'よい心がけじゃ。共に学ぶ仲間にエールを贈ってみてはどうかな。',cta:['なかまを見る',`comGo:${th.id}:nakama`],mood:'happy'}}
 
 /* ---- じぶん（自分を推す） ---- */
-V.home=()=>{const u=me(),r=compute(u);if(!r)return V.needDiag();const pid=state.persona,k=classOf(u,r),L=levelOf(expOf(pid)),st=stageOfLv(L.lv),na=nextAction(u),lg=loginGain(u);
+V.home=()=>{const u=me(),r=compute(u);if(!r)return V.needDiag();const pid=state.persona,k=classOf(u,r),L=levelOf(expOf(pid)),st=stageOfLv(L.lv),na=nextAction(u),lg=loginGain(u);const J=journey(u),jn=J.find(x=>!x.done);if(jn&&!todos().length){na.t=jn.say;na.cta=['▶ '+jn.label,jn.act]}
  return`<div class="stage" style="margin-top:12px">${avatarPx(u.eq,k.curKey,112,u.name,{g:u.chara,st,look:u.look})}</div>
  <div class="win statwin"><div class="row between" style="margin-bottom:6px"><b class="pxf" style="font-size:20px">${esc(u.name)}</b><span class="pxf" style="color:var(--yell);font-size:20px">Lv.${L.lv}</span></div>
- ${statRow('ねんれい',STAGE_N(u.chara)[st])}${statRow('しょくぎょう',st<2?`みならい（素質：${esc(k.cur.n)}）`:esc(k.cur.n))}${statRow('しょうごう',esc(titleOf(u)))}${statRow('エール',`${ICO('coin',14)}${u.bal.toLocaleString()} pt`)}
+ ${statRow('せいちょう',STAGE_N(u.chara)[st])}${statRow('しょくぎょう',st<2?`みならい（素質：${esc(k.cur.n)}）`:esc(k.cur.n))}${statRow('しょうごう',esc(titleOf(u)))}${statRow('エール',`${ICO('coin',14)}${u.bal.toLocaleString()} pt`)}
  <div class="expbar"><i style="width:${Math.round(L.cur/L.need*100)}%"></i></div><div style="color:#A5ACC9;font-size:12px;margin-top:4px">つぎのレベルまで あと ${L.need-L.cur} EXP${st<2?`・Lv.${st===0?3:6}で${STAGE_N(u.chara)[st+1]}に成長`:''}</div></div>
- ${owlSay(na.t,{mood:na.mood})}
- <div class="win cmdwin">${cmd(na.cta[0],na.cta[1],'',true)}${lg?cmd(`${ICO('potion',16)}ログインボーナス`,'loginBonus',`+${lg} エール`):''}${cmd(`${ICO('scroll',18)}冒険者カード`,'go:mypage','名刺を見る・共有')}${cmd(`${ICO('chest',18)}そうび`,'go:equip','着替える・ショップ')}${cmd(`${ICO('key',18)}メニュー`,'go:settings','記録・設定')}</div>`};
+ ${owlSay(na.t,{mood:na.mood})}${jn?journeyWin(J):''}
+ <div class="win cmdwin">${jn&&!todos().length?'':cmd(na.cta[0],na.cta[1],'',true)}${lg?cmd(`${ICO('potion',16)}ログインボーナス`,'loginBonus',`+${lg} エール`):''}${cmd(`${ICO('scroll',18)}冒険者カード`,'go:mypage','名刺を見る・共有')}${cmd(`${ICO('chest',18)}そうび`,'go:equip','着替える・ショップ')}${cmd(`${ICO('key',18)}メニュー`,'go:settings','記録・設定')}</div>`};
 V.settings=()=>{const u=me(),pid=state.persona,ti=tier(u),st=stageOf(u.sent);const map=activity(pid);const m=TODAY.getMonth()+1;const act=Object.keys(map).filter(k=>+k.slice(5,7)===m).length;
- return`<h1>メニュー</h1><div class="win cmdwin">${cmd(`${ICO('book',18)}学びの記録`,'go:record',`今月${act}日`,true)}${cmd(`${ICO('coin',18)}エールの集め方`,'go:yellrules',`残高 ${u.bal.toLocaleString()}pt`)}${cmd(`${ICO('star',18)}しょうごう`,'go:yellpage',RANKS[st].n)}${cmd('評価と割引','go:tierpage',['通常','20%引き','50%引き'][ti])}${cmd(`${ICO('scroll',18)}詳細レポート`,'go:report','無料')}${cmd(`${ICO('gem',18)}プロフィール写真`,'go:photo','')}${cmd('安全とプライバシー','go:safety','')}${cmd('データの管理','go:datamgmt','')}</div><p class="small muted" style="text-align:center">バージョン ${APP_VERSION}</p>`};
+ return`<h1>メニュー</h1><div class="win cmdwin">${cmd(`${ICO('key',18)}遊び方`,'go:guide','用語と仕組み')}${cmd(`${ICO('book',18)}学びの記録`,'go:record',`今月${act}日`,true)}${cmd(`${ICO('coin',18)}エールの集め方`,'go:yellrules',`残高 ${u.bal.toLocaleString()}pt`)}${cmd(`${ICO('star',18)}しょうごう`,'go:yellpage',RANKS[st].n)}${cmd('評価と割引','go:tierpage',['通常','20%引き','50%引き'][ti])}${cmd(`${ICO('scroll',18)}詳細レポート`,'go:report','無料')}${cmd(`${ICO('gem',18)}プロフィール写真`,'go:photo','')}${cmd('安全とプライバシー','go:safety','')}${cmd('データの管理','go:datamgmt','')}</div><p class="small muted" style="text-align:center">バージョン ${APP_VERSION}</p>`};
 V.yellrules=()=>{const u=me();const used=u.em&&u.em.m===dstr(TODAY).slice(0,7)?u.em.amt:0;return`<h1>エールの集め方</h1>${owlSay('エールはお金では買えぬ。学びに行き、仲間と励まし合うことでのみ集まる、学びの証じゃ。',{size:48})}
  <div class="sheet"><div class="row between"><b>今月もらったエール</b><span class="pxf">${used} / 2,000</span></div><div class="meter yell" style="margin-top:6px"><span style="width:${used/20}%"></span></div></div>
  <h2>もらえる</h2><div class="sheet"><table class="price"><tr><td>${ICO('scroll',14)}初めての診断</td><td>100</td></tr><tr><td>${ICO('flag',14)}対面クエストに参加（転職ルート）</td><td>200</td></tr><tr><td>${ICO('flag',14)}対面クエストに参加（鍛錬ルート）</td><td>100</td></tr><tr><td>${ICO('star',14)}師匠からの評価 ★5／★4／★3</td><td>100／60／30</td></tr><tr><td>${ICO('gem',14)}連続参加ボーナス</td><td>100〜200</td></tr><tr><td>${ICO('potion',14)}ログイン（7日連続で＋20）</td><td>5／日</td></tr><tr><td>${ICO('book',14)}お題への投稿（1日1回）</td><td>10</td></tr><tr><td>${ICO('heart',14)}後輩を会に誘う（鍛錬ルート）</td><td>50</td></tr></table></div>
@@ -1211,27 +1392,27 @@ V.shuhari=()=>{const u=me(),r=compute(u);if(!r)return V.needDiag();const pid=sta
  <div class="win cmdwin">${cmd(sk.length?'ワザを入れかえる':'ワザを覚える','go:pick','',true)}${cmd('のうりょくち','go:stats','6つの軸')}${cmd('詳細レポート','go:report','無料')}${cmd('目標を調整する','go:goal','')}${cmd('成長の記録','go:growth','')}</div>`};
 V.stats=()=>{const u=me(),r=compute(u);if(!r)return V.needDiag();return`<h1>のうりょくち</h1><div class="sheet"><div class="track-key"><span><i style="width:12px;height:12px;background:var(--shu)"></i>いま</span><span><i style="width:12px;height:12px;background:var(--ri)"></i>目標</span><span><i style="width:12px;height:12px;background:var(--ha-t);outline:2px solid var(--ha);outline-offset:-2px"></i>修行の道のり</span></div>${AX.map(a=>`<div class="axis" style="padding:10px 0"><div class="row between"><b style="font-size:14px">${a.name}</b><span class="small muted" style="font-weight:700">${r.s[a.id]}</span></div><div class="ends"><span>${a.w}</span><span>${a.e}</span></div>${pxStat(r.s[a.id],u.target[a.id])}</div>`).join('')}</div><div class="pad"><button class="btn ghost full" data-act="go:flowerview">花のチャートで見る</button></div>`};
 V.pick=()=>{const u=me(),r=compute(u);if(!r)return V.needDiag();const max=u.plus?5:3;if(!state.ui.pick)state.ui.pick=[...u.themes];const sel=state.ui.pick;const pl=plan(u,r.s);
- const row=t=>{const on=sel.includes(t.id);return`<div class="opt ${on?'on':''}" style="cursor:default"><button class="box" data-act="pickT:${t.id}" aria-label="${esc(SKILL[t.id])}を選ぶ" style="background:${on?'var(--ink)':'transparent'};color:var(--paper)">${on?'✓':''}</button><div class="grow"><b class="pxf">${esc(SKILL[t.id])}</b><div class="small muted">${esc(t.name)}・${esc(t.re)}</div></div><button class="btn ghost sm" data-act="go:theme:${t.id}">詳細</button></div>`};
+ const row=t=>{const on=sel.includes(t.id);return`<div class="opt ${on?'on':''}" style="cursor:default"><button class="box" data-act="pickT:${t.id}" aria-label="${esc(SKILL[t.id])}を選ぶ" style="background:${on?'var(--ink)':'transparent'};color:var(--paper)">${on?'✓':''}</button><div class="grow"><b>${esc(t.name)}</b><div class="small muted">こんなときに：${esc(t.scene)}</div><div class="small" style="color:var(--ha);font-weight:700">ワザ名「${esc(SKILL[t.id])}」</div></div><button class="btn ghost sm" data-act="go:theme:${t.id}">詳細</button></div>`};
  const tSet=pl.flatMap(p=>THEMES.filter(t=>t.ax===p.ax.id&&t.dir===p.dir)),kSet=pl.flatMap(p=>THEMES.filter(t=>t.ax===p.ax.id&&t.dir===p.strong));
- return`<h1>ワザを覚える<small>推しテーマ</small></h1>${owlSay(`強みを鍛えるも、反対側へ転職を目指すも自由じゃ。ただし勇気のいる転職ルートには、経験値1.5倍・エール2倍の報酬があるぞ。${max}つまで選べる。`,{size:48})}
+ return`${u.tut?tutBar(3):''}<h1>テーマを選ぶ<small>ワザを覚える</small></h1>${u.tut?owlSay('チュートリアルの最後じゃ。まずは気になるテーマを1つだけ選んでみよう。あとからいつでも入れかえられるぞ。',{size:44}):''}${u.tut?'':owlSay(`強みを鍛えるも、反対側へ転職を目指すも自由じゃ。ただし勇気のいる転職ルートには、経験値1.5倍・エール2倍の報酬があるぞ。${max}つまで選べる。`,{size:48})}
  <div class="sheet row between"><span>選択中</span><b class="pxf">${sel.length}/${max}</b></div>
- <h2><span class="rtag t">転職</span> 転職ルートのワザ</h2><div class="sheet">${tSet.map(row).join('')}</div>
- <h2><span class="rtag k">鍛錬</span> 鍛錬ルートのワザ</h2><div class="sheet">${kSet.map(row).join('')}</div>
+ <h2><span class="rtag t">アンラーン</span> 反対側を身につける</h2><p class="lead">いまの強みと逆の考え方。勇気がいる分、報酬は経験値1.5倍・エール2倍（転職ルート）</p><div class="sheet">${tSet.map(row).join('')}</div>
+ <h2><span class="rtag k">強み強化</span> いまの強みを磨く</h2><p class="lead">得意をさらに伸ばす道。極めると後輩の先輩役にもなれます（鍛錬ルート）</p><div class="sheet">${kSet.map(row).join('')}</div>
  <div class="pad"><button class="btn ha full" data-act="savePick" ${sel.length?'':'disabled'}>このワザに決める</button></div>`};
 
 /* ---- なかま（仲間を推す） ---- */
 V.comm=()=>{const u=me();if(!u.themes.length)return`<h1>なかま<small>仲間を推す</small></h1>${owlSay('ワザを覚えると、同じワザを磨く仲間の広場に入れるぞ。',{cta:['ワザを覚える','go:pick']})}`;
- let tid=state.ui.comT;if(!u.themes.includes(tid))tid=u.themes[0];state.ui.comT=tid;let seg=state.ui.comSeg;if(!['timeline','nakama','friends'].includes(seg))seg=state.ui.comSeg='timeline';
+ const TL=[...u.themes,...(u.trial||[]).filter(x=>!u.themes.includes(x))];let tid=state.ui.comT;if(!TL.includes(tid))tid=u.themes[0];state.ui.comT=tid;let seg=state.ui.comSeg;if(!['timeline','nakama','friends'].includes(seg))seg=state.ui.comSeg='timeline';
  const t=TH(tid);let body='';
  if(seg==='friends')body=u.friends.length?`<div class="sheet">${u.friends.map(f=>{const fu=state.users[f];return`<button class="list-item" data-act="go:friend:${f}">${avatar(fu.name,44,'u:'+f)}<div class="grow"><b>${esc(fu.name)}</b><div class="small muted">タイプを重ねて比べる</div></div><span class="muted">›</span></button>`}).join('')}</div><div class="pad"><button class="btn ghost full" data-act="invite">友達を招待する</button></div>`:owlSay('フレンドを招待すると、タイプを重ねて比べたり、ペアでクエストに行けるぞ。',{cta:['友達を招待する','invite']});
  else{const full=communityBody(tid);const i=full.indexOf('<div class="seg">');const j=full.indexOf('</div>',i)+6;body=full.slice(j)}
- return`<h1 style="margin-bottom:0">なかま<small>仲間を推す</small></h1><div class="themebar">${u.themes.map(id=>`<button class="tchip ${id===tid?'on':''}" style="--c:${AXCOL[TH(id).ax]}" data-act="comT:${id}">${esc(SKILL[id])}</button>`).join('')}</div>
+ return`<h1 style="margin-bottom:0">なかま<small>仲間を推す</small></h1><div class="themebar">${TL.map(id=>`<button class="tchip ${id===tid?'on':''}" style="--c:${AXCOL[TH(id).ax]}" data-act="comT:${id}">${u.themes.includes(id)?'':'🧪'}${esc(SKILL[id])}</button>`).join('')}</div>
  <div class="seg">${[['timeline','広場'],['nakama','同じワザの仲間'],['friends','フレンド']].map(([kk,l])=>`<button class="${seg===kk?'on':''}" data-act="comSeg:${kk}">${l}</button>`).join('')}</div>${body}`};
 
 /* ---- ししょう（師匠を推す） ---- */
 V.shisho=()=>{const u=me(),r=compute(u);if(!r)return V.needDiag();u.oshi=u.oshi||[];const mine=u.oshi.map(LEC).filter(Boolean);
  const rec=[];u.themes.forEach(id=>LECS.filter(l=>l.themes.includes(id)).forEach(l=>{if(!rec.find(x=>x.l.id===l.id))rec.push({l,id,m:match(u,l,id)})}));rec.sort((a,b)=>b.m-a.m);
- const row=(l,id)=>{const it=id?interest(l.id+'|'+id):null;return`<button class="list-item" data-act="go:circle:${l.id}:${id||l.themes[0]}">${avatar(l.name,46,'l:'+l.id)}<div class="grow"><b>${esc(l.name)}</b><div class="small muted ellipsis">${CAT_ICON[l.cat]} ${esc(l.title)}</div>${id?`<div class="small" style="font-weight:700">${esc(SKILL[id])}を伝授・弟子入り希望 ${Math.min(it.n,5)}/5人</div>`:''}</div>${id?`<span class="tag ha">${match(u,l,id)}%</span>`:''}</button>`};
+ const row=(l,id)=>{const it=id?interest(l.id+'|'+id):null;return`<button class="list-item" data-act="go:circle:${l.id}:${id||l.themes[0]}">${avatar(l.name,46,'l:'+l.id)}<div class="grow"><b>${esc(l.name)}</b><div class="small muted ellipsis">${CAT_ICON[l.cat]} ${esc(l.title)}</div>${id?`<div class="small" style="font-weight:700">${esc(TH(id).name)}・弟子入り希望 ${Math.min(it.n,5)}/5人</div><div class="small muted">🧭 ${esc(AXM[TH(id).ax].name)}で${esc(TH(id).dir==='e'?AXM[TH(id).ax].e:AXM[TH(id).ax].w)}寄り・★${l.rating}（${l.count}回）</div>`:''}</div>${id?`<span class="tag ha">${match(u,l,id)}%</span>`:''}</button>`};
  return`<h1>ししょう<small>師匠を推す</small></h1>${owlSay('ワザを授けてくれる師匠を推すのじゃ。弟子入り希望が5人そろうと、会を開く日取りを決められるぞ。',{size:48})}
  <h2>推し師匠</h2>${mine.length?`<div class="sheet">${mine.map(l=>row(l,l.themes.find(x=>u.themes.includes(x)))).join('')}</div>`:'<p class="lead">師匠のページで「推し師匠にする」を押すと、ここに並びます。</p>'}
  <h2>あなたのワザを伝授できる師匠</h2><div class="sheet">${rec.length?rec.map(x=>row(x.l,x.id)).join(''):'<p class="small muted">ワザを覚えると、師匠が表示されます。</p>'}</div>`};
@@ -1260,17 +1441,17 @@ V.event=p=>{const e=ev(p.id),u=me(),per=state.persona;if(e.status!=='confirmed')
 
 /* ---- 冒険者カード ---- */
 const _cardPayloadOld=cardPayload;
-cardPayload=pid=>{const P=_cardPayloadOld(pid);if(!P)return null;const u=state.users[pid];P.g=u.chara||'boy';P.l=u.look;P.st=stageOfLv(P.lv);return P};
+cardPayload=pid=>{const P=_cardPayloadOld(pid);if(!P)return null;const u=state.users[pid];P.g=u.chara||'tanuki';P.l=u.look;P.st=stageOfLv(P.lv);return P};
 V.mypage=()=>{const pid=state.persona;const P=cardPayload(pid);return`<h1>冒険者カード<small>自分を推す</small></h1>${P?cardHtml(P):owlSay('診断すると、冒険者カードができるぞ。',{cta:['診断をはじめる','go:diag']})}
  ${P?`<div class="win cmdwin">${cmd('カードを共有する','shareCard','URLを送るだけ',true)}${cmd('カードを編集する','go:cardedit','')}${cmd('実物のカードをつくる','buyCard','NFC入り 1,980円')}</div><p class="small muted pad">URLを受け取った人は、ログインなしでカードを見られます。実物のカードは、会場でスマホにかざすだけで自己紹介できます。</p>`:''}`};
 
 /* ---- 登録（キャラ選択） ---- */
-V.register=()=>{const c=state.ui.rgChara||'';return`<h1>冒険者登録</h1>${owlSay('ようこそ、すゝめの世界へ。まずは男の子か女の子かを選び、8つの見た目からおぬしの分身を決めるのじゃ。旅は幼い姿から始まり、学ぶほどに成長していくぞ。さあ、すゝめ！',{size:48})}
- <h2>1. 男の子・女の子</h2><div class="pad seg2">${[['boy','👦 男の子'],['girl','👧 女の子']].map(([k,l])=>`<button class="chip ${c===k?'on':''}" style="flex:1;padding:12px;font-size:15px" data-act="rgChara:${k}" aria-pressed="${c===k}">${l}</button>`).join('')}</div>${c?`<h2>2. 見た目を選ぶ</h2><div class="pad lookgrid">${LOOKS[c].map((L,i)=>`<button class="lookopt ${state.ui.rgLook===i?'on':''}" data-act="rgLook:${i}" aria-pressed="${state.ui.rgLook===i}" aria-label="${L.n}">${avatarPx({},'see-w',40,'',{g:c,st:0,look:i})}<span>${L.n}</span></button>`).join('')}</div>${state.ui.rgLook!=null?`<div class="pad" style="margin-top:10px"><div class="stage" style="margin:0;height:170px"><div style="position:absolute;left:12%;bottom:14px;text-align:center">${avatarPx({},'see-w',48,'',{g:c,st:0,look:state.ui.rgLook})}</div><div style="position:absolute;left:50%;bottom:14px;transform:translateX(-50%)">${avatarPx({},'see-w',56,'',{g:c,st:2,look:state.ui.rgLook})}</div><div style="position:absolute;right:12%;bottom:14px">${avatarPx({body:'body_robe'},'see-w',60,'',{g:c,st:3,look:state.ui.rgLook})}</div><div class="nameplate" style="font-size:11px"><b class="pxf" style="font-size:13px">成長のイメージ</b><span>幼少期 → 青年期 → 熟練期</span></div></div></div>`:''}`:''}<h2>3. 冒険者の情報</h2>
+V.register=()=>{const c=state.ui.rgChara||'';return`<h1>冒険者登録</h1>${owlSay('ようこそ、すゝめの世界へ。おぬしの分身は、タヌキとキツネのどちらにする？どちらも化け上手じゃ。学んで別の考え方を身につけることを、ここでは「化ける＝転職」と呼ぶ。子どもの姿から旅を始めて、化け名人を目指すのじゃ。さあ、すゝめ！',{size:48})}
+ <h2>1. タヌキかキツネか</h2><div class="pad seg2">${[['tanuki','タヌキ'],['fox','キツネ']].map(([k,l])=>`<button class="charopt ${c===k?'on':''}" style="flex:1" data-act="rgChara:${k}" aria-pressed="${c===k}">${avatarPx({},'see-w',52,'',{g:k,st:0,look:0})}<b class="pxf">${l}</b></button>`).join('')}</div>${c?`<h2>2. 見た目を選ぶ</h2><div class="pad lookgrid">${LOOKS[c].map((L,i)=>`<button class="lookopt ${state.ui.rgLook===i?'on':''}" data-act="rgLook:${i}" aria-pressed="${state.ui.rgLook===i}" aria-label="${L.n}">${avatarPx({},'see-w',40,'',{g:c,st:0,look:i})}<span>${L.n}</span></button>`).join('')}</div>${state.ui.rgLook!=null?`<div class="pad" style="margin-top:10px"><div class="stage" style="margin:0;height:170px"><div style="position:absolute;left:12%;bottom:14px;text-align:center">${avatarPx({},'see-w',48,'',{g:c,st:0,look:state.ui.rgLook})}</div><div style="position:absolute;left:50%;bottom:14px;transform:translateX(-50%)">${avatarPx({},'see-w',56,'',{g:c,st:2,look:state.ui.rgLook})}</div><div style="position:absolute;right:12%;bottom:14px">${avatarPx({body:'body_robe'},'see-w',60,'',{g:c,st:3,look:state.ui.rgLook})}</div><div class="nameplate" style="font-size:11px"><b class="pxf" style="font-size:13px">成長のイメージ</b><span>子ども → 一人前 → 化け名人</span></div></div></div>`:''}`:''}<h2>3. 冒険者の情報</h2>
  <div class="sheet pop form-card"><label class="f" for="rg-n" style="margin-top:0">なまえ（ニックネーム）</label><input type="text" id="rg-n" data-id="rg-n" maxlength="20" placeholder="例：はなこ" value="${esc(state.ui.rgN||'')}"><label class="f" for="rg-a">年齢</label><input type="number" id="rg-a" data-id="rg-a" min="18" max="99" placeholder="例：32" inputmode="numeric" value="${esc(state.ui.rgA||'')}"><label class="f" for="rg-j">お仕事・立場（任意）</label><input type="text" id="rg-j" data-id="rg-j" maxlength="30" placeholder="例：メーカー勤務、大学生" value="${esc(state.ui.rgJ||'')}"><label class="check"><input type="checkbox" data-id="rg-ok">18歳以上であり、利用規約とプライバシーポリシーに同意します</label></div>
  <div class="pad"><button class="btn ha full big" data-act="register">冒険をはじめる</button></div>`};
-V.welcome=()=>`<section class="hero"><div class="stage" style="margin:6px 0 0;height:210px"><div style="position:absolute;left:18%;bottom:18px">${avatarPx({},'see-w',70,'a',{g:'boy',st:0})}</div><div style="position:absolute;right:18%;bottom:18px">${avatarPx({},'see-e',70,'b',{g:'girl',st:0})}</div><div style="position:absolute;left:50%;bottom:30px;transform:translateX(-50%)">${owl(64,'happy','bob')}</div></div>
- <div class="titlelogo"><span class="pxf">すゝめ</span><small>学びの冒険に、いざ出発。</small></div><p class="muted">診断で、あなたの「いまの職業」がわかります。強みを極めるか、反対側へ転職するか。師匠と仲間に会いに行くほど、キャラクターが成長していきます。</p></section>
+V.welcome=()=>`<section class="hero"><div class="stage" style="margin:6px 0 0;height:210px"><div style="position:absolute;left:18%;bottom:18px">${avatarPx({},'see-w',70,'a',{g:'tanuki',st:0,look:0})}</div><div style="position:absolute;right:18%;bottom:18px">${avatarPx({},'see-e',70,'b',{g:'fox',st:0,look:0})}</div><div style="position:absolute;left:50%;bottom:30px;transform:translateX(-50%)">${owl(64,'happy','bob')}</div></div>
+ <div class="titlelogo"><span class="pxf">すゝめ</span><small>学びの冒険に、いざ出発。</small></div><p class="muted">診断で、あなたの「いまの職業」がわかります。強みを極めるか、反対側の考え方に「化けて」転職するか。タヌキかキツネになって、師匠と仲間に会いに行くほど成長していきます。</p></section>
  <div class="win"><div style="line-height:2">🎒 学びを推す ── ワザを覚える<br>🤝 仲間を推す ── 共に学ぶ<br>🧙 師匠を推す ── 弟子入りする<br>🗺 コトを推す ── 旅に出る<br>🌱 自分を推す ── 成長する</div></div>
  <div class="pad"><button class="btn ha full big" data-act="go:register">冒険者登録（無料）</button><p class="muted small" style="text-align:center;margin-top:10px">18歳以上が対象です</p><p style="text-align:center;margin-top:22px"><button class="chip" data-act="go:adminLogin">管理者の方はこちら</button></p><p class="small muted" style="text-align:center;margin-top:12px">バージョン ${APP_VERSION}</p></div>`;
 
@@ -1329,6 +1510,94 @@ const TAB_PX={
 function tabIcon(k){const t=TAB_PX[k];return t?gMap(t[0],t[1],26,'tabpx'):`<svg viewBox="0 0 24 24">${TAB_ICON[k]||''}</svg>`}
 
 
+
+/* ============ v22：タヌキとキツネ ============ */
+function lum(hex){const n=parseInt(hex.slice(1),16);return((n>>16&255)*.3+(n>>8&255)*.59+(n&255)*.11)}
+function avatarPx(eq,clsKey,size=96,name='',o={}){const g=(o.g==='fox'||o.g==='girl')?'fox':'tanuki',st=o.st??2;const C=CLS[clsKey]||{c:'#3D5AFE',w:'sword'};const it=k=>eq&&eq[k]&&ITEMS[eq[k]]?ITEMS[eq[k]]:null;const head=it('head'),body=it('body'),hand=it('hand'),acc=it('acc');
+ const LK=LOOKS[g][o.look??(hash(name||'x')%8)];const f=LK.f,d=LK.d,l=LK.l,ink=OUTC,wood='#8B5A2B';
+ const G=pxGrid(20,27,1,5);const p=(x,y,w,hh,c)=>gp(G,x,y,w,hh,c);
+ const legH=[1,1,2,2][st],bh=[3,4,4,5][st],F=20,L0=F-legH,B=L0-bh,H=B-8;
+ const kid=g==='fox'?'#60A5FA':'#6CC24A';const main=body?body.c:(st<2?kid:C.c),dark=shade(main,.78);
+ if(g==='tanuki'){p(0,B,4,5,f);p(1,B-1,2,1,f);p(0,B+1,4,1,d);p(0,B+3,4,1,d);p(1,B+5,2,1,d)}
+ else{p(1,B-3,3,2,f);p(0,B-1,4,4,f);p(0,B+3,3,2,l);p(1,B+5,1,1,l)}
+ if(acc&&acc.k==='cape')p(3,B,12,F-B,acc.c),p(3,F-1,12,1,shade(acc.c,.75));
+ p(6,L0,2,legH,d);p(10,L0,2,legH,d);p(5,F,3,1,shade(d,.8));p(10,F,3,1,shade(d,.8));
+ const kind=body?body.k:'tunic';p(5,B,8,bh,main);p(5,B+bh-1,8,1,dark);p(12,B,1,bh,dark);
+ if(kind==='robe')p(5,L0,8,legH,main),p(8,B,2,bh+legH,dark);
+ else if(kind==='haori')p(7,B,4,bh,'#F8FAFC'),p(5,B,2,bh,main),p(11,B,2,bh,main);
+ else if(kind==='armor')p(6,B+1,6,1,'#94A3B8'),p(6,B+3,6,1,'#94A3B8'),p(6,B,2,1,'#F8FAFC');
+ else{p(7,B,4,1,l);if(bh>=4)p(5,B+bh-2,8,1,dark),p(8,B+bh-2,2,1,'#FBBF24')}
+ if(st===3)p(5,B,8,1,'#FBBF24');
+ const ah=Math.min(3,bh-1);p(3,B,2,ah,main);p(13,B,2,ah,main);p(3,B+ah,2,1,d);p(13,B+ah,2,1,d);
+ if(g==='tanuki'){p(4,H-2,3,2,f);p(11,H-2,3,2,f);p(5,H-1,1,1,d);p(12,H-1,1,1,d)}
+ else{p(4,H-4,2,4,f);p(4,H-5,1,1,d);p(12,H-4,2,4,f);p(13,H-5,1,1,d);p(5,H-3,1,2,l);p(12,H-3,1,2,l)}
+ p(4,H,10,8,f);p(4,H+7,10,1,shade(f,.88));p(6,H,4,1,lighten(f,1.12));
+ let E=ink;
+ if(g==='tanuki'){p(5,H+2,3,3,d);p(10,H+2,3,3,d);p(7,H+4,4,3,l);p(8,H+4,2,1,ink);E='#FFF7E6'}
+ else{p(4,H+5,3,3,l);p(11,H+5,3,3,l);p(7,H+5,4,3,l);p(8,H+5,2,1,ink);if(lum(f)<90)E='#FDE68A'}
+ const ey=H+3;[6,11].forEach(ex=>{switch(LK.e){case'smile':p(ex-1,ey+1,1,1,E);p(ex,ey,1,1,E);p(ex+1,ey+1,1,1,E);break;case'sleepy':p(ex-1,ey+1,3,1,E);break;case'sharp':p(ex-1,ey,1,1,E);p(ex,ey+1,2,1,E);break;default:p(ex,ey,1,2,E);if(g==='tanuki')p(ex,ey+1,1,1,ink)}});
+ p(5,H+6,1,1,'#FF8FB1');p(12,H+6,1,1,'#FF8FB1');
+ if(LK.m==='leaf')p(8,H-2,2,1,'#3FA34D'),p(9,H-3,1,1,'#3FA34D'),p(8,H-1,1,1,'#7ED957');
+ if(LK.m==='brow')p(5,H+1,3,1,d),p(10,H+1,3,1,d);
+ if(LK.m==='star')p(8,H+1,2,1,'#FBBF24');
+ if(acc){const c=acc.c;switch(acc.k){case'scarf':p(5,B,8,2,c);p(10,B+2,2,2,c);break;case'glasses':p(5,H+3,3,1,c);p(10,H+3,3,1,c);p(8,H+3,2,1,ink);break;case'juzu':p(6,B,1,1,c);p(7,B+1,1,1,c);p(8,B+2,2,1,c);p(10,B+1,1,1,c);p(11,B,1,1,c);break;case'mask':p(4,H+2,10,3,c);p(6,H+3,1,1,ink);p(11,H+3,1,1,ink);break;case'cape':p(5,B,1,1,c);p(12,B,1,1,c);break}}
+ if(head){const c=head.c;switch(head.k){case'kasa':p(1,H-2,16,1,c);p(4,H-4,10,2,c);p(6,H-5,6,1,c);p(4,H-4,10,1,lighten(c,1.15));break;case'crown':p(5,H-5,8,2,c);p(5,H-6,1,1,c);p(8,H-6,2,1,c);p(12,H-6,1,1,c);p(8,H-5,2,1,'#E11D48');break;case'wizard':p(2,H-3,14,1,c);p(5,H-5,8,2,c);p(7,H-7,4,2,c);p(10,H-8,2,1,c);p(5,H-4,8,1,'#FBBF24');break;case'band':p(3,H-1,12,1,c);p(15,H-1,2,1,c);p(16,H,1,1,c);break;case'kanzashi':p(12,H-3,2,2,c);p(13,H-4,1,1,'#FFD166');p(11,H-2,1,1,'#16A34A');break;case'beret':p(3,H-4,12,2,c);p(2,H-3,1,1,c);p(9,H-5,1,1,c);break}}
+ const wk=hand?hand.k:(st>=2?C.w:null),wc=hand?hand.c:'#E2E8F0',cc=hand?wc:C.c;
+ switch(wk){case'sword':p(16,B-6,1,9,wc);p(16,B-6,1,1,'#fff');p(15,B+2,3,1,'#B45309');p(16,B+3,1,2,wood);break;case'bokuto':p(16,B-6,1,11,'#C08A3E');p(15,B+2,3,1,wood);break;case'staff':p(16,B-8,1,15,wood);p(15,B-10,3,3,cc);p(15,B-10,1,1,'#fff');break;case'fan':p(15,B-2,3,3,cc);p(16,B+1,1,2,wood);p(15,B-2,1,1,'#fff');break;case'book':p(14,B+2,3,3,cc);p(15,B+3,1,1,'#fff');break;case'lantern':p(15,B,3,4,'#F59E0B');p(16,B-1,1,1,ink);p(15,B+4,3,1,ink);p(16,B+1,1,2,'#FEF3C7');break;case'brush':p(16,B-4,1,8,wood);p(16,B+4,1,2,ink);break;case'orb':p(14,B+1,3,3,cc);p(14,B+1,1,1,'#fff');p(14,B+4,3,1,wood);break;case'cup':p(14,B+2,3,3,wc);p(17,B+3,1,1,wc);p(14,B+2,3,1,'#FDE68A');break;case'mic':p(16,B,1,4,'#475569');p(15,B-2,3,2,wc);break;case'shield':p(14,B,4,5,wc);p(15,B+1,2,3,'#fff');break}
+ gOutline(G);return gSvg(G,size,'ava')}
+
+
+/* ============ v23：かわいいタヌキとキツネ ============ */
+function avatarPx(eq,clsKey,size=96,name='',o={}){const g=(o.g==='fox'||o.g==='girl')?'fox':'tanuki',st=o.st??2;const C=CLS[clsKey]||{c:'#3D5AFE',w:'sword'};const it=k=>eq&&eq[k]&&ITEMS[eq[k]]?ITEMS[eq[k]]:null;const head=it('head'),body=it('body'),hand=it('hand'),acc=it('acc');
+ const LK=LOOKS[g][o.look??(hash(name||'x')%8)];const f=LK.f,d=LK.d,l=LK.l,ink=OUTC,wood='#8B5A2B',pink='#FF9EBB';
+ const G=pxGrid(21,28,2,6);const p=(x,y,w,hh,c)=>gp(G,x,y,w,hh,c);
+ const legH=[1,1,1,2][st],bh=[3,3,4,4][st],F=20,L0=F-legH,B=L0-bh,H=B-9;
+ const kid=g==='fox'?'#60A5FA':'#6CC24A';const main=body?body.c:(st<2?kid:C.c),dark=shade(main,.78);
+ // しっぽ
+ if(g==='tanuki'){p(0,B,4,4,f);p(1,B-1,2,1,f);p(1,B+4,2,1,f);p(0,B+1,4,1,d);p(0,B+3,4,1,d);p(1,B-1,1,1,lighten(f,1.15))}
+ else{p(0,B-1,3,5,f);p(1,B-2,3,1,f);p(1,B+4,2,1,f);p(-1,B,1,3,f);p(0,B-4,2,2,l);p(1,B-3,2,1,l)}
+ if(acc&&acc.k==='cape')p(4,B,10,F-B,acc.c),p(4,F-1,10,1,shade(acc.c,.75));
+ // あし
+ p(6,L0,2,legH,d);p(10,L0,2,legH,d);p(5,F,3,1,shade(d,.85));p(10,F,3,1,shade(d,.85));
+ // からだ
+ const kind=body?body.k:'tunic';p(5,B,8,bh,main);p(5,B+bh-1,8,1,dark);
+ if(kind==='robe')p(5,L0,8,legH,main),p(8,B,2,bh+legH,dark);
+ else if(kind==='haori')p(7,B,4,bh,'#F8FAFC'),p(5,B,2,bh,main),p(11,B,2,bh,main);
+ else if(kind==='armor')p(6,B+1,6,1,'#94A3B8'),p(6,B,2,1,'#F8FAFC');
+ if(g==='tanuki'&&kind!=='armor'&&kind!=='robe')p(7,B+1,4,bh-1,l),p(7,B+bh-1,4,1,shade(l,.92));
+ if(st===3)p(5,B,8,1,'#FBBF24');
+ if(g==='fox'){p(6,B,6,2,'#E11D48');p(7,B+2,4,1,'#E11D48');p(8,B+1,2,1,'#FBBF24');p(8,B+2,2,1,'#D97706')}
+ // うで・肉球
+ p(3,B,2,2,main);p(13,B,2,2,main);p(3,B+2,2,1,d);p(13,B+2,2,1,d);
+ // みみ
+ if(g==='tanuki'){p(3,H-1,4,2,f);p(4,H-2,2,1,f);p(11,H-1,4,2,f);p(12,H-2,2,1,f);p(4,H-1,2,1,d);p(12,H-1,2,1,d)}
+ else{p(3,H-1,5,2,f);p(3,H-2,4,1,f);p(3,H-3,3,1,f);p(3,H-4,2,1,f);p(3,H-5,1,1,d);p(3,H-4,1,1,d);p(4,H-2,2,1,pink);p(4,H-3,1,1,pink);p(10,H-1,5,2,f);p(11,H-2,4,1,f);p(12,H-3,3,1,f);p(13,H-4,2,1,f);p(14,H-5,1,1,d);p(14,H-4,1,1,d);p(12,H-2,2,1,pink);p(13,H-3,1,1,pink)}
+ // あたま（まるい大きな頭）
+ p(5,H,8,1,f);p(4,H+1,10,1,f);p(3,H+2,12,6,f);p(4,H+8,10,1,f);p(6,H,5,1,lighten(f,1.12));p(4,H+1,3,1,lighten(f,1.12));
+ let E=ink,face=g==='tanuki'?d:f;
+ if(g==='tanuki'){p(4,H+3,4,3,d);p(10,H+3,4,3,d);p(3,H+5,2,1,d);p(13,H+5,2,1,d);p(6,H+5,6,3,l);p(5,H+7,8,1,l)}
+ else{p(2,H+5,2,2,l);p(1,H+6,1,1,l);p(14,H+5,2,2,l);p(16,H+6,1,1,l);p(5,H+5,8,3,l);p(4,H+6,1,2,l);p(13,H+6,1,2,l);p(5,H+8,8,1,l)}
+ // め（大きくてきらきら）
+ const ey=H+3,EC=g==='tanuki'?'#FFF7E6':ink;[5,11].forEach(a=>{const inner=a<8?a+1:a;switch(LK.e){
+  case'smile':p(a,ey,2,1,EC);p(a-1,ey+1,1,1,EC);p(a+2,ey+1,1,1,EC);break;
+  case'sleepy':p(a-1,ey+1,4,1,EC);break;
+  case'sharp':if(g==='tanuki'){p(a,ey,2,2,'#FFF7E6');p(inner,ey,1,2,ink)}else{p(a,ey,2,2,ink);p(a<8?a:a+1,ey,1,1,face);p(inner,ey+1,1,1,'#fff')}break;
+  default:if(g==='tanuki'){p(a,ey,2,2,'#FFF7E6');p(inner,ey,1,2,ink);p(inner,ey,1,1,'#5B4A7A')}else{p(a,ey,2,2,lum(f)<90?'#FDE68A':ink);p(a,ey,1,1,'#fff')}}});
+ // はな・くち（ω）・ほっぺ
+ p(8,H+5,2,1,ink);p(7,H+6,1,1,ink);p(10,H+6,1,1,ink);p(8,H+7,1,1,ink);p(9,H+7,1,1,ink);p(8,H+6,2,1,g==='tanuki'?l:l);
+ p(4,H+6,2,1,pink);p(12,H+6,2,1,pink);
+ // ちいさな印
+ if(LK.m==='brow')p(5,H+2,2,1,d),p(11,H+2,2,1,d);
+ if(LK.m==='star')p(8,H+1,2,1,'#FBBF24');
+ if(g==='tanuki'){p(8,H-2,2,1,'#3FA34D');p(9,H-3,2,1,'#3FA34D');p(10,H-4,1,1,'#3FA34D');p(8,H-1,1,1,'#7ED957');if(LK.m==='leaf')p(7,H-3,1,1,'#FF9EBB')}
+ else{p(-1,H+1,2,2,'#7DD3FC');p(-1,H,1,1,'#E0F2FE');p(0,H+3,1,1,'#38BDF8');if(LK.m==='leaf')p(16,H-1,1,1,'#E0F2FE')}
+ // そうび
+ if(acc){const c=acc.c;switch(acc.k){case'scarf':p(5,B,8,2,c);p(10,B+2,2,2,c);break;case'glasses':p(4,H+3,4,1,c);p(10,H+3,4,1,c);p(8,H+3,2,1,c);break;case'juzu':p(6,B,1,1,c);p(7,B+1,1,1,c);p(8,B+2,2,1,c);p(10,B+1,1,1,c);p(11,B,1,1,c);break;case'mask':p(3,H+2,12,3,c);p(5,H+3,2,1,ink);p(11,H+3,2,1,ink);break;case'cape':p(5,B,1,1,c);p(12,B,1,1,c);break}}
+ if(head){const c=head.c;switch(head.k){case'kasa':p(1,H-1,16,1,c);p(4,H-3,10,2,c);p(6,H-4,6,1,c);p(4,H-3,10,1,lighten(c,1.15));break;case'crown':p(6,H-3,6,2,c);p(6,H-4,1,1,c);p(8,H-4,2,1,c);p(11,H-4,1,1,c);p(8,H-3,2,1,'#E11D48');break;case'wizard':p(2,H-1,14,1,c);p(5,H-3,8,2,c);p(7,H-5,4,2,c);p(10,H-6,2,1,c);p(5,H-2,8,1,'#FBBF24');break;case'band':p(3,H+1,12,1,c);p(15,H+1,2,1,c);p(16,H+2,1,1,c);break;case'kanzashi':p(12,H-1,2,2,c);p(13,H-2,1,1,'#FFD166');p(11,H,1,1,'#16A34A');break;case'beret':p(4,H-2,10,2,c);p(3,H-1,1,1,c);p(9,H-3,1,1,c);break}}
+ const wk=hand?hand.k:(st>=2?C.w:null),wc=hand?hand.c:'#E2E8F0',cc=hand?wc:C.c;
+ switch(wk){case'sword':p(16,B-6,1,8,wc);p(16,B-6,1,1,'#fff');p(15,B+1,3,1,'#B45309');p(16,B+2,1,2,wood);break;case'bokuto':p(16,B-6,1,10,'#C08A3E');p(15,B+1,3,1,wood);break;case'staff':p(16,B-7,1,12,wood);p(15,B-9,3,3,cc);p(15,B-9,1,1,'#fff');break;case'fan':p(15,B-2,3,3,cc);p(16,B+1,1,2,wood);p(15,B-2,1,1,'#fff');break;case'book':p(14,B+1,3,3,cc);p(15,B+2,1,1,'#fff');break;case'lantern':p(15,B,3,4,'#F59E0B');p(16,B-1,1,1,ink);p(15,B+4,3,1,ink);p(16,B+1,1,2,'#FEF3C7');break;case'brush':p(16,B-4,1,7,wood);p(16,B+3,1,2,ink);break;case'orb':p(14,B,3,3,cc);p(14,B,1,1,'#fff');p(14,B+3,3,1,wood);break;case'cup':p(14,B+1,3,3,wc);p(17,B+2,1,1,wc);p(14,B+1,3,1,'#FDE68A');break;case'mic':p(16,B,1,4,'#475569');p(15,B-2,3,2,wc);break;case'shield':p(14,B-1,4,5,wc);p(15,B,2,3,'#fff');break}
+ gOutline(G);return gSvg(G,size,'ava')}
+
 /* ============ v20：アイテムアイコン ============ */
 const ICO_MAP={
  coin:[["..yyyy..",".yYYYYy.","yYwYYYYy","yYYYYYoy","yYYYYYoy","yYYYYooy",".yooooy.","..yyyy.."],{y:'#D97706',Y:'#FBBF24',o:'#F59E0B',w:'#FFF7CC'}],
@@ -1349,6 +1618,32 @@ const ICO_MAP={
  ring:[["..cc..",".cCcc.","cccccc",".c..c.",".y..y.","..yy.."],{y:'#FBBF24'}]};
 function ICO(k,size=16,color){const m=ICO_MAP[k];if(!m)return'';const pal={...m[1]};if(color){pal.c=color;pal.C=lighten(color,1.25)}return gMap(m[0],pal,size,'ico')}
 function itemIcon(it,size=20){const k={head:'hat',body:'shirt',hand:'sword',acc:'ring'}[it.s];return ICO(k,size,it.c)}
+
+
+/* ============ v21：チュートリアルと遊び方 ============ */
+function tutBar(n){return`<div class="tutbar"><span>チュートリアル ${n}/3</span><b>${['診断に答える','結果を知る','テーマを1つ選ぶ'][n-1]}</b><div class="tutdots">${[1,2,3].map(i=>`<i class="${i<=n?'on':''}"></i>`).join('')}</div></div>`}
+V.tutResult=()=>{const u=me(),r=compute(u);if(!r)return V.needDiag();const k=classOf(u,r),p=k.pl[0],a=p.ax;
+ return`${tutBar(2)}<div class="stage" style="margin-top:12px;height:200px">${avatarPx(u.eq,k.curKey,96,u.name,avOpt(u,'me'))}</div>
+ ${owlSay(`診断の結果、おぬしの職業は「${k.cur.n}」と出たぞ。強みは「${p.strong==='w'?a.wS:a.eS}」じゃ。`,{mood:'happy'})}
+ <div class="win"><div class="pxf" style="font-size:16px;margin-bottom:8px">学び方は2つ</div>
+ <div class="route"><div class="rt k"><span>💪 強み強化</span><b>${esc(a.name)}をさらに磨く</b><small>極めると「${esc(KIWAMI[k.curKey]||'')}」に</small></div>
+ <div class="rt t"><span>🔄 アンラーン</span><b>反対側を身につける</b><small>「${esc(k.next.n)}」へ転職。報酬1.5〜2倍</small></div></div>
+ <p style="margin:10px 0 0;font-size:13px;color:#A5ACC9">どちらを選んでもOK。両方のテーマを組み合わせることもできます。</p></div>
+ ${owlSay('つぎは、覚えたいワザを1つ選ぼう。3つの質問に答えるだけで、おぬしに合うワザがしぼれるぞ。')}
+ <div class="pad"><button class="btn ha full big" data-act="go:pick">ワザを1つ選ぶ</button></div>`};
+V.tutDone=()=>{const u=me(),t=u.themes[0]?TH(u.themes[0]):null;return`<div class="hero" style="padding-top:16px">${owl(90,'happy','bob')}</div>
+ ${owlSay(`見事じゃ！最初のテーマ${t?`「${esc(t.name)}」`:''}が決まったぞ。ここからは、5つのタブで冒険を進めていく。`,{mood:'happy'})}
+ <div class="win" style="line-height:2">${tabIcon('home')} <b>じぶん</b>：成長と、次にやること<br>${tabIcon('shuhari')} <b>まなび</b>：職業とテーマ<br>${tabIcon('comm')} <b>なかま</b>：同じテーマの仲間<br>${tabIcon('shisho')} <b>ししょう</b>：教えてくれる師匠<br>${tabIcon('events')} <b>たび</b>：会いに行くクエスト</div>
+ <div class="pad stack"><button class="btn ha full big" data-act="tab:home">冒険をはじめる</button><button class="btn ghost full" data-act="go:guide">遊び方をくわしく見る</button></div>`};
+V.guide=()=>{const sec=(ic,t,body,open)=>`<details class="sheet gd" ${open?'open':''}><summary>${ic} ${t}</summary>${body}</details>`;
+ return`<h1>遊び方</h1><p class="lead">知りたいところだけ開いてください。右上の「？」からいつでも戻れます。</p>
+ ${sec(tabIcon('home'),'すゝめってなに？','<p>自分の考え方のタイプを知り、伸ばしたいテーマを決めて、師匠と仲間に<b>対面で会いに行って学ぶ</b>サービスです。学ぶほどキャラクターが成長します。</p>',true)}
+ ${sec(tabIcon('shuhari'),'職業と2つの学び方','<p>診断で「いまの職業」が決まります。学び方は2つ。</p><ul class="kv"><li><b>💪 強み強化（鍛錬ルート）</b>得意を磨いて「極み職」を目指す</li><li><b>🔄 アンラーン（転職ルート）</b>反対側の考え方を身につけて転職。勇気がいる分、報酬が多め</li></ul>')}
+ ${sec(tabIcon('events'),'クエストと参加費','<ul class="kv"><li><b>クエスト</b>師匠と仲間で開く対面の学びの会</li><li><b>開催の決まり方</b>参加希望が5人集まると、日時と場所を投票で決めます</li><li><b>参加費</b>最少人数の金額（上限価格）で事前決済。人数が増えて安くなった差額は次回のクレジットに</li><li><b>クエスト券</b>3回分のまとめ買いで少しお得</li></ul>')}
+ ${sec(ICO('coin',18),'エール','<p>応援のしるしのポイントです。<b>お金では買えません</b>。</p><ul class="kv"><li><b>もらえる</b>クエスト参加、師匠からの評価、ログイン、投稿</li><li><b>使える</b>着替え（装備）、仲間や師匠へのギフト</li></ul>')}
+ ${sec(ICO('star',18),'レベルと成長','<p>行動するたびに経験値がたまり、レベルが上がります。あなたの分身（タヌキかキツネ）は、子ども→若者→一人前→化け名人と成長し、一人前から職業の装備を身につけます。タヌキもキツネも化け上手。反対側の考え方を身につけて別の職業に「化ける」のが転職（アンラーン）です。</p>')}
+ ${sec(ICO('scroll',18),'冒険者カード','<p>あなたのレベル・職業・テーマをまとめた名刺です。URLを送るだけで、相手はログインなしで見られます。</p>')}
+ <h2>ことばの対応表</h2><div class="sheet"><table class="price">${[['ワザ・テーマ','学びたいこと（推しテーマ）'],['師匠','講師'],['なかま','同じテーマを学ぶ人'],['クエスト','対面の学びの会'],['転職','アンラーン'],['鍛錬','強み強化'],['エール','応援ポイント']].map(([a,b])=>`<tr><td><b>${a}</b></td><td>${b}</td></tr>`).join('')}</table></div>`};
 
 /* ============ 管理者：合成データ ============ */
 const JOBS=['会社員（営業）','会社員（企画・マーケ）','会社員（エンジニア）','会社員（人事・総務）','公務員','医療・福祉','教育','クリエイター','経営者・起業家','フリーランス','大学生・大学院生','主婦・主夫','パート・アルバイト','退職・シニア'];
@@ -1433,22 +1728,23 @@ function render(){save();if(PUBLIC){document.getElementById('app').innerHTML=pub
  else if(state.role==='admin'&&!state.viewAs){if(!ADMIN_VIEWS.includes(view))view='adm'}
  else if(['welcome','register',...ADMIN_VIEWS].includes(view))view='home';
  const fn=V[view]||V.home;
- let html=topbar()+`<main>${fn(n.p||{})}</main>`+tabbar();
+ let html=topbar()+`<main>${fn(n.p||{})}</main>`+tabbar()+coachPanel();
  if(state.toast)html+=`<div class="toast" role="status">${esc(state.toast)}</div>`;
  if(state.modal&&state.modal.tabidachi)html+=`<div class="modal" role="dialog" aria-modal="true" aria-label="旅立ち"><div class="win" style="max-width:340px;text-align:center">${owl(80,'happy','bob')}<div class="pxf" style="font-size:24px;color:#FBBF24;margin:8px 0">旅立ちの日</div><p>はじめてのクエストを達成した！<br>師匠と仲間に会いに行くたび、おぬしは成長していく。</p>${cmd('冒険をつづける','closeModal','',true)}</div></div>`;
  else if(state.modal&&state.modal.lv)html+=`<div class="modal" role="dialog" aria-modal="true" aria-label="レベルアップ"><div class="sheet">${owl(90,'happy','bob')}<h2 class="pxf" style="margin:8px 0 2px;font-size:28px;color:var(--ha)">${ICO('star',26)}LEVEL UP!${ICO('star',26)}</h2><p style="font-weight:800">Lv.${state.modal.lv} になりました</p><p class="small muted">学びを続けると、職業の熟練度と必殺ワザも伸びていきます</p><button class="btn full" data-act="closeModal">つづける</button></div></div>`;
  else if(state.modal)html+=`<div class="modal" role="dialog" aria-modal="true" aria-label="称号を獲得"><div class="sheet"><div class="row" style="justify-content:center;gap:4px;align-items:flex-end">${owl(80,'happy','bob')}${stageIcon(state.modal.st,90,true)}</div><h2 style="margin:10px 0 6px;text-align:center">称号「${RANKS[state.modal.st].n}の応援者」を獲得</h2><p class="small muted">新しい特典：${RANKS[state.modal.st].perk}</p><button class="btn full" data-act="closeModal">閉じる</button></div></div>`;
- document.getElementById('app').innerHTML=html;
- if(view==='analyze'&&!render.t){render.t=setTimeout(()=>{render.t=null;state.ui.bloom=true;logAct('diag','');{const u=me();if(!u.diagBonus){u.diagBonus=1;earn(u,100)}}const u=me();if(state.persona==='me'&&!u.hist.length)u.hist=[];state.stack=[];state.nav={tab:'shuhari',view:'shuhari',p:{}};render();window.scrollTo(0,0)},1700)}}
+ document.getElementById('app').innerHTML=html;coachHook();
+ if(view==='analyze'&&!render.t){render.t=setTimeout(()=>{render.t=null;state.ui.bloom=true;logAct('diag','');{const u=me();if(!u.diagBonus){u.diagBonus=1;earn(u,100)}}const u=me();if(state.persona==='me'&&!u.hist.length)u.hist=[];state.stack=[];state.nav=me().tut?{tab:'home',view:'tutResult',p:{}}:{tab:'shuhari',view:'shuhari',p:{}};render();window.scrollTo(0,0)},1700)}}
 
 /* ============ 操作 ============ */
 const val=id=>{const el=document.querySelector(`[data-id="${id}"]`);return el?el.value:''};
 const ACT={
  back,tab:t=>tab(t),
- go:(view,a,b)=>{const p=view==='circle'?{lec:a,theme:b}:view==='yell'?{kind:a,id:b}:a!==undefined?{id:a}:{};if(view==='community'){state.ui.comT=a;state.ui.comSeg='timeline';state.ui.compose=false;if(me().themes.includes(a)){tab('comm');return}}if(view==='pick')state.ui.pick=null;if(view==='theme'&&TH(a))logAct('read',TH(a).name);if(view==='dq'){const f=me().answers.findIndex(x=>!x);state.ui.qi=f>=0?f:0}if(view==='circle'){const u=me();u.mis=u.mis||{};u.mis.circle=true}go(view,p)},
+ go:(view,a,b)=>{const p=view==='circle'?{lec:a,theme:b}:view==='yell'?{kind:a,id:b}:a!==undefined?{id:a}:{};if(view==='community'){state.ui.comT=a;state.ui.comSeg='timeline';state.ui.compose=false;if(me().themes.includes(a)){tab('comm');return}}if(view==='pick'){state.ui.pick=null;state.ui.pk=null}if(view==='theme'&&TH(a))logAct('read',TH(a).name);if(view==='dq'){const u=me();const f=qPairs().findIndex(x=>!u.answers[x.ie]||!u.answers[x.iw]);state.ui.qi=f>=0?f:0}if(view==='circle'){const u=me();u.mis=u.mis||{};u.mis.circle=true}go(view,p)},
  mode:()=>{state.mode=state.mode==='user'?'lec':'user';state.stack=[];if(state.mode==='user')state.nav={tab:'home',view:'home',p:{}};render();window.scrollTo(0,0)},
  ans:(i,v)=>{if(state.ui.qLock)return;const u=me();u.answers[+i]=+v;state.ui.qPop=+i;try{navigator.vibrate&&navigator.vibrate(12)}catch(e){}state.ui.qLock=true;setTimeout(()=>{state.ui.qLock=false;state.ui.qPop=null;const f=u.answers.findIndex(x=>!x);if(+i<11&&!u.answers[+i+1])state.ui.qi=+i+1;else if(f>=0)state.ui.qi=f;state.ui.qAnim=true;render()},520)},
- qNav:i=>{state.ui.qi=clamp(+i,0,11);render()},
+ qNav:i=>{state.ui.qi=clamp(+i,0,5);render()},
+ ans2:(k,v)=>{if(state.ui.qLock)return;const u=me(),q=qPairs()[+k];u.answers[q.ie]=+v;u.answers[q.iw]=8-v;state.ui.qPop=+k;try{navigator.vibrate&&navigator.vibrate(12)}catch(e){}state.ui.qLock=true;setTimeout(()=>{state.ui.qLock=false;state.ui.qPop=null;const PR=qPairs();const f=PR.findIndex(x=>!u.answers[x.ie]||!u.answers[x.iw]);if(f>=0)state.ui.qi=f;state.ui.qAnim=true;render()},520)},
  solo:k=>{state.ui.show={shu:true,ha:k==='ha',ri:k==='ri'};render()},
  toolOn:id=>{const u=me();u.toolOn=u.toolOn||[];u.toolOn=u.toolOn.includes(id)?u.toolOn.filter(x=>x!==id):[...u.toolOn,id];render()},
  toolPick:(id,o)=>{const u=me(),t=TOOLS.find(x=>x.id===id);let s=u.tools[id]||[];if(s.includes(o))s=s.filter(x=>x!==o);else if(s.length<t.max)s=[...s,o];else{toast(`${t.max}つまで選べます`);return}u.tools[id]=s;render()},
@@ -1459,7 +1755,7 @@ const ACT={
  analyze:()=>{if(!compute(me()))return;go('analyze')},
  show:k=>{state.ui.show[k]=!state.ui.show[k];render()},
  pickT:id=>{const u=me(),max=u.plus?5:3,s=state.ui.pick;if(s.includes(id))state.ui.pick=s.filter(x=>x!==id);else if(s.length<max)s.push(id);else{toast(`推しテーマは${max}つまでです`);return}render()},
- savePick:()=>{me().themes=[...state.ui.pick];state.ui.pick=null;toast('推しテーマを決めました');tab('comm')},
+ savePick:()=>{if(me().tut){me().themes=[...state.ui.pick];state.ui.pick=null;me().tut=null;state.stack=[];state.nav={tab:'home',view:'tutDone',p:{}};render();window.scrollTo(0,0);return}me().themes=[...state.ui.pick];state.ui.pick=null;toast('推しテーマを決めました');tab('comm')},
  toggleTheme:id=>{const u=me(),max=u.plus?5:3;if(u.themes.includes(id))u.themes=u.themes.filter(x=>x!==id);else if(u.themes.length<max)u.themes.push(id);else{toast(`推しテーマは${max}つまでです。先にどれかを外してください`);return}toast(u.themes.includes(id)?'推しテーマに追加しました':'推しテーマから外しました')},
  comSeg:k=>{state.ui.comSeg=k;render()},
  evSeg:k=>{state.ui.evSeg=k;render()},
@@ -1503,7 +1799,7 @@ const ACT={
  saveCard:()=>{const u=me();u.card={msg:val('cmsg').trim().slice(0,40),showJob:document.querySelector('[data-id="c-job"]').checked,showAge:document.querySelector('[data-id="c-age"]').checked,showStats:document.querySelector('[data-id="c-stats"]').checked,showQuests:document.querySelector('[data-id="c-q"]').checked};back();toast('カードを保存しました')},
  shareCard:()=>{const P=cardPayload(state.persona);if(!P)return;const url=cardUrl(P);if(navigator.share){navigator.share({title:`${P.n}さんの冒険者カード`,text:'すゝめの冒険者カードです',url}).catch(()=>{})}else copyText(url,'カードのURL')},
  leavePublic:()=>{PUBLIC=null;try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}state.stack=[];state.nav={tab:'home',view:state.role==='user'?'home':'welcome',p:{}}},
- register:()=>{const n=val('rg-n').trim(),a=+val('rg-a'),j=val('rg-j').trim(),ok=document.querySelector('[data-id="rg-ok"]')?.checked;if(!n){toast('ニックネームを入力してください');return}if(!a||a<18||a>99){toast('18歳以上の年齢を入力してください');return}if(!ok){toast('利用規約への同意が必要です');return}if(!state.ui.rgChara){toast('男の子か女の子を選んでください');return}if(state.ui.rgLook==null){toast('見た目を選んでください');return}const u=state.users.me;u.name=n;u.age=a;u.job=j;u.chara=state.ui.rgChara;u.look=state.ui.rgLook;state.role='user';state.persona='me';state.viewAs=null;state.stack=[];state.nav={tab:'home',view:'diag',p:{}};render();toast(`${n}さん、ようこそ。まずは診断から始めましょう`)},
+ register:()=>{const n=val('rg-n').trim(),a=+val('rg-a'),j=val('rg-j').trim(),ok=document.querySelector('[data-id="rg-ok"]')?.checked;if(!n){toast('ニックネームを入力してください');return}if(!a||a<18||a>99){toast('18歳以上の年齢を入力してください');return}if(!ok){toast('利用規約への同意が必要です');return}if(!state.ui.rgChara){toast('タヌキかキツネを選んでください');return}if(state.ui.rgLook==null){toast('見た目を選んでください');return}const u=state.users.me;u.name=n;u.age=a;u.job=j;u.chara=state.ui.rgChara;u.look=state.ui.rgLook;state.role='user';state.persona='me';state.viewAs=null;state.stack=[];u.tut=1;state.ui.qi=0;state.nav={tab:'home',view:'dq',p:{}};render();toast(`${n}さん、ようこそ。フク老と一緒に、最初のテーマを決めよう`)},
  adminLogin:()=>{if(val('ad-p').trim()!=='admin'){toast('パスコードが違います');return}state.role='admin';state.viewAs=null;state.stack=[];state.nav={tab:'adm',view:'adm',p:{}};render();toast('管理者としてログインしました')},
  logout:()=>{state.role=state.users.me.name?'user':'guest';state.viewAs=null;state.persona='me';state.stack=[];state.nav={tab:'home',view:state.role==='user'?'home':'welcome',p:{}};toast('ログアウトしました')},
  viewAs:id=>{state.viewAs=id;state.persona=id;state.stack=[];state.nav={tab:'home',view:'home',p:{}};window.scrollTo(0,0)},
@@ -1528,7 +1824,7 @@ const ACT={
  approve:id=>{const e=ev(id);const lead=k=>[...e.opts[k]].sort((a,b)=>b.v-a.v)[0];const v=lead('venue');e.date=lead('date').l;e.format=lead('format').l;e.venue=v.l;e.venueFee=v.fee;e.status='confirmed';e.paid={};e.checked={};toast('開催が確定し、参加者に通知しました')},
  propose:()=>{const l=LEC(state.lec);const title=val('pti').trim(),date=val('pdt').trim();if(!title||!date){toast('タイトルと日時を入力してください');return}const fmt=val('pfm');const min=clamp(+val('pmin')||5,3,20),max=clamp(+val('pmax')||10,min,30);state.events.unshift({id:'ev'+Date.now(),theme:val('pth'),lec:l.id,title,status:'proposed',joined:0,min,max,fee:+val('pfee')||l.fee,date,format:fmt,venue:fmt==='オンライン'?'オンライン':`${l.area}（提携スペース）`,venueFee:fmt==='オンライン'?0:8000,by:{},paid:{},checked:{}});toast('提案を公開しました。推しサークルに表示されます')}
 };
-document.addEventListener('click',e=>{const el=e.target.closest('[data-act]');if(!el||el.disabled)return;const [fn,...args]=el.dataset.act.split(':');if(ACT[fn]){e.preventDefault();ACT[fn](...args);if(!['back','tab','go','mode','reset','analyze','savePick','comGo','register','adminLogin','saveCard'].includes(fn))render()}});
+document.addEventListener('click',e=>{const el=e.target.closest('[data-act]');if(!el||el.disabled)return;const [fn,...args]=el.dataset.act.split(':');if(ACT[fn]){e.preventDefault();ACT[fn](...args);if(!['back','tab','go','mode','reset','analyze','savePick','comGo','register','adminLogin','saveCard','cardFlip'].includes(fn))render()}});
 document.addEventListener('change',async e=>{const ph=e.target.closest('[data-photo]');if(ph){const key=ph.dataset.photo,file=ph.files&&ph.files[0];if(!file)return;try{const url=await toThumb(file);const prev=state.photos[key];state.photos[key]=url;if(!save()){if(prev)state.photos[key]=prev;else delete state.photos[key];toast('保存容量がいっぱいです。ほかの写真を削除してからお試しください');return}render();toast('写真を登録しました')}catch(err){toast('画像ファイル（JPEG・PNGなど）を選んでください')}return}
  const el=e.target.closest('[data-chg]');if(!el)return;const [k,a]=el.dataset.chg.split(':');
  if(k==='persona'){state.persona=el.value;state.stack=[];state.nav={tab:'home',view:'home',p:{}};state.ui.pick=null;state.ui.bloom=true;render();window.scrollTo(0,0)}
@@ -1536,6 +1832,151 @@ document.addEventListener('change',async e=>{const ph=e.target.closest('[data-ph
  if(k==='lec'){state.lec=el.value;render();window.scrollTo(0,0)}
  if(k==='admQ'){state.ui.admQ=el.value;state.ui.admPage=0;render()}});
 document.addEventListener('input',e=>{const el=e.target.closest('[data-filter="book"]');if(!el)return;const q=el.value.trim();document.querySelectorAll('.book').forEach(b=>{b.style.display=!q||b.dataset.key.includes(q)?'':'none'})});
+
+/* ===== v25: ワザえらびウィザード / 6ステップチュートリアル / はじめての冒険 ===== */
+function tutBar(n){const L=['診断に答える','結果を知る','ワザを1つ選ぶ','なかまを知る','師匠を知る','クエストを知る'];return`<div class="tutbar"><span>チュートリアル ${n}/6</span><b>${L[n-1]}</b><div class="tutdots">${L.map((_,i)=>`<i class="${i<n?'on':''}"></i>`).join('')}</div></div>`}
+function pkSet(u,r,route,axId){const p=plan(u,r.s).find(x=>x.ax.id===axId);if(!p)return[];const d=route==='t'?p.dir:p.strong;return THEMES.filter(t=>t.ax===axId&&t.dir===d)}
+V.pick=()=>{const u=me(),r=compute(u);if(!r)return V.needDiag();const max=u.plus?5:3,k=classOf(u,r),pl=plan(u,r.s);const pk=state.ui.pk=state.ui.pk||{s:1};const s=pk.s;
+ const steps=[['道',1],['場面',2],['ワザ',3],['決める',4]];
+ const can=n=>n===1||(n===2&&pk.route)||(n===3&&pk.route&&pk.ax)||(n===4&&pk.id);
+ const head=`${u.tut?tutBar(3):''}<h1 style="margin-bottom:4px">ワザをえらぶ<small>${u.tut?'1つ選べばOK':`${u.themes.length}/${max} 覚えている`}</small></h1>
+ <div class="pksteps">${steps.map(([l,n])=>`<button class="${n===s?'on':n<s?'done':''}" data-act="pkStep:${n}" ${can(n)?'':'disabled'}>${n<s?'✓ ':''}${n}. ${l}</button>`).join('')}</div>
+ ${!u.tut&&u.themes.length?`<div class="pktray">覚えたワザ：${u.themes.map(id=>`<button class="chip2" data-act="pkDrop:${id}" aria-label="${esc(SKILL[id])}を外す">${esc(SKILL[id])} ×</button>`).join('')}</div>`:''}`;
+ const bk=n=>`<button class="pkback" data-act="pkStep:${n}">◀ もどる</button>`;
+ let body='';
+ if(s===1){const a0=pl[0].ax;body=`<div class="pkq">Q. どっちの道で進む？</div><p class="pkhint">どちらを選んでも大丈夫。あとから両方の道を組み合わせられます。</p>
+  <button class="pkc t big" data-act="pkRoute:t"><span class="bdg">報酬 大</span><span class="ttl">🔄 アンラーン<small style="font-weight:700;font-size:12px;color:var(--ha)">（転職ルート）</small></span><span class="sub">いまの自分と<b>逆の考え方</b>を身につける。<br>「${esc(k.cur.n)}」→「${esc(k.next.n)}」へ転職を目指す</span><span class="rw">${ICO('star',12)} 経験値1.5倍・${ICO('coin',12)} エール2倍</span><span class="go">›</span></button>
+  <button class="pkc k big" data-act="pkRoute:k"><span class="ttl">💪 強み強化<small style="font-weight:700;font-size:12px;color:var(--shu)">（鍛錬ルート）</small></span><span class="sub">いまの<b>得意をもっと磨く</b>。<br>極めると「${esc(KIWAMI[k.curKey]||'達人')}」に</span><span class="rw">${ICO('heart',12)} 後輩の先輩役にもなれる</span><span class="go">›</span></button>
+  <p class="pkhint" style="margin-top:12px">迷ったら：<button class="pkback" style="margin:0;color:var(--ha)" data-act="pkAuto">フク老のおすすめを見る ›</button></p>`}
+ else if(s===2){const T=pk.route==='t';body=`${bk(1)}<div class="pkq">Q. どんな場面で効かせたい？</div><p class="pkhint">いちばん「あるある」と思う場面を1つ選んでください。</p>
+  ${pl.map((p,i)=>{const set=pkSet(u,r,pk.route,p.ax.id),side=(T?p.dir:p.strong)==='e'?p.ax.e:p.ax.w;return`<button class="pkc" data-act="pkAx:${p.ax.id}" style="box-shadow:inset 6px 0 0 ${AXCOL[p.ax.id]}">${i===0?'<span class="bdg">診断でいちばん伸びしろ大</span>':''}<span class="ttl">${set.slice(0,2).map(t=>esc(t.scene)).join('<br>')}</span><span class="sub">${esc(p.ax.name)}・「${esc(side)}」の考え方を${T?'身につける':'磨く'}</span><span class="go">›</span></button>`}).join('')}`}
+ else if(s===3){const set=pkSet(u,r,pk.route,pk.ax),mx=Math.max(...set.map(t=>memberCount(t.id)));body=`${bk(2)}<div class="pkq">Q. 覚えたいワザは？</div><p class="pkhint">タップすると、くわしい中身が見られます。</p>
+  ${set.map(t=>{const own=u.themes.includes(t.id);return`<button class="pkc" data-act="pkTheme:${t.id}">${own?'<span class="bdg" style="background:var(--ri)">覚えている</span>':memberCount(t.id)===mx?'<span class="bdg" style="background:var(--yell)">いちばん人気</span>':''}<span class="ttl">${esc(t.name)}</span><span class="sub">こんなときに：${esc(t.scene)}</span><span class="sub">${ICO('heart',12)} 仲間 ${memberCount(t.id)}人　${ICO('star',12)} 師匠 ${LECS.filter(l=>l.themes.includes(t.id)).length}人</span><span class="go">›</span></button>`}).join('')}`}
+ else{const t=TH(pk.id),own=u.themes.includes(t.id),lc=LECS.filter(l=>l.themes.includes(t.id)),rt=routeOf(u,t.id);body=`${bk(3)}
+  <div class="waza"><small>${rt==='t'?'🔄 アンラーン（転職ルート）':'💪 強み強化（鍛錬ルート）'}</small><b>${esc(SKILL[t.id])}</b><span>${esc(t.name)}</span></div>
+  <div class="sheet"><h3 style="margin-top:0">こんなときに効く</h3><p style="margin:0">${esc(t.scene)}</p></div>
+  <div class="pair"><div class="sheet card-shu"><h3>手放すこと</h3><p class="small">${esc(t.un)}</p></div><div class="sheet card-ha"><h3>身につけること</h3><p class="small">${esc(t.re)}</p></div></div>
+  <div class="sheet"><h3 style="margin-top:0">覚えると、こうなる</h3><div class="pkfx"><p>${ICO('heart',14)} 同じワザの仲間 <strong>${memberCount(t.id)}人</strong> の広場に入れる</p><p>${ICO('star',14)} 教えてくれる師匠 <strong>${lc.length}人</strong> が見つかる</p><p>${ICO('flag',14)} 対面クエストで${rt==='t'?'経験値1.5倍・エール2倍':'経験値・エール'}がもらえる</p></div></div>
+  <div class="pad stack">${own?`<button class="btn ghost full" data-act="pkDrop:${t.id}">このワザを外す</button>`:`<button class="btn ha full big" data-act="pkLearn:${t.id}">このワザを覚える</button>`}<button class="btn ghost full" data-act="pkStep:3">ほかのワザも見る</button><button class="pkback" style="align-self:center" data-act="go:theme:${t.id}">4つの知のレンズなど、もっとくわしく ›</button></div>`}
+ const say=u.tut&&s===1?owlSay('チュートリアルの最後じゃ。質問に答えていくと、おぬしに合うワザが3つにしぼれるぞ。',{size:44}):'';
+ return head+say+body};
+V.pickOk=()=>{const u=me(),max=u.plus?5:3,id=u.themes[u.themes.length-1];return`<div class="hero" style="padding-top:16px">${owl(80,'happy','bob')}</div><div class="waza"><small>あたらしいワザを覚えた！</small><b>${esc(SKILL[id]||'')}</b><span>${esc(TH(id)?TH(id).name:'')}</span></div>
+ ${owlSay(`つぎは同じワザを磨く仲間に会いに行こう。${u.themes.length<max?`ワザはあと${max-u.themes.length}つ覚えられるぞ。`:''}`,{mood:'happy'})}
+ <div class="win cmdwin">${cmd(`${ICO('heart',18)}なかまの広場へ`,'tab:comm','',true)}${cmd(`${ICO('star',18)}師匠をさがす`,'tab:shisho','')}${u.themes.length<max?cmd(`${ICO('sword',18)}もう1つワザを選ぶ`,'go:pick',''):''}</div>`};
+const COACH={4:{tab:'comm',sel:'.seg',t:'ワザを覚えたな！ここは「なかま」。同じワザを磨く仲間が集まる広場じゃ。上のタブで「広場（投稿）」「同じワザの仲間」「フレンド」を切りかえられる。まずは一言あいさつを投稿してみるとよいぞ。'},
+ 5:{tab:'shisho',sel:'[data-act^="go:circle:"]',t:'ここは「ししょう」。おぬしのワザを教えられる師匠が、マッチ度の高い順に並ぶ。タップすると<b>マッチの理由</b>が見られて、「弟子入り希望」を出せる。希望が5人そろうと会の日取りが決まるのじゃ。'},
+ 6:{tab:'events',sel:'main .sheet:last-of-type > *:first-child',t:'ここは「たび」。実際に会って学ぶ<b>対面クエスト</b>が並ぶ。参加表明して最少人数がそろえば開催決定。参加費は上限価格を先に払い、人が多く集まると差額が戻ってくる仕組みじゃ。'}};
+function coachPanel(){if(state.role!=='user'||state.viewAs)return'';const u=me(),c=COACH[u.tut];if(!c)return'';return`<div class="coach" role="dialog" aria-label="チュートリアル"><div class="cs">チュートリアル ${u.tut}/6</div><div class="ct">${owl(40,'normal')}<p>${c.t}</p></div><div class="cb"><button class="sk" data-act="tutSkip">スキップ</button><button class="nx" data-act="tutNext">${u.tut<6?'つぎへ ▶':'チュートリアル完了'}</button></div></div>`}
+function coachHook(){let on=null;try{if(state.role==='user'&&!state.viewAs){const u=me(),c=COACH[u.tut];if(c&&state.nav.view===c.tab){on=u.tut;const el=document.querySelector(c.sel);if(el){el.classList.add('coach-hl');setTimeout(()=>{const r=el.getBoundingClientRect();if(r.top<70||r.bottom>innerHeight-350)window.scrollTo({top:scrollY+r.top-110,behavior:'smooth'})},60)}}}}catch(e){}if(on)document.body.dataset.coach=on;else delete document.body.dataset.coach}
+function journey(u){const pid=state.persona,ints=Object.values(state.interest||{}).some(it=>it.by&&it.by[pid]),evs=myEvents(),rated=state.events.some(e=>e.rated&&e.rated[pid]);
+ return[{label:'クイック診断',done:!!compute(u),act:'go:dq',say:'まずは6問の診断で、いまの職業を知ろう。'},
+ {label:'ワザを1つ覚える',done:u.themes.length>0,act:'go:pick',say:'学びたいワザを1つ選ぼう。3つの質問に答えるだけじゃ。'},
+ {label:'なかまの広場であいさつ',done:!!(u.mis&&u.mis.post),act:'tab:comm',say:'つぎは「なかま」の広場で、ひとことあいさつを投稿してみよう。エールももらえるぞ。'},
+ {label:'師匠に弟子入り希望を出す',done:ints||(u.oshi||[]).length>0,act:'tab:shisho',say:'気になる師匠を見つけて「弟子入り希望」を出そう。5人そろうと会が開かれるぞ。'},
+ {label:'対面クエストに参加表明',done:evs.length>0,act:'tab:events',say:'「たび」で対面クエストに参加表明しよう。実際に会うと、経験値がぐんと増えるぞ。'},
+ {label:'クエスト後に師匠を評価',done:rated,act:'tab:events',say:'クエストに参加したら、師匠を評価しよう。エールが集まり、装備や成長につながるぞ。'}]}
+function journeyWin(J){const n=J.filter(x=>x.done).length,nx=J.findIndex(x=>!x.done);return`<div class="win jwin"><div class="row between"><b class="pxf" style="font-size:16px">${ICO('flag',16)} はじめての冒険</b><span class="pxf" style="color:#FBBF24">${n}/${J.length}</span></div><div class="jbar"><i style="width:${n/J.length*100}%"></i></div>
+ ${J.map((x,i)=>`<button class="jr ${x.done?'ok':i===nx?'nx':''}" data-act="${x.act}"><span class="jn">${x.done?'✓':i+1}</span><span class="jl">${esc(x.label)}${i===nx?'<br><small>つぎはここ ▶ タップ</small>':''}</span>${x.done?'':'<span>›</span>'}</button>`).join('')}</div>`}
+V.tutDone=()=>{const u=me(),t=u.themes[0]?TH(u.themes[0]):null,J=journey(u);return`<div class="hero" style="padding-top:16px">${owl(90,'happy','bob')}</div>
+ ${owlSay(`見事じゃ！ワザ${t?`「${esc(SKILL[t.id])}」`:''}を覚え、5つのタブも見て回ったな。これからの冒険の流れはこうじゃ。`,{mood:'happy'})}
+ ${journeyWin(J)}
+ ${owlSay('「じぶん」タブにいつもこの地図があるから、迷ったら<b>光っている所</b>をタップすればよいぞ。',{size:40})}
+ <div class="pad stack"><button class="btn ha full big" data-act="tab:home">冒険をはじめる</button><button class="btn ghost full" data-act="go:guide">遊び方をくわしく見る</button></div>`};
+Object.assign(ACT,{
+ pkStep:n=>{state.ui.pk.s=+n;window.scrollTo(0,0)},
+ pkRoute:r=>{Object.assign(state.ui.pk,{route:r,ax:null,id:null,s:2});window.scrollTo(0,0)},
+ pkAx:a=>{Object.assign(state.ui.pk,{ax:a,id:null,s:3});window.scrollTo(0,0)},
+ pkTheme:id=>{Object.assign(state.ui.pk,{id,s:4});window.scrollTo(0,0)},
+ pkAuto:()=>{const u=me(),r=compute(u),p=plan(u,r.s)[0],t=THEMES.find(x=>x.ax===p.ax.id&&x.dir===p.dir);state.ui.pk={route:'t',ax:p.ax.id,id:t.id,s:4};window.scrollTo(0,0)},
+ pkDrop:id=>{const u=me();u.themes=u.themes.filter(x=>x!==id);toast(`「${SKILL[id]}」を外しました`)},
+ pkLearn:id=>{const u=me(),max=u.plus?5:3;if(u.tut){u.themes=[id];u.tut=4;state.ui.pk=null;state.stack=[];state.nav={tab:'comm',view:'comm',p:{}};state.ui.comT=id;return}
+  if(u.themes.includes(id))return;if(u.themes.length>=max){toast(`ワザは${max}つまでです。上の「×」で外してから選んでください`);return}u.themes.push(id);state.ui.pk=null;state.stack=[];state.nav={tab:'shuhari',view:'pickOk',p:{}};window.scrollTo(0,0)},
+ tutNext:()=>{const u=me();if(u.tut<6){u.tut++;const c=COACH[u.tut];state.stack=[];state.nav={tab:c.tab,view:c.tab,p:{}};window.scrollTo(0,0)}else ACT.tutSkip()},
+ tutSkip:()=>{const u=me();u.tut=null;state.stack=[];state.nav={tab:'home',view:'tutDone',p:{}};window.scrollTo(0,0)}
+});
+
+/* ===== v26: 推しクエスト／寄り道クエスト・冒険者カード（表裏）・PC対応 ===== */
+function yoriSeats(e){const taken=(hash(e.id)%2)+Object.keys(e.yori||{}).filter(k=>k!==state.persona).length;return{max:2,left:Math.max(0,2-taken)}}
+function qReasons(u,e){const pid=state.persona,t=TH(e.theme),r=[];if(u.themes.includes(e.theme))r.push(['sword',`あなたのワザ「${SKILL[e.theme]}」`]);else if(u.themes.some(id=>TH(id).ax===t.ax&&TH(id).dir===t.dir))r.push(['book',`近いワザ（${AXM[t.ax].name}）`]);if((u.oshi||[]).includes(e.lec))r.push(['star',`推し師匠 ${LEC(e.lec).name}`]);const it=state.interest[e.lec+'|'+e.theme];if(it&&it.by&&it.by[pid])r.push(['heart','弟子入り希望した師匠']);if((u.trial||[]).includes(e.theme))r.push(['potion','お試し中のワザ']);if(e.yori&&e.yori[pid])r.push(['flag','寄り道で参加']);return r}
+function isOshiQ(u,e){const t=TH(e.theme);return u.themes.includes(e.theme)||(u.oshi||[]).includes(e.lec)||u.themes.some(id=>TH(id).ax===t.ax&&TH(id).dir===t.dir)||!!(state.interest[e.lec+'|'+e.theme]&&state.interest[e.lec+'|'+e.theme].by[state.persona])}
+function qCard(u,e,ft){const rs=qReasons(u,e);return`<div class="qwrap">${rs.length?`<div class="qwhy">${rs.map(([ic,t])=>`<span>${ICO(ic,12)}${esc(t)}</span>`).join('')}</div>`:''}${eventCard(e)}${ft||''}</div>`}
+V.events=()=>{const u=me(),pid=state.persona;let seg=state.ui.tabiSeg;if(!['oshi','yori','exped','album'].includes(seg))seg=state.ui.tabiSeg='oshi';
+ const td=todos();const byTs=(a,b)=>((evDate(a)||{}).ts||0)-((evDate(b)||{}).ts||0);const done=doneTitles(pid).length;const unlocked=done>=3||(compute(u)&&reach(u,compute(u).s)>=60);
+ const live=e=>['voting','proposed','confirmed'].includes(e.status)&&!(e.by&&e.by[pid]);
+ const head=`<h1>たび<small>コトを推す</small></h1>
+ <div class="tkt"><div><small>${ICO('ticket',14)} クエスト券</small><div class="v">${u.tickets||0}<span style="font-size:13px"> 枚</span></div></div><div><small>${ICO('coin',14)} クレジット</small><div class="v">${yen(u.credit||0)}</div></div>
+ <div class="bt"><button class="p" data-act="buyTicket">券を買う（${TICKET.n}枚 ${yen(TICKET.price)}）</button><button data-act="giftTicket">${ICO('heart',12)} 友達に贈る</button></div></div>
+ <div class="seg">${[['oshi','推しクエスト'],['yori','寄り道'],['exped','遠征'],['album','思い出']].map(([kk,l])=>`<button class="${seg===kk?'on':''}" data-act="tabiSeg:${kk}">${l}</button>`).join('')}</div>`;
+ let body='';
+ if(seg==='oshi'){
+  if(!u.themes.length)body=owlSay('推しクエストは、おぬしが覚えたワザと推し師匠から生まれる。まずはワザを1つ覚えよう。',{cta:['ワザをえらぶ','go:pick']});
+  else{const mine=myEvents().filter(e=>e.status!=='done').sort(byTs);const shown=new Set();
+   body=`${td.length?owlSay(`「${esc(td[0].e.title)}」で${td[0].t}が残っておるぞ。`,{cta:[td[0].t,td[0].act],size:44}):owlSay('ここには、おぬしの<b>ワザ</b>と<b>推し師匠</b>につながるクエストだけが並ぶ。カードの上のタグが「なぜおすすめか」じゃ。',{size:44})}`;
+   if(mine.length)body+=`<div class="qsec">${ICO('flag',16)} 受注中のクエスト<small>${mine.length}件</small></div><div class="qlist">${mine.map(e=>qCard(u,e)).join('')}</div>`;
+   u.themes.forEach(id=>{const t=TH(id);const list=state.events.filter(e=>live(e)&&e.theme===id).sort(byTs);list.forEach(e=>shown.add(e.id));
+    body+=`<div class="qsec"><span class="sk" style="background:${AXCOL[t.ax]}">${esc(SKILL[id])}</span>のクエスト<small>${list.length}件</small></div>`;
+    if(list.length)body+=`<div class="qlist">${list.map(e=>qCard(u,e)).join('')}</div>`;
+    else{const ls=LECS.filter(l=>l.themes.includes(id)).slice(0,2);body+=`<div class="qempty">まだ募集中のクエストはありません。師匠に<b>弟子入り希望</b>を出して5人そろうと、このワザのクエストが生まれます。${ls.map(l=>{const it=interest(l.id+'|'+id);return`<button class="lc2" data-act="go:circle:${l.id}:${id}">${avatar(l.name,32,'l:'+l.id)}<span style="flex:1"><b>${esc(l.name)}</b><br><span class="small muted">弟子入り希望 ${Math.min(it.n,5)}/5人</span></span><span>›</span></button>`}).join('')}</div>`}});
+   const extra=state.events.filter(e=>live(e)&&!shown.has(e.id)&&isOshiQ(u,e)).sort(byTs);
+   if(extra.length)body+=`<div class="qsec">${ICO('star',16)} 推し師匠・近いワザのクエスト<small>${extra.length}件</small></div><div class="qlist">${extra.map(e=>qCard(u,e)).join('')}</div>`;
+   const others=state.events.filter(e=>live(e)&&!isOshiQ(u,e)).length;
+   body+=`<button class="pkc" style="margin-top:18px" data-act="tabiSeg:yori"><span class="bdg" style="background:var(--yell)">${ICO('ticket',12)} 券がおトク</span><span class="ttl">ほかのワザのクエストに寄り道する</span><span class="sub">一般募集中のクエストが ${others}件。のぞいてみると、新しい自分に出会えるかも。</span><span class="go">›</span></button>`}}
+ if(seg==='yori'){const ax=state.ui.yoriAx||'all';const list=state.events.filter(e=>live(e)&&!isOshiQ(u,e)&&(ax==='all'||TH(e.theme).ax===ax)).sort(byTs);const tr=(u.trial||[]);
+  body=`<details class="yexp" ${tr.length?'':'open'}><summary><b class="t">${ICO('flag',16)} 寄り道クエストとは？</b> <span class="small" style="font-weight:800">（タップで開閉）</span></summary><p style="margin:4px 0 0;font-size:13px">あなたの推しとは別の、一般募集のクエストです。どの回にも<b>寄り道枠（2席）</b>があり、だれでも参加できます。</p>
+  <div style="margin-top:8px;font-weight:800;font-size:13px">${ICO('ticket',14)} クエスト券で寄り道すると</div><ol><li>寄り道枠を<b>優先で確保</b></li><li>参加費は<b>券1枚</b>でOK（${yen(TICKET.cap)}まで）</li><li>そのワザが30日間<b>「お試しワザ」</b>になり、仲間の広場をのぞける</li><li>寄り道ボーナス：<b>経験値＋50%</b></li></ol></details>
+  ${tr.length?`<div class="pktray">お試し中のワザ：${tr.map(id=>`<span class="chip2" style="background:${AXCOL[TH(id).ax]}">🧪 ${esc(SKILL[id])}</span>`).join('')}</div>`:''}
+  <div class="axf"><button class="${ax==='all'?'on':''}" data-act="yoriAx:all">すべて</button>${AX.map(a=>`<button class="${ax===a.id?'on':''}" style="--c:${AXCOL[a.id]}" data-act="yoriAx:${a.id}">${a.name}</button>`).join('')}</div>
+  ${list.length?`<div class="qlist">${list.map(e=>{const st=yoriSeats(e),l=LEC(e.lec),tk=u.tickets||0;const seats=[0,1].map(i=>`<i class="${i<st.max-st.left?'on':''}"></i>`).join('');
+   const btn=st.left<=0?`<button class="btn ghost sm" disabled>寄り道枠は満席</button>`:tk>0?`<button class="btn ha sm" data-act="yoriJoin:${e.id}:1">${ICO('ticket',12)} 券で寄り道</button><button class="btn ghost sm" data-act="yoriJoin:${e.id}:0">通常参加</button>`:`<button class="btn ha sm" data-act="yoriBuy:${e.id}">${ICO('ticket',12)} 券で寄り道</button><button class="btn ghost sm" data-act="yoriJoin:${e.id}:0">通常参加</button>`;
+   return qCard(u,e,`<div class="qft"><div class="info"><span class="seats">${seats}</span> 寄り道枠 残り${st.left}/${st.max}席<br>みんなの様子：参加 ${e.joined}人・師匠★${l.rating}（${l.count}回）</div>${btn}</div>`)}).join('')}</div>`:'<p class="lead pad">この分野の寄り道クエストは、いまはありません。</p>'}`}
+ if(seg==='exped')body=`${owlSay(unlocked?'遠征クエストへの道が開けたぞ。仲間と旅に出て、土地の師匠から学ぶのじゃ。':`遠征クエストは、都市のクエストを3回達成するか、熟練度60%で解放される。いまは${done}回じゃ。`,{size:44})}${EXPEDS.map(x=>{const l=LEC(x.lec);const ap=(u.exApply||[]).includes(x.id);return`<div class="sheet ${unlocked?'':'dim'}"><span class="tag yell">遠征・1泊2日</span><h3 style="margin:6px 0 2px" class="pxf">${esc(x.title)}</h3><div class="small muted">${esc(x.area)}・${esc(x.date)}</div><div class="row" style="gap:8px;margin:8px 0">${avatar(l.name,30,'l:'+l.id)}<span class="small" style="font-weight:700">師匠：${esc(l.name)}・ワザ「${esc(SKILL[x.theme])}」</span></div><div class="row between"><div><b class="pxf" style="font-size:20px">${yen(x.price)}</b><div class="small muted">${esc(x.inc)}</div></div>${unlocked?`<button class="btn sm ${ap?'ghost':'ha'}" data-act="expApply:${x.id}" ${ap?'disabled':''}>${ap?'申込済み':'申し込む'}</button>`:`<span class="tag">${ICO('lock',12)}未解放</span>`}</div></div>`}).join('')}`;
+ if(seg==='album'){const list=state.events.filter(e=>e.status==='done'&&e.by&&e.by[pid]);body=list.length?list.map(e=>{const rw=Object.values(ITEMS).find(x=>x.rw===e.id);const l=LEC(e.lec);return`<div class="sheet"><div class="row" style="gap:10px">${avatar(l.name,40,'l:'+l.id)}<div class="grow"><b>${esc(e.title)}</b><div class="small muted">${esc(e.date)}・${esc(e.venue)}・師匠 ${esc(l.name)}</div>${rw?`<span class="tag yell" style="margin-top:4px">${ICO('chest',14)}${esc(rw.n)} を手に入れた</span>`:''}</div></div></div>`}).join(''):owlSay('まだ思い出はないようじゃ。最初のクエストが、旅立ちの日になるぞ。',{size:44})}
+ return head+body};
+/* --- 冒険者カード --- */
+const _cardPayload0=cardPayload;
+cardPayload=function(pid){const P=_cardPayload0(pid);if(!P)return null;const u=state.users[pid];const L=levelOf(expOf(pid));return Object.assign(P,{go:AX.map(a=>u.target[a.id]??50),ch:u.chara||'tanuki',l:u.look||0,sg:stageOfLv(L.lv),id:'No.'+String(1000+hash(pid+u.name)%9000),qn:doneTitles(pid).length,os:(u.oshi||[]).length,fr:(u.friends||[]).length})};
+function hexRadar(s,g,lab){const W=120,c=60,R=44,pt=(i,v)=>{const a=-Math.PI/2+i*Math.PI/3,r=R*(v/100);return[(c+r*Math.cos(a)).toFixed(1),(c+r*Math.sin(a)).toFixed(1)]};const L=['見る','自己','判断','知','時間','矛盾'];
+ let h=`<svg viewBox="0 0 ${W} ${W}" aria-label="思考のかたち">`;[100,66,33].forEach(v=>{h+=`<polygon points="${[0,1,2,3,4,5].map(i=>pt(i,v).join(',')).join(' ')}" fill="none" stroke="${lab}" stroke-opacity=".25" stroke-width="1"/>`});
+ if(g)h+=`<polygon points="${g.map((v,i)=>pt(i,v).join(',')).join(' ')}" fill="none" stroke="#FBBF24" stroke-width="1.5" stroke-dasharray="3 2"/>`;
+ h+=`<polygon points="${s.map((v,i)=>pt(i,Math.max(8,v)).join(',')).join(' ')}" fill="#FF3D7F" fill-opacity=".45" stroke="#FF3D7F" stroke-width="2"/>`;
+ L.forEach((t,i)=>{const [x,y]=pt(i,128);h+=`<text x="${x}" y="${(+y+3).toFixed(1)}" font-size="9" font-weight="700" text-anchor="middle" fill="${lab}">${t}</text>`});return h+'</svg>'}
+function cardFace(P,o={}){const mode=o.mode||'digital',C=CLS[P.c]||{},T=CLS[P.t]||{},lab=mode==='real'?'#191B2E':'#FFFFFF';const flip=o.flip?'flip':'';
+ const sk=(P.sk||[]).slice(0,3).map(([id,lv])=>`<span style="background:${AXCOL[TH(id).ax]}">${esc(SKILL[id])} Lv${lv}</span>`).join('');
+ const qr=mode==='digital'&&o.qr?`<span class="qrs">${(()=>{try{if(typeof qrcode!=='function')return'';const q=qrcode(0,'L');q.addData(o.qr);q.make();return q.createSvgTag({cellSize:2,margin:1})}catch(e){return''}})()}</span>`:'';
+ return`<div class="fcard ${mode} ${flip}" ${o.act===false?'':'data-act="cardFlip"'} role="button" aria-label="カードをうらがえす" style="--cc:${C.c||'#3D5AFE'}"><div class="fin">
+ <div class="ff front"><div class="fhd"><span>${mode==='real'?'ADVENTURER CARD':'冒険者カード'}</span><b>Lv.${P.lv}</b></div>
+  <div class="fbody"><div class="fav">${avatarPx(P.eq||{},P.c,70,P.n,{g:P.ch||(typeof P.g==='string'?P.g:'tanuki'),st:P.sg??2,look:P.l||0})}</div><div class="finfo"><small>${esc(RANKS[P.ti||0].n)}の応援者${P.j?'・'+esc(P.j):''}</small><div class="fnm">${esc(P.n)}</div><span class="fjob" style="background:${C.c}">${esc(C.n||'')}</span><div class="fsk">${sk}</div><div class="fmt"><small>${esc(T.n||'')}へ 熟練度${P.m}%</small><i><b style="width:${P.m}%"></b></i></div></div></div>
+  <div class="fft"><span>${logo()} すゝめ</span><span>${esc(P.id||'')}</span></div></div>
+ <div class="ff back"><div class="fhd"><span>${mode==='real'?'STATUS':'ステータス'}</span><b>${P.m}%</b></div>
+  <div class="fbk"><div class="frad">${hexRadar(P.s,Array.isArray(P.go)?P.go:null,lab)}</div><div class="fst"><div><small>クエスト</small><b>${P.qn||0}</b></div><div><small>推し師匠</small><b>${P.os||0}</b></div><div><small>フレンド</small><b>${P.fr||0}</b></div><div><small>熟練度</small><b>${P.m}%</b></div><div class="wide">${esc(C.n||'')} ▶ ${esc(T.n||'')}</div></div></div>
+  <div class="fbf">${mode==='real'?`<span class="nfc"><i>))</i>スマホをかざすとカードが開きます</span><span>${esc(P.id||'')}</span>`:`<span>${P.msg?esc(P.msg):'学びの冒険、修行中！'}</span>${qr}`}</div></div>
+ </div></div>`}
+V.mypage=()=>{const pid=state.persona,u=me();const P=cardPayload(pid);if(!P)return`<h1>冒険者カード</h1>${owlSay('診断すると、冒険者カードができるぞ。',{cta:['診断をはじめる','go:diag']})}`;
+ const mode=state.ui.cardMode||'digital',L=levelOf(expOf(pid)),C=CLS[P.c]||{},T=CLS[P.t]||{},H=CLS[P.h]||{};const map=activity(pid);
+ const days=[];for(let i=83;i>=0;i--){const d=new Date(TODAY);d.setDate(d.getDate()-i);days.push((map[dstr(d)]||[]).length)}const actN=days.filter(x=>x).length;
+ const sks=skillsOf(pid);
+ const card=`<div class="cardcol"><div class="cmode"><button class="${mode==='digital'?'on':''}" data-act="cardMode:digital">デジタル</button><button class="${mode==='real'?'on':''}" data-act="cardMode:real">実物カード（NFC）</button></div>
+  ${cardFace(P,{mode,flip:state.ui.cardFlip,qr:cardUrl(P)})}
+  <div class="fhint">${state.ui.cardFlip?'うら面':'おもて面'}を表示中<button data-act="cardFlip">↻ うらがえす</button></div>
+  ${mode==='real'?`<div class="sheet" style="margin-top:10px"><div class="row between"><b>実物の冒険者カード</b><b class="pxf" style="font-size:20px">1,980円</b></div><p class="small muted" style="margin:4px 0 0">おもて：ホログラム加工のフルカラー。うら：ステータスとNFCチップ。会場でスマホにかざすだけで自己紹介できます。ステータスはアプリと連動して更新。</p></div>`:''}
+  <div class="win cmdwin">${mode==='real'?cmd(`${ICO('chest',18)}実物カードを注文する`,'buyCard','NFC入り 1,980円',true):cmd(`${ICO('scroll',18)}カードを共有する`,'shareCard','URLを送るだけ',true)}${cmd(`${ICO('key',18)}カードを編集する`,'go:cardedit','ひとこと・公開項目')}</div></div>`;
+ const dash=`<div><div class="dtiles"><div class="dtile"><small>レベル</small><b>${L.lv}</b><div class="bar"><i style="width:${Math.round(L.cur/L.need*100)}%"></i></div></div><div class="dtile"><small>熟練度</small><b>${P.m}<em>%</em></b><div class="bar"><i style="width:${P.m}%;background:var(--ri)"></i></div></div><div class="dtile"><small>クエスト達成</small><b>${P.qn}<em>回</em></b></div><div class="dtile"><small>エール</small><b>${u.bal.toLocaleString()}<em>pt</em></b></div></div>
+  <div class="win" style="margin-top:0"><div class="pxf" style="font-size:15px">${ICO('flag',16)} 転職ロード</div><div class="road"><div style="background:${C.c}"><small>いま</small>${esc(C.n||'')}</div><span class="ar">▶</span><div style="background:${T.c}"><small>転職先</small>${esc(T.n||'')}</div><span class="ar">▶</span><div style="background:${H.c||'#8B5CF6'}"><small>上級職</small>${esc(H.n||'')}</div></div><div class="expbar" style="margin-top:8px"><i style="width:${P.m}%"></i></div><div style="color:#A5ACC9;font-size:12px;margin-top:4px">熟練度${P.m}%・${P.m<60?`あと${60-P.m}%で転職の試練`:'転職の試練に挑戦できます'}</div></div>
+  <div class="sheet"><h3 style="margin-top:0">必殺ワザ</h3>${sks.length?`<div class="skb">${sks.map(x=>`<span>${esc(x.name)}</span><div class="m"><i style="width:${x.lv*10}%;background:${AXCOL[x.t.ax]}"></i></div><span class="pxf">Lv${x.lv}</span>`).join('')}</div>`:'<p class="small muted">ワザを覚えるとここに並びます。</p>'}</div>
+  <div class="sheet"><div class="row between"><h3 style="margin:0">学びの記録（12週）</h3><span class="small muted" style="font-weight:800">${actN}日</span></div><div class="heat">${days.map(n=>`<i class="${n>=3?'l3':n===2?'l2':n===1?'l1':''}"></i>`).join('')}</div></div>
+  ${P.q&&P.q.length?`<div class="sheet"><h3 style="margin-top:0">最近のクエスト</h3>${P.q.map(x=>`<div class="small" style="font-weight:700">${ICO('flag',12)} ${esc(x)}</div>`).join('')}</div>`:''}</div>`;
+ return`<h1>冒険者カード<small>自分を推す</small></h1><div class="mpgrid">${card}${dash}</div>`};
+function publicView(){const P=PUBLIC;return`<header class="top"><div class="brand">${logo()}<span>すゝめ</span></div></header><h1>${esc(P.n)}さんの<br>冒険者カード</h1>${cardFace(P,{mode:'digital',flip:state.ui&&state.ui.cardFlip})}<div class="fhint">タップでうら面<button data-act="cardFlip">↻ うらがえす</button></div>${owlSay(`${esc(P.n)}さんは「${esc((CLS[P.t]||{}).n||'')}」への転職を目指して修行中だよ。おぬしも職業を診断して、学びの冒険にすゝんでみぬか？`,{cta:['無料で職業診断する','leavePublic'],size:56})}<p class="small muted" style="text-align:center;margin:14px 0">すゝめ｜学びの冒険に、いざ出発。</p>`}
+Object.assign(ACT,{
+ cardFlip:()=>{state.ui.cardFlip=!state.ui.cardFlip;const el=document.querySelector('.fcard');if(el){el.classList.toggle('flip',state.ui.cardFlip);const h=document.querySelector('.fhint');if(h&&!PUBLIC)h.firstChild.textContent=(state.ui.cardFlip?'うら面':'おもて面')+'を表示中';if(PUBLIC)return 'nr';return 'nr'}},
+ cardMode:m=>{state.ui.cardMode=m;state.ui.cardFlip=false},
+ yoriAx:a=>{state.ui.yoriAx=a},
+ yoriBuy:id=>{if(!confirm(`クエスト券（${TICKET.n}枚 ${yen(TICKET.price)}）を購入して、1枚使って寄り道しますか？（デモ）`))return;const u=me();u.tickets=(u.tickets||0)+TICKET.n;ACT.yoriJoin(id,1)},
+ yoriJoin:(id,t)=>{const e=ev(id),u=me(),pid=state.persona;t=+t;if(e.by&&e.by[pid])return;if(t&&!(u.tickets>0)){toast('クエスト券がありません');return}e.by=e.by||{};e.by[pid]=1;e.joined++;e.yori=e.yori||{};e.yori[pid]={t};
+  if(t){u.tickets--;if(e.status==='confirmed'){e.paid=e.paid||{};e.paid[pid]=1}u.trial=[...new Set([...(u.trial||[]),e.theme])]}
+  if(e.status==='proposed'&&e.joined>=e.min)e.status='confirmed';logAct('circle',e.title);
+  toast(t?`券で寄り道！「${SKILL[e.theme]}」がお試しワザになりました（残り${u.tickets}枚）`:`寄り道枠で参加表明しました`)}
+});
 render();
 if('serviceWorker' in navigator&&location.protocol.startsWith('http')){window.addEventListener('load',()=>{navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).then(r=>r.update()).catch(()=>{});let reloaded=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(reloaded)return;reloaded=true;location.reload()})})}
 </script>

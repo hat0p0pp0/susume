@@ -14,9 +14,38 @@
 | `manifest.webmanifest` | ホーム画面に追加したときの名前・アイコン・色の設定 |
 | `sw.js` | オフラインでも開けるようにする仕組み（Service Worker） |
 | `icons/` | アプリのアイコン画像 |
+| `_headers` / `vercel.json` | 無料ホスティング用のキャッシュ設定 |
 | `README.md` | この説明書 |
 
 ビルド（変換作業）は不要です。ファイルを置くだけで動きます。
+
+## 無料でWebアプリとして公開する（おすすめ：Cloudflare Pages）
+
+ビルド不要の静的サイトなので、無料のホスティングにそのまま載せられます。
+GitHubのリポジトリとつなぐと、ファイルを更新するたびに自動で公開し直されます。
+
+| サービス | 特長 | 公開URLの例 |
+|---|---|---|
+| **Cloudflare Pages**（おすすめ） | 無料枠が大きく表示も速い。GitHub連携で自動公開 | `https://susume.pages.dev` |
+| Netlify | フォルダをドラッグ＆ドロップするだけでも公開できる | `https://susume.netlify.app` |
+| Vercel | GitHub連携で自動公開 | `https://susume.vercel.app` |
+| GitHub Pages | いまの方法。設定が最小 | `https://ユーザー名.github.io/リポジトリ名/` |
+
+### Cloudflare Pages の手順
+1. このフォルダの中身をGitHubのリポジトリに置きます（下の「GitHub Pagesで公開する手順」の1〜2）
+2. Cloudflare（無料アカウント）にログイン →「Workers & Pages」→「作成」→「Pages」→「Gitに接続」
+3. リポジトリを選び、ビルド設定は **フレームワーク：なし／ビルドコマンド：空欄／出力ディレクトリ：`/`** にして「保存してデプロイ」
+4. 数十秒で `https://（プロジェクト名）.pages.dev` が発行されます
+
+### Netlify の手順（いちばん手軽）
+1. Netlifyにログイン →「Add new site」→「Deploy manually」
+2. このフォルダ（zipを解凍したもの）をそのままドラッグ＆ドロップ
+3. `https://（ランダム名）.netlify.app` が発行されます（サイト名は後から変更可）
+
+`_headers`（Cloudflare Pages / Netlify用）と `vercel.json`（Vercel用）は、更新がすぐ反映されるようにキャッシュを調整する設定ファイルです。そのまま置いてください。
+
+### PCでの表示
+画面幅が広いとき（約920px以上）は、左にメニューが並ぶPCレイアウトに切り替わります。冒険者カードは「カード＋ダッシュボード」の2列、クエスト一覧は2列で表示されます。
 
 ## GitHub Pagesで公開する手順
 

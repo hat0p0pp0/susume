@@ -14,6 +14,7 @@
 | `manifest.webmanifest` | ホーム画面に追加したときの名前・アイコン・色の設定 |
 | `sw.js` | オフラインでも開けるようにする仕組み（Service Worker） |
 | `icons/` | アプリのアイコン画像 |
+| `wrangler.jsonc` / `.assetsignore` | Cloudflare Workersで公開するための設定 |
 | `_headers` / `vercel.json` | 無料ホスティング用のキャッシュ設定 |
 | `README.md` | この説明書 |
 
@@ -36,6 +37,12 @@ GitHubのリポジトリとつなぐと、ファイルを更新するたびに�
 2. Cloudflare（無料アカウント）にログイン →「Workers & Pages」→「作成」→「Pages」→「Gitに接続」
 3. リポジトリを選び、ビルド設定は **フレームワーク：なし／ビルドコマンド：空欄／出力ディレクトリ：`/`** にして「保存してデプロイ」
 4. 数十秒で `https://（プロジェクト名）.pages.dev` が発行されます
+
+### Cloudflare Workers（「Set up your application」画面が出た場合）
+Cloudflareの新しい画面では、Pagesの代わりにWorkersの作成画面が出ることがあります。その場合も、同梱の `wrangler.jsonc` があればそのまま公開できます。
+- Build command：空欄
+- Deploy command：`npx wrangler deploy`（初期値のまま）
+- 「Deploy」を押すと `https://susume.（アカウント名）.workers.dev` が発行されます
 
 ### Netlify の手順（いちばん手軽）
 1. Netlifyにログイン →「Add new site」→「Deploy manually」
